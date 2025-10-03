@@ -64,9 +64,10 @@
         <version>0.0.8</version>
         <configuration>
           <!-- Pon aquí la clase principal completa con package -->
-          <mainClass>com.mycompany.quickbyte.QuickBiteFX</mainClass>
+          <mainClass>com.mycompany.quickbite.QBloginFX</mainClass>
         </configuration>
       </plugin>
     </plugins>
   </build>
+    <name>QuickBite</name>
 </project>

@@ -1,0 +1,31 @@
+.root .headerbox{
+    -fx-background-color: #947D66;
+    -fx-padding: 20px 150px;
+    -fx-background-radius: 20px;
+    -fx-font-size: 22px;
+}
+
+
+.text-field{
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 20px;
+}
+
+.root .form{
+    -fx-background-color: rgba(71, 16, 21, 0.3);
+    -fx-background-radius: 10px;
+    -fx-padding: 40px 30px;
+}
+
+.button{
+    -fx-text-fill: #ffffff;
+    -fx-background-color: #471015;
+    -fx-background-radius: 20px;
+}
+
+.fondo {
+    -fx-background-image: url('fondo/fondo.jpg');
+    -fx-background-size: cover;
+    -fx-background-position: center;
+}
+

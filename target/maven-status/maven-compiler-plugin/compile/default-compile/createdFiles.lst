@@ -1,4 +1,6 @@
-com\mycompany\quickbyte\QuickBiteFX$Inventory.class
-com\mycompany\quickbyte\QuickBiteFX$DeepLinkRouter.class
-com\mycompany\quickbyte\QuickBiteFX.class
-com\mycompany\quickbyte\QuickBiteFX$ProductVM.class
+com\mycompany\quickbite\QBloginFX.class
+com\mycompany\quickbite\DeepLinkRouter.class
+com\mycompany\quickbite\ProductVM.class
+com\mycompany\quickbite\Navigator.class
+com\mycompany\quickbite\Inventory.class
+com\mycompany\quickbite\QuickBiteFX.class

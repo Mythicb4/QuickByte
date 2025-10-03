@@ -1,0 +1,29 @@
+.root-pane {
+  -fx-background-color: linear-gradient(to bottom right,#947D66, #EDDCAB);
+}
+
+.title {
+  -fx-font-size: 22px;
+  -fx-font-weight: bold;
+  -fx-fill: #ffffff;
+}
+
+.button {
+  -fx-background-color: #471015;
+  -fx-text-fill: white;
+  -fx-background-radius: 10;
+}
+
+.text-field, .table-view {
+  -fx-background-radius: 10;
+}
+
+.separator *.line {
+  -fx-background-color: rgba(255,255,255,0.35);
+  -fx-radius: 10;
+}
+
+.title-container {
+  -fx-background-color: #947D66;
+
+}

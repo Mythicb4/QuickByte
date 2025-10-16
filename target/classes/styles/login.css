@@ -1,0 +1,87 @@
+/* --- Campos de texto --- */
+#txtEmail,
+#tfPassword {
+    -fx-background-color: #F7D6A8;       /* fondo del campo */
+    -fx-background-insets: 0;           /* evita sombras internas */
+    -fx-border-color: #F7D6A8;          /* sin borde por defecto */
+    -fx-border-width: 0;
+    -fx-text-fill: #210002;             /* color del texto escrito */
+    -fx-prompt-text-fill: rgba(33,0,2,0.4); /* prompt text con baja opacidad */
+    -fx-background-radius: 8px;         /* esquinas suaves (coherente visualmente) */
+    -fx-border-radius: 8px;
+}
+
+/* === BOTÓN ENTRAR === */
+#btnEntrar {
+    -fx-text-fill: #210002;                                /* color del texto */
+    -fx-background-color: rgba(96,33,36,0.2);              /* fondo #602124 con 20% opacity */
+    -fx-border-color: #602124;                             /* contorno sólido */
+    -fx-border-width: 1px;
+    -fx-background-radius: 10px;                           /* bordes redondeados */
+    -fx-border-radius: 10px;                               /* radio del borde coincide */
+    -fx-font-weight: 600;                                  /* texto un poco más fuerte */
+    -fx-opacity: 1;                                        /* asegurar opacidad del texto */
+    -fx-min-width: 90px;
+    -fx-min-height: 32px;
+    -fx-pref-height: 55px;
+    -fx-pref-width: 288px;
+    
+    -fx-background-insets: 0;   /* importante: alinear dibujo de fondo y borde */
+    -fx-border-insets: 0;
+    -fx-alignment: center;      /* centrar texto vertical/horizontal */
+    -fx-font-smoothing-type: lcd; /* mejora render del texto en algunas plataformas */
+}
+
+/* Hover / pressed para ENTRAR */
+/* usamos offsetX grande para "empujar" la sombra hacia la derecha (lateral),
+   y padding suficiente para que la sombra quede fuera del área del texto. */
+#btnEntrar:hover,
+#btnSingup:hover{
+    -fx-effect: dropshadow(two-pass-box, rgba(0,0,0,0.14), 12, 0, 10, 0); /* suave, lateral */
+}
+#btnEntrar:pressed,
+#btnSingup:pressed{
+    -fx-effect: dropshadow(two-pass-box, rgba(96,33,36,0.18), 10, 0, 10, 0);
+    -fx-scale-x: 1;
+    -fx-scale-y: 1;
+    -fx-translate-x: 0;
+    -fx-translate-y: 0;
+    -fx-text-fill: #210002;
+}
+
+#btnSingup { 
+    -fx-text-fill: #210002; /* color del texto */ 
+    -fx-background-color: #F7D6A8; /* fondo claro */ 
+    -fx-border-color: #602124; /* contorno */ 
+    -fx-border-width: 1px; 
+    
+    -fx-background-radius: 10px; 
+    -fx-border-radius: 10px; 
+    -fx-background-insets: 0;
+    -fx-border-insets: 0;
+    
+    -fx-font-weight: 600; 
+    -fx-min-width: 90px; /* ajusta según prefieras */ 
+    -fx-min-height: 32px; 
+    -fx-pref-height: 49px; 
+    -fx-pref-width: -fx-size; /* usa tamaño computado por el contenido */ 
+}
+
+/* Evitar escalado/translate en pressed (mantener exactamente el mismo tamaño y alineación) */
+#btnSingup:pressed,
+#btnSingup:focused,
+#btnSingup:hover {
+    -fx-scale-x: 1;
+    -fx-scale-y: 1;
+    -fx-translate-x: 0;
+    -fx-translate-y: 0;
+}
+
+/* === MANTENER TAMAÑO y TIPO DE LETRA en estados hover/pressed === */
+#btnEntrar:hover,
+#btnSingup:hover,
+#btnEntrar:pressed,
+#btnSingup:pressed {
+    -fx-font-size: inherit;      /* conserva tamaño de fuente */
+    -fx-font-weight: inherit;    /* conserva grosor */
+}

@@ -64,7 +64,7 @@
         <version>0.0.8</version>
         <configuration>
           <!-- Pon aquí la clase principal completa con package -->
-          <mainClass>com.mycompany.quickbite.QBloginFX</mainClass>
+          <mainClass>com.mycompany.quickbite.QuickBiteFX</mainClass>
         </configuration>
       </plugin>
     </plugins>

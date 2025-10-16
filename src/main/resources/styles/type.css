@@ -1,0 +1,189 @@
+#btnBack { 
+    -fx-text-fill: #210002;            /* Color del texto (vino oscuro) */
+    -fx-background-color: #F7D6A8;     /* Fondo claro tipo beige */
+    -fx-border-color: #602124;         /* Contorno vino oscuro */
+    -fx-border-width: 1px;             /* Grosor del borde */
+
+    -fx-background-radius: 10px;       /* Bordes redondeados */
+    -fx-border-radius: 10px;           /* Radio igual al del fondo */
+    -fx-background-insets: 0;          /* Evita que el fondo se "encaje" más adentro */
+    -fx-border-insets: 0;              /* Alinea borde con el fondo */
+
+    -fx-font-weight: 600;              /* Texto seminegrita */
+    -fx-min-width: 90px;               /* Ancho mínimo */
+    -fx-min-height: 32px;              /* Altura mínima */
+    -fx-pref-height: 49px;             /* Altura preferida */
+    -fx-pref-width: 110px;             /* Ancho preferido */
+    -fx-alignment: center;             /* Centra el texto dentro del botón */
+    -fx-cursor: hand;                  /* Cambia el cursor al pasar el mouse */
+}
+
+/*
+   Evita el encogimiento o desplazamiento del botón al presionarlo.
+   Aplica una sombra lateral sutil sin alterar el tamaño ni el color del texto.
+*/
+#btnBack:hover,
+#btnBack:focused,
+#btnBack:pressed {
+    -fx-scale-x: 1;                    /* Mantiene escala original */
+    -fx-scale-y: 1;
+    -fx-translate-x: 0;                /* Evita desplazamientos */
+    -fx-translate-y: 0;
+
+    /* Sombra lateral (sutil, color oscuro con transparencia) */
+    -fx-effect: dropshadow(two-pass-box, rgba(96,33,36,0.18), 10, 0, 6, 0);
+
+    /* Mantiene la legibilidad del texto y su color */
+    -fx-text-fill: #210002;            
+    -fx-font-size: inherit;            /* Evita cambios de tamaño de texto */
+    -fx-font-weight: inherit;          /* Evita cambios de grosor */
+}
+
+ /* RoundButtons */
+#rbNegocio, 
+#rbEstudiante {
+    -fx-font-weight: 600;                /* fuente seminegrita */
+}
+
+#rbNegocio .radio, 
+#rbEstudiante .radio {
+    -fx-background-color: #F7D6A8;       /* color de fondo del círculo exterior */
+    -fx-border-color: #602124;           /* color del borde */
+    -fx-border-width: 2px;               /* grosor del borde */
+    -fx-border-radius: 50%;              /* mantiene el círculo perfectamente redondo */
+    -fx-background-radius: 50%;
+}
+
+#rbNegocio:selected .dot, 
+#rbEstudiante:selected .dot {
+    -fx-background-color: #602124;       /* color del punto central */
+    -fx-background-radius: 50%;
+}
+
+#rbNegocio .dot, 
+#rbEstudiante .dot {
+    -fx-background-color: transparent;   /* sin relleno cuando no está seleccionado */
+}
+
+/* =====================================================
+   RadioButtons "Negocio" / "Estudiante"
+   - Bloque final: fuerza consistencia de tamaño y evita saltos
+   ===================================================== */
+
+/* Aplicar al host: tamaño estable y texto consistente */
+#rbNegocio,
+#rbEstudiante {
+    -fx-font-size: 18px;                 /* tamaño de texto fijo */
+    -fx-font-weight: 600;                /* grosor fijo */
+    -fx-alignment: center-left;          /* alinear texto con la radio */
+    -fx-cursor: hand;
+}
+
+/* ============================
+   FORZAR tamaño y apariencia del círculo exterior (.radio)
+   ============================ */
+/* fijamos min/pref/max iguales para evitar auto-resize */
+#rbNegocio .radio,
+#rbEstudiante .radio {
+    -fx-min-width: 24px !important;
+    -fx-min-height: 24px !important;
+    -fx-pref-width: 24px !important;
+    -fx-pref-height: 24px !important;
+    -fx-max-width: 24px !important;
+    -fx-max-height: 24px !important;
+
+    /* apariencia */
+    -fx-background-color: #F7D6A8 !important;   /* fondo del círculo exterior */
+    -fx-background-radius: 50% !important;      /* redondo */
+    -fx-border-color: #602124 !important;       /* borde vino */
+    -fx-border-width: 2px !important;
+    -fx-border-radius: 50% !important;
+
+    /* eliminar cualquier efecto que el skin intente aplicar */
+    -fx-effect: none !important;
+    -fx-scale-x: 1 !important;
+    -fx-scale-y: 1 !important;
+    -fx-translate-x: 0 !important;
+    -fx-translate-y: 0 !important;
+    -fx-padding: 0 !important;                   /* evita reajuste del area interior */
+}
+
+/* ============================
+   FORZAR tamaño y apariencia del punto interior (.dot)
+   ============================ */
+/* tamaño fijo (visible sólo si está seleccionado) */
+#rbNegocio .dot,
+#rbEstudiante .dot {
+    -fx-min-width: 12px !important;
+    -fx-min-height: 12px !important;
+    -fx-pref-width: 12px !important;
+    -fx-pref-height: 12px !important;
+    -fx-max-width: 12px !important;
+    -fx-max-height: 12px !important;
+
+    -fx-background-color: transparent !important; /* por defecto oculto */
+    -fx-background-radius: 50% !important;
+    -fx-effect: none !important;
+    -fx-scale-x: 1 !important;
+    -fx-scale-y: 1 !important;
+    -fx-translate-x: 0 !important;
+    -fx-translate-y: -1 !important;
+}
+
+/* ============================
+   ESTADO seleccionado: colorear el punto central
+   ============================ */
+#rbNegocio:selected .dot,
+#rbEstudiante:selected .dot {
+    -fx-background-color: #602124 !important; /* punto central vino cuando seleccionado */
+}
+
+/* ============================
+   PSEUDOESTADOS (pressed / armed / focused / hover)
+   - aseguramos que NINGUNO cambie tamaño ni traslade nada
+   ============================ */
+#rbNegocio:hover .radio,
+#rbNegocio:pressed .radio,
+#rbNegocio:focused .radio,
+#rbNegocio:armed .radio,
+#rbNegocio:selected .radio,
+
+#rbEstudiante:hover .radio,
+#rbEstudiante:pressed .radio,
+#rbEstudiante:focused .radio,
+#rbEstudiante:armed .radio,
+#rbEstudiante:selected .radio {
+    -fx-scale-x: 1 !important;
+    -fx-scale-y: 1 !important;
+    -fx-translate-x: 0 !important;
+    -fx-translate-y: 0 !important;
+    -fx-effect: none !important;
+}
+
+/* y también para el dot en todos los pseudoestados (por si el skin lo agranda) */
+#rbNegocio:hover .dot,
+#rbNegocio:pressed .dot,
+#rbNegocio:focused .dot,
+#rbNegocio:armed .dot,
+#rbNegocio:selected .dot,
+
+#rbEstudiante:hover .dot,
+#rbEstudiante:pressed .dot,
+#rbEstudiante:focused .dot,
+#rbEstudiante:armed .dot,
+#rbEstudiante:selected .dot {
+    -fx-scale-x: 1 !important;
+    -fx-scale-y: 1 !important;
+    -fx-translate-x: 0 !important;
+    -fx-translate-y: -1 !important;
+    -fx-effect: none !important;
+}
+
+/* ============================
+   Ajuste final: centra verticalmente la estructura (radio + texto)
+   para compensar cualquier diferencia de baseline entre plataformas
+   ============================ */
+#rbNegocio .content,
+#rbEstudiante .content {
+    -fx-alignment: CENTER_LEFT !important;
+}

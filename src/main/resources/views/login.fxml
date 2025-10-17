@@ -27,7 +27,7 @@
          </image>
       </ImageView>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f7d6a8" height="634.0" layoutX="414.0" layoutY="238.0" stroke="BLACK" strokeType="INSIDE" width="590.0" AnchorPane.leftAnchor="425.0" AnchorPane.topAnchor="220.0" />
-      <VBox fx:id="vbLogin" layoutX="393.0" layoutY="149.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="730.0" prefWidth="590.0" AnchorPane.leftAnchor="425.0" AnchorPane.topAnchor="124.0">
+      <VBox fx:id="vbLogin" layoutX="425.0" layoutY="129.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="730.0" prefWidth="590.0" AnchorPane.leftAnchor="425.0" AnchorPane.topAnchor="129.0">
          <children>
             <ImageView fx:id="logoImage" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" x="651.0" y="124.0">
                <image>

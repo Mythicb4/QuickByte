@@ -59,7 +59,7 @@ public class QBloginFX {
     // Evento del botón "Singup"
     @FXML
     private void onBtnSingup(ActionEvent event) {
-        Navigator.navigateTo("/views/type.fxml", "Type", event);
+        Navigator.navigateTo("/views/type.fxml", "type", event);
     }
 
     // Evento del Hyperlink "Recuperar contraseña"

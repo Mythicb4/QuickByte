@@ -32,13 +32,13 @@ public class QBtype {
     
     public void onNegocioSelected(ActionEvent event){
         if(rbNegocio.isSelected()){
-            System.out.print("Cargar vista de negocio");
+            Navigator.navigateTo("/views/singupN.fxml", "singup_negocio", event);
         }
     }
     
     public void onEstudianteSelected(ActionEvent event){
         if(rbEstudiante.isSelected()){
-            System.out.print("Cargar vista de estudiante");
+            Navigator.navigateTo("/views/singupE.fxml", "singup_estudiante", event);
         }
     }
 

@@ -13,7 +13,7 @@
     -fx-min-width: 90px;               /* Ancho mínimo */
     -fx-min-height: 32px;              /* Altura mínima */
     -fx-pref-height: 49px;             /* Altura preferida */
-    -fx-pref-width: 110px;             /* Ancho preferido */
+    -fx-pref-width: -fx-size;             /* Ancho preferido */
     -fx-alignment: center;             /* Centra el texto dentro del botón */
     -fx-cursor: hand;                  /* Cambia el cursor al pasar el mouse */
 }

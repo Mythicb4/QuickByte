@@ -87,6 +87,14 @@
                         <Point3D />
                      </rotationAxis>
                   </Line>
+                  <ImageView fx:id="userImage" fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons/user.png" />
+                     </image>
+                     <GridPane.margin>
+                        <Insets left="431.0" />
+                     </GridPane.margin>
+                  </ImageView>
                   <PasswordField fx:id="tfPassword" promptText="Contraseña" GridPane.rowIndex="1">
                      <font>
                         <Font name="SansSerif Regular" size="18.0" />
@@ -98,20 +106,31 @@
                         <Insets />
                      </opaqueInsets>
                   </PasswordField>
+                  <TextField fx:id="tfPasswordVisible" managed="false" promptText="Contraseña" visible="false" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="SansSerif Regular" size="18.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <GridPane.margin>
+                        <Insets left="129.0" right="160.0" top="50.0" />
+                     </GridPane.margin>
+                  </TextField>
                   <Line endX="100.0" startX="431.29290771484375" GridPane.rowIndex="1">
                      <GridPane.margin>
                         <Insets left="129.0" top="82.0" />
                      </GridPane.margin>
                   </Line>
-                  <ImageView fx:id="userImage" fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="visibilityImageOff" fitHeight="26.0" fitWidth="26.0" onMouseClicked="#onVisibilityClick" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
                      <image>
-                        <Image url="@../images/icons/user.png" />
+                        <Image url="@../images/icons/visibility_off.png" />
                      </image>
                      <GridPane.margin>
-                        <Insets left="431.0" />
+                        <Insets left="431.0" top="50.0" />
                      </GridPane.margin>
                   </ImageView>
-                  <ImageView fx:id="visibilityImage" fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+                  <ImageView fx:id="visibilityImageOn" fitHeight="26.0" fitWidth="26.0" onMouseClicked="#onVisibilityClick" pickOnBounds="true" preserveRatio="true" visible="false" GridPane.rowIndex="1">
                      <image>
                         <Image url="@../images/icons/visibility.png" />
                      </image>

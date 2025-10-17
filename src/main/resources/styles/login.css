@@ -1,6 +1,7 @@
 /* --- Campos de texto --- */
 #txtEmail,
-#tfPassword {
+#tfPassword,
+#tfPasswordVisible {
     -fx-background-color: #F7D6A8;       /* fondo del campo */
     -fx-background-insets: 0;           /* evita sombras internas */
     -fx-border-color: #F7D6A8;          /* sin borde por defecto */

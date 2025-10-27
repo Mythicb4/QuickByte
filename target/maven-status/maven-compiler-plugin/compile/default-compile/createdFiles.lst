@@ -1,5 +1,12 @@
+com\mycompany\quickbite\dao\StudentDao$1.class
 com\mycompany\quickbite\util\Navigator.class
-com\mycompany\quickbite\QuickBiteFX.class
+com\mycompany\quickbite\model\Student.class
+com\mycompany\quickbite\model\Business.class
 com\mycompany\quickbite\QBloginFX.class
 com\mycompany\quickbite\QBsingupFX.class
+com\mycompany\quickbite\dao\BusinessDao$1.class
+com\mycompany\quickbite\dao\BusinessDao.class
+com\mycompany\quickbite\util\AppState.class
+com\mycompany\quickbite\QuickBiteFX.class
+com\mycompany\quickbite\dao\StudentDao.class
 com\mycompany\quickbite\QBtype.class

@@ -1,5 +1,8 @@
 package com.mycompany.quickbite;
 
+import com.mycompany.quickbite.dao.BusinessDao;
+import com.mycompany.quickbite.dao.StudentDao;
+import com.mycompany.quickbite.util.AppState;
 import com.mycompany.quickbite.util.Navigator;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -7,6 +10,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
+import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -52,10 +56,29 @@ public class QBloginFX {
 
     @FXML
     private ImageView visibilityImageOn;
+    
+    @FXML
+    private RadioButton rbEstudiante;
+
+    @FXML
+    private RadioButton rbNegocio;
 
     // indica si la contraseña está visible (texto plano)
     private boolean passwordVisible = false;
+    
+    // guarda si eligió estudiante o negocio
+     private String selectedType = null; 
+     
+     @FXML
+    private void onEstudianteSelected(ActionEvent event) {
+        selectedType = "estudiante";
+    }
 
+    @FXML
+    private void onNegocioSelected(ActionEvent event) {
+        selectedType = "negocio";
+    }
+    
     @FXML
     private void initialize() {
         // 1) sincronizar el texto entre PasswordField y TextField
@@ -123,9 +146,41 @@ public class QBloginFX {
     }
 
     // Evento del botón "Entrar"
-    @FXML
-    private void onBtnEntrar(ActionEvent event) {
-        System.out.println("Entrar");
+@FXML
+    private void onLoginClick(ActionEvent event) {
+        String email = txtEmail.getText().trim();
+        String password = tfPassword.getText();
+
+        if (email.isEmpty() || password.isEmpty()) {
+           System.out.println("Por favor ingresa email y contraseña.");
+            return;
+        }
+
+        if (selectedType == null) {
+           System.out.println("⚠️ Selecciona el tipo de usuario primero.");
+            return;
+        }
+
+        boolean valid = false;
+
+        if (selectedType.equals("negocio")) {
+            BusinessDao dao = new BusinessDao();
+            valid = dao.validateCredentials(email, password);
+        } else if (selectedType.equals("estudiante")) {
+            StudentDao dao = new StudentDao();
+            valid = dao.validateCredentials(email, password);
+        }
+
+        if (valid) {
+           System.out.println("✅ Bienvenido, " + selectedType + "!");
+            if (selectedType.equals("negocio")) {
+                Navigator.navigateTo("/views/login_negocio.fxml", "dashboard_negocio", event);
+            } else {
+                Navigator.navigateTo("/views/login_estudiante.fxml", "dashboard_estudiante", event);
+            }
+        } else {
+           System.out.println("❌ Email o contraseña incorrectos.");
+        }
     }
 
     // Evento del botón "Singup"

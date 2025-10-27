@@ -1,5 +1,10 @@
 package com.mycompany.quickbite;
 
+import com.mycompany.quickbite.dao.BusinessDao;
+import com.mycompany.quickbite.dao.StudentDao;
+import com.mycompany.quickbite.model.Business;
+import com.mycompany.quickbite.model.Student;
+import com.mycompany.quickbite.util.AppState;
 import com.mycompany.quickbite.util.Navigator;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -63,14 +68,27 @@ public class QBsingupFX {
 
     @FXML
     private void onBackClick(ActionEvent event) {
+        AppState.setUserType(null);
         Navigator.navigateTo("/views/type.fxml", "type", event);
     }
     
     // indica si la contraseña está visible (texto plano)
     private boolean passwordVisible = false;
+    private boolean isBusiness = false;
 
     @FXML
     private void initialize() {
+         String type = AppState.getUserType();
+
+        // Si el AppState no se setea (por usar fxmls distintos), lo detectamos por nombre del FXML cargado
+        if ("negocio".equalsIgnoreCase(type)) {
+            isBusiness = true;
+        } else {
+            isBusiness = false;
+        }
+
+        System.out.println("Modo signup: " + (isBusiness ? "Negocio" : "Estudiante"));
+
         // 1) sincronizar el texto entre PasswordField y TextField
         if (tfPassword != null && tfPasswordVisible != null) {
             // bidireccional para mantener ambos actualizados automaticamente
@@ -132,6 +150,47 @@ public class QBsingupFX {
         if (visibilityImageOff != null && visibilityImageOn != null) {
             visibilityImageOff.setVisible(!passwordVisible);
             visibilityImageOn.setVisible(passwordVisible);
+        }
+    }
+    
+    @FXML
+    private void onCrearClick(ActionEvent event) {
+        String email = txtEmail.getText().trim();
+        String password = tfPassword.getText();
+
+        if (email.isEmpty() || password.isEmpty()) {
+            System.out.println("Por favor completa todos los campos obligatorios.");
+            return;
+        }
+
+        if (isBusiness) {
+            String name = txtBussines.getText().trim();
+            String location = txtLocation.getText().trim();
+
+            if (name.isEmpty() || location.isEmpty()) {
+                System.out.println("Completa nombre y ubicación del negocio.");
+                return;
+            }
+
+            BusinessDao bDao = new BusinessDao();
+            if (bDao.emailExists(email)) {
+                System.out.println("Email ya registrado.");
+                return;
+            }
+
+            bDao.addBusiness(new Business(name, location, email, password));
+            System.out.println("Negocio registrado correctamente.");
+            Navigator.navigateTo("/views/login.fxml", "login", event);
+        } else {
+            StudentDao sDao = new StudentDao();
+            if (sDao.emailExists(email)) {
+                System.out.println("Email ya registrado.");
+                return;
+            }
+
+            sDao.addStudent(new Student(email, password));
+            System.out.println("Estudiante registrado correctamente.");
+            Navigator.navigateTo("/views/login.fxml", "login", event);
         }
     }
 }

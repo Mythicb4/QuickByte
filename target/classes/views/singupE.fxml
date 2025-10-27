@@ -144,7 +144,7 @@
                   <Insets bottom="25.0" />
                </VBox.margin>
             </GridPane>
-            <Button fx:id="btnCrear" defaultButton="true" maxWidth="288.0" mnemonicParsing="false" text="CREAR" textFill="#210002">
+            <Button fx:id="btnCrear" onAction="#onCrearClick" defaultButton="true" maxWidth="288.0" mnemonicParsing="false" text="CREAR" textFill="#210002">
                <VBox.margin>
                   <Insets left="151.0" />
                </VBox.margin>

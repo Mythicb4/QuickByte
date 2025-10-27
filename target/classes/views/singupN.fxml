@@ -159,7 +159,7 @@
                         <Insets left="431.0" top="100.0" />
                      </GridPane.margin>
                   </ImageView>
-                  <TextField fx:id="txtLocation" promptText="Edificio - piso - puesto" GridPane.rowIndex="3">
+                  <TextField fx:id="txtLocation" promptText="P10 101" GridPane.rowIndex="3">
                      <GridPane.margin>
                         <Insets left="129.0" right="160.0" top="150.0" />
                      </GridPane.margin>
@@ -188,7 +188,7 @@
                   <Insets bottom="25.0" />
                </VBox.margin>
             </GridPane>
-            <Button fx:id="btnCrear" defaultButton="true" maxWidth="288.0" mnemonicParsing="false" text="CREAR" textFill="#210002">
+            <Button fx:id="btnCrear" defaultButton="true" maxWidth="288.0" mnemonicParsing="false" onAction="#onCrearClick" text="CREAR" textFill="#210002">
                <VBox.margin>
                   <Insets left="151.0" />
                </VBox.margin>

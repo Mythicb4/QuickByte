@@ -6,7 +6,9 @@
 <?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -66,6 +68,7 @@
               <rowConstraints>
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
                   <TextField fx:id="txtEmail" promptText="Correo Institucional">
@@ -138,6 +141,32 @@
                         <Insets left="431.0" top="50.0" />
                      </GridPane.margin>
                   </ImageView>
+                  <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2">
+                     <children>
+                        <RadioButton fx:id="rbNegocio" mnemonicParsing="false" onAction="#onNegocioSelected" text="Negocio">
+                           <HBox.margin>
+                              <Insets left="76.0" right="105.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="SansSerif Regular" size="18.0" />
+                           </font>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="typeGroup" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="rbEstudiante" mnemonicParsing="false" onAction="#onEstudianteSelected" text="Estudiante" toggleGroup="$typeGroup">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <font>
+                              <Font name="SansSerif Regular" size="18.0" />
+                           </font>
+                        </RadioButton>
+                     </children>
+                     <GridPane.margin>
+                        <Insets left="55.0" top="75.0" />
+                     </GridPane.margin>
+                  </HBox>
                </children>
                <padding>
                   <Insets bottom="50.0" />
@@ -146,7 +175,7 @@
                   <Insets bottom="25.0" />
                </VBox.margin>
             </GridPane>
-            <Button fx:id="btnEntrar" defaultButton="true" maxWidth="288.0" mnemonicParsing="false" onAction="#onBtnEntrar" text="ENTRAR" textFill="#210002">
+            <Button fx:id="btnEntrar" defaultButton="true" maxWidth="288.0" mnemonicParsing="false" onAction="#onLoginClick" text="ENTRAR" textFill="#210002">
                <VBox.margin>
                   <Insets left="151.0" />
                </VBox.margin>

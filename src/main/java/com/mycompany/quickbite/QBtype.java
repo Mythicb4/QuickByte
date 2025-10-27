@@ -1,5 +1,6 @@
 package com.mycompany.quickbite;
 
+import com.mycompany.quickbite.util.AppState;
 import com.mycompany.quickbite.util.Navigator;
 
 import javafx.scene.control.Button;
@@ -32,15 +33,16 @@ public class QBtype {
     
     public void onNegocioSelected(ActionEvent event){
         if(rbNegocio.isSelected()){
+            AppState.setUserType("negocio");
             Navigator.navigateTo("/views/singupN.fxml", "singup_negocio", event);
         }
     }
     
     public void onEstudianteSelected(ActionEvent event){
         if(rbEstudiante.isSelected()){
+            AppState.setUserType("estudiante");
             Navigator.navigateTo("/views/singupE.fxml", "singup_estudiante", event);
         }
     }
 
 }
-

@@ -23,26 +23,38 @@
       </Button>
       <VBox prefHeight="1024.0" prefWidth="360.0">
          <children>
-            <HBox prefHeight="186.0" prefWidth="360.0">
+            <VBox prefHeight="200.0" prefWidth="100.0">
                <children>
-                  <ImageView fx:id="imgLogo" fitHeight="67.12" fitWidth="67.12" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../images/icons/logo.png" />
-                     </image>
-                     <HBox.margin>
-                        <Insets left="50.0" top="50.0" />
-                     </HBox.margin>
-                  </ImageView>
-                  <Label fx:id="lblLogo" text="QuickBite">
+                  <HBox prefHeight="133.0" prefWidth="360.0">
+                     <children>
+                        <ImageView fx:id="imgLogo" fitHeight="67.12" fitWidth="67.12" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons/logo.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="50.0" top="50.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Label fx:id="lblLogo" text="QuickBite">
+                           <font>
+                              <Font name="SansSerif Bold" size="36.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="71.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Label fx:id="lblLogo1" text="Estudiante">
                      <font>
-                        <Font name="SansSerif Bold" size="36.0" />
+                        <Font name="SansSerif Regular" size="25.0" />
                      </font>
-                     <HBox.margin>
-                        <Insets top="71.0" />
-                     </HBox.margin>
+                     <VBox.margin>
+                        <Insets left="50.0" />
+                     </VBox.margin>
                   </Label>
                </children>
-            </HBox>
+            </VBox>
             <VBox prefHeight="843.0" prefWidth="360.0">
                <children>
                   <Button fx:id="btnTienda" minHeight="-Infinity" mnemonicParsing="false" prefHeight="76.0" prefWidth="360.0" text="Tienda">
@@ -274,7 +286,7 @@
                         <Insets left="7.0" right="7.0" />
                      </HBox.margin>
                   </StackPane>
-                  <Button fx:id="btnMore" contentDisplay="TOP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="100.0" prefWidth="264.0" rotate="-90.0" text="More">
+                  <Button fx:id="btnMore" contentDisplay="TOP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="100.0" prefWidth="264.0" rotate="-90.0" text="Más">
                      <HBox.margin>
                         <Insets left="-76.0" right="-70.0" top="82.0" />
                      </HBox.margin>
@@ -321,7 +333,7 @@
                         </Button>
                      </children>
                   </StackPane>
-                  <Button contentDisplay="TOP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="100.0" prefWidth="264.0" rotate="-90.0" text="More">
+                  <Button contentDisplay="TOP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="100.0" prefWidth="264.0" rotate="-90.0" text="Más">
                      <HBox.margin>
                         <Insets left="-76.0" right="-70.0" top="82.0" />
                      </HBox.margin>

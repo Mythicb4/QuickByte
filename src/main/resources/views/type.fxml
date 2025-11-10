@@ -21,7 +21,7 @@
          </image>
       </ImageView>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f7d6a8" height="212.0" stroke="BLACK" strokeType="INSIDE" width="469.0" AnchorPane.leftAnchor="486.0" AnchorPane.topAnchor="406.0" />
-      <Button fx:id="btnBack" mnemonicParsing="false" onAction="#onBackClick" text="BACK" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="50.0">
+      <Button fx:id="btnBack" mnemonicParsing="false" onAction="#onBackClick" text="ATRÁS" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="50.0">
          <padding>
             <Insets bottom="15.0" left="29.0" right="29.0" top="15.0" />
          </padding>

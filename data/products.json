@@ -1,0 +1,15 @@
+[
+  {
+    "id": "PRD-001",
+    "name": "Empanada de Pollo",
+    "price": 2000.0,
+    "category": "Fritos",
+    "description": "Empanada crujiente de pollo",
+    "stock": 3,
+    "imagePath": "images/empanada.png",
+    "cost": 1000.0,
+    "supplier": "Fritos La Abuela",
+    "enabled": true,
+    "minStock": 5
+  }
+]

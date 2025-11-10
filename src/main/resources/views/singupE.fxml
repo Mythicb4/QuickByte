@@ -35,12 +35,12 @@
                   <Insets left="226.0" />
                </VBox.margin>
             </ImageView>
-            <Label fx:id="lblLogin" alignment="CENTER" text="Singup" textAlignment="CENTER" textFill="#210002">
+            <Label fx:id="lblLogin" alignment="CENTER" text="Crear" textAlignment="CENTER" textFill="#210002">
                <font>
                   <Font name="SansSerif Regular" size="26.0" />
                </font>
                <VBox.margin>
-                  <Insets left="261.0" />
+                  <Insets left="269.0" />
                </VBox.margin>
                <padding>
                   <Insets bottom="52.0" top="52.0" />
@@ -144,7 +144,7 @@
                   <Insets bottom="25.0" />
                </VBox.margin>
             </GridPane>
-            <Button fx:id="btnCrear" onAction="#onCrearClick" defaultButton="true" maxWidth="288.0" mnemonicParsing="false" text="CREAR" textFill="#210002">
+            <Button fx:id="btnCrear" defaultButton="true" maxWidth="288.0" mnemonicParsing="false" onAction="#onCrearClick" text="CREAR" textFill="#210002">
                <VBox.margin>
                   <Insets left="151.0" />
                </VBox.margin>
@@ -157,7 +157,7 @@
             </Button>
          </children>
       </VBox>
-      <Button fx:id="btnBack" layoutX="50.0" layoutY="50.0" mnemonicParsing="false" onAction="#onBackClick" text="BACK">
+      <Button fx:id="btnBack" layoutX="50.0" layoutY="50.0" mnemonicParsing="false" onAction="#onBackClick" text="ATRÁS">
          <padding>
             <Insets bottom="15.0" left="29.0" right="29.0" top="15.0" />
          </padding>

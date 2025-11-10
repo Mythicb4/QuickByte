@@ -1,17 +1,167 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="1024.0" prefWidth="1440.0" style="-fx-background-color: #c7e9ff;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.quickbite.QBloginFX">
+<AnchorPane prefHeight="1024.0" prefWidth="1440.0" style="-fx-background-color: F7D6A8;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.quickbite.QBEstudianteFX">
     <children>
-        <VBox alignment="CENTER" spacing="10" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="80.0" />
-          <Label layoutX="593.0" layoutY="496.0" text="Bienvenido Negocio" textFill="#00294d">
-              <font>
-                  <Font name="SansSerif Bold" size="26" />
-              </font>
-          </Label>
+      <Line endX="362.0" scaleX="3.0" startX="362.0" startY="1024.0" />
+      <Button fx:id="btnSalir" layoutX="1250.0" layoutY="50.0" mnemonicParsing="false" onAction="#onBtnSingup" prefHeight="50.0" prefWidth="140.0" text="SALIR">
+         <font>
+            <Font name="SansSerif Regular" size="15.4" />
+         </font>
+      </Button>
+      <VBox prefHeight="1024.0" prefWidth="360.0">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <HBox prefHeight="133.0" prefWidth="360.0">
+                     <children>
+                        <ImageView fx:id="imgLogo" fitHeight="67.12" fitWidth="67.12" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons/logo.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="50.0" top="50.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Label fx:id="lblLogo" text="QuickBite">
+                           <font>
+                              <Font name="SansSerif Bold" size="36.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="71.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Label fx:id="lblLogo1" text="Negocio">
+                     <font>
+                        <Font name="SansSerif Regular" size="25.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="50.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox prefHeight="843.0" prefWidth="360.0">
+               <children>
+                  <Button fx:id="btnTienda" minHeight="-Infinity" mnemonicParsing="false" prefHeight="76.0" prefWidth="360.0" text="Productos">
+                     <graphic>
+                        <ImageView fitHeight="41.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons/products.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets bottom="2.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="btnCarrito" minHeight="-Infinity" mnemonicParsing="false" prefHeight="76.0" prefWidth="360.0" text="Clientes">
+                     <graphic>
+                        <ImageView fitHeight="41.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons/clients.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets bottom="2.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="btnPreferencias" minHeight="-Infinity" mnemonicParsing="false" prefHeight="76.0" prefWidth="360.0" text="Ventas">
+                     <graphic>
+                        <ImageView fitHeight="41.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons/sells.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets bottom="2.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="btnHistorial" minHeight="-Infinity" mnemonicParsing="false" prefHeight="76.0" prefWidth="360.0" text="Inventario">
+                     <graphic>
+                        <ImageView fitHeight="41.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons/inventory.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets bottom="2.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="btnPerfil" minHeight="-Infinity" mnemonicParsing="false" prefHeight="76.0" prefWidth="360.0" text="Reportes">
+                     <graphic>
+                        <ImageView fitHeight="41.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons/report.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets bottom="2.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="btnHistorial1" minHeight="-Infinity" mnemonicParsing="false" prefHeight="76.0" prefWidth="360.0" text="QR Ventas">
+                     <graphic>
+                        <ImageView fitHeight="41.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons/qr.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnPerfil1" minHeight="-Infinity" mnemonicParsing="false" prefHeight="76.0" prefWidth="360.0" text="Configuración">
+                     <graphic>
+                        <ImageView fitHeight="41.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons/settings.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#210002" height="292.0" stroke="BLACK" strokeType="INSIDE" width="360.0" />
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <VBox layoutX="440.0" layoutY="160.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="950.0" AnchorPane.leftAnchor="431.0">
+         <children>
+                <Label text="Ventas Diarias" textFill="#00294d">
+                    <font>
+                        <Font name="SansSerif Regular" size="35.0" />
+                    </font>
+                </Label>
+            <HBox fx:id="HBCompraExpress" maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="340.0" prefWidth="950.0">
+               <VBox.margin>
+                  <Insets bottom="20.0" top="20.0" />
+               </VBox.margin>
+            </HBox>
+            <Label text="Productos de bajo Stock" textFill="#00294d">
+               <font>
+                  <Font name="SansSerif Regular" size="35.0" />
+               </font>
+            </Label>
+            <HBox fx:id="HBCompraExpress1" maxHeight="-Infinity" minWidth="-Infinity" prefHeight="264.0" prefWidth="950.0">
+               <VBox.margin>
+                  <Insets bottom="20.0" top="20.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
     </children>
 </AnchorPane>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefWidth="480" prefHeight="600" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.mycompany.quickbite.ProductFormFX">
+    <children>
+        <VBox spacing="12" alignment="TOP_CENTER" prefWidth="480" AnchorPane.topAnchor="20" AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20">
+            <children>
+                <Label text="Gestión de Producto">
+                    <font>
+                        <Font name="SansSerif Bold" size="22"/>
+                    </font>
+                </Label>
+
+                <GridPane hgap="10" vgap="10">
+                    <columnConstraints>
+                        <ColumnConstraints percentWidth="40"/>
+                        <ColumnConstraints percentWidth="60"/>
+                    </columnConstraints>
+
+                    <children>
+                        <Label text="Nombre:" GridPane.rowIndex="0"/>
+                        <TextField fx:id="txtName" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+                        <Label text="Precio:" GridPane.rowIndex="1"/>
+                        <TextField fx:id="txtPrice" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+                        <Label text="Categoría:" GridPane.rowIndex="2"/>
+                        <TextField fx:id="txtCategory" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+                        <Label text="Descripción:" GridPane.rowIndex="3"/>
+                        <TextArea fx:id="txtDescription" prefRowCount="3" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+                        <Label text="Stock:" GridPane.rowIndex="4"/>
+                        <TextField fx:id="txtStock" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+
+                        <Label text="Costo por unidad:" GridPane.rowIndex="5"/>
+                        <TextField fx:id="txtCost" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+
+                        <Label text="Proveedor:" GridPane.rowIndex="6"/>
+                        <TextField fx:id="txtSupplier" GridPane.columnIndex="1" GridPane.rowIndex="6"/>
+
+                        <Label text="Imagen:" GridPane.rowIndex="7"/>
+                        <HBox spacing="8" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                            <children>
+                                <TextField fx:id="txtImagePath" prefWidth="200"/>
+                                <Button text="..." onAction="#onSelectImage"/>
+                            </children>
+                        </HBox>
+                    </children>
+                </GridPane>
+
+                <HBox spacing="20" alignment="CENTER">
+                    <Button fx:id="btnSave" text="Guardar" prefWidth="120" onAction="#onSave"/>
+                    <Button fx:id="btnCancel" text="Cancelar" prefWidth="120" onAction="#onCancel"/>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

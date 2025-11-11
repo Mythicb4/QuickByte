@@ -2,14 +2,16 @@ com\mycompany\quickbite\dao\StudentDao$1.class
 com\mycompany\quickbite\util\Navigator.class
 com\mycompany\quickbite\model\Student.class
 com\mycompany\quickbite\model\Business.class
+com\mycompany\quickbite\QBProductFX.class
 com\mycompany\quickbite\QBsingupFX.class
 com\mycompany\quickbite\QBEstudianteFX.class
 com\mycompany\quickbite\model\Product.class
 com\mycompany\quickbite\util\AppState.class
-com\mycompany\quickbite\service\TestProductService.class
 com\mycompany\quickbite\dao\ProductDao$1.class
 com\mycompany\quickbite\service\ProductService.class
 com\mycompany\quickbite\QBloginFX.class
+com\mycompany\quickbite\ProductFormFX.class
+com\mycompany\quickbite\QBNegocioFX.class
 com\mycompany\quickbite\dao\BusinessDao$1.class
 com\mycompany\quickbite\dao\BusinessDao.class
 com\mycompany\quickbite\QuickBiteFX.class

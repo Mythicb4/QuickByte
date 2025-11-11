@@ -18,7 +18,7 @@
 <AnchorPane prefHeight="1024.0" prefWidth="1440.0" style="-fx-background-color: F7D6A8;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.quickbite.QBProductFX">
     <children>
       <Line endX="940.0" layoutX="20.0" layoutY="192.0" scaleX="3.0" startX="460.0" />
-      <Button fx:id="btnSalir" layoutX="1250.0" layoutY="50.0" mnemonicParsing="false" onAction="#onBtnSingup" prefHeight="50.0" prefWidth="140.0" text="SALIR">
+      <Button fx:id="btnAtras" layoutX="1250.0" layoutY="50.0" mnemonicParsing="false" onAction="#onBtnBack" prefHeight="50.0" prefWidth="140.0" text="ATRÁS">
          <font>
             <Font name="SansSerif Regular" size="15.4" />
          </font>
@@ -78,7 +78,7 @@
                </HBox.margin>
                <children>
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#210002" height="835.0" stroke="BLACK" strokeType="INSIDE" width="217.0" />
-                  <Button fx:id="btnAdd" alignment="TOP_CENTER" mnemonicParsing="false" prefHeight="35.0" prefWidth="153.0" text="Crear">
+                  <Button fx:id="btnAdd" alignment="TOP_CENTER" mnemonicParsing="false" onAction="#onAdd" prefHeight="35.0" prefWidth="153.0" text="Crear">
                      <StackPane.margin>
                         <Insets top="-681.0" />
                      </StackPane.margin>
@@ -90,7 +90,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="btnSearch" alignment="TOP_CENTER" mnemonicParsing="false" prefHeight="35.0" prefWidth="153.0" text="Consultar">
+                  <Button fx:id="btnSearch" alignment="TOP_CENTER" mnemonicParsing="false" onAction="#onSearch" prefHeight="35.0" prefWidth="153.0" text="Consultar">
                      <graphic>
                         <ImageView fitHeight="21.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -102,7 +102,7 @@
                         <Insets top="-566.0" />
                      </StackPane.margin>
                   </Button>
-                  <Button fx:id="btnEdit" alignment="TOP_CENTER" mnemonicParsing="false" prefHeight="35.0" prefWidth="153.0" text="Modificar">
+                  <Button fx:id="btnEdit" alignment="TOP_CENTER" mnemonicParsing="false" onAction="#onEdit" prefHeight="35.0" prefWidth="153.0" text="Modificar">
                      <graphic>
                         <ImageView fitHeight="21.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -114,7 +114,7 @@
                         <Insets top="-451.0" />
                      </StackPane.margin>
                   </Button>
-                  <Button fx:id="btnRemove" alignment="TOP_CENTER" mnemonicParsing="false" prefHeight="35.0" prefWidth="153.0" text="Eliminar">
+                  <Button fx:id="btnRemove" alignment="TOP_CENTER" mnemonicParsing="false" onAction="#onRemove" prefHeight="35.0" prefWidth="153.0" text="Eliminar">
                      <graphic>
                         <ImageView fitHeight="21.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
                            <image>

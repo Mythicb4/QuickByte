@@ -8,8 +8,9 @@ import java.util.Objects;
  */
 public class Product {
 
-    private static final int DEFAULT_MIN_STOCK = 10;
+   private static final int DEFAULT_MIN_STOCK = 10;
 
+    // Campos estándar
     private String id;
     private String name;
     private double price;
@@ -34,12 +35,13 @@ public class Product {
         this.price = price;
         this.category = category;
         this.description = description;
-        this.stock = stock;                // <- se asigna correctamente
         this.imagePath = imagePath;
         this.cost = cost;
         this.supplier = supplier;
-        this.minStock = minStock > 0 ? minStock : DEFAULT_MIN_STOCK;
-        this.enabled = this.stock > 0;
+        
+        // Uso los setters para aplicar la validación y lógica de enabled/minStock
+        setStock(stock);
+        setMinStock(minStock);
     }
 
     // ---------- Getters ----------

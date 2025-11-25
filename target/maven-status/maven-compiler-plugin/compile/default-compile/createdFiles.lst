@@ -17,4 +17,5 @@ com\mycompany\quickbite\dao\BusinessDao.class
 com\mycompany\quickbite\QuickBiteFX.class
 com\mycompany\quickbite\dao\StudentDao.class
 com\mycompany\quickbite\dao\ProductDao.class
+com\mycompany\quickbite\util\SessionContext.class
 com\mycompany\quickbite\QBtype.class

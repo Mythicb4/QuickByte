@@ -67,7 +67,7 @@ public class ProductFormFX {
             String imagePath = txtImagePath.getText();
 
             if (editingProduct == null) {
-                Product newProduct = new Product(name, price, category, description, stock, imagePath, cost, supplier, 5);
+                Product newProduct = new Product(name, price, category, description, stock, imagePath, cost, supplier, 0);
                 productService.createProduct(newProduct);
             } else {
                 editingProduct.setName(name);

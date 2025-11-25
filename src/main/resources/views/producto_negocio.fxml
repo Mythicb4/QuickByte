@@ -64,7 +64,7 @@
                   <TableColumn fx:id="colCategory" prefWidth="155.0" text="Categoria" />
                   <TableColumn fx:id="colStock" prefWidth="110.0" text="Stock" />
                   <TableColumn fx:id="colCost" prefWidth="135.0" text="Costo Und" />
-                  <TableColumn fx:id="ColProvider" prefWidth="135.0" text="Proveedor" />
+                  <TableColumn fx:id="colProvider" prefWidth="135.0" text="Proveedor" />
                   <TableColumn fx:id="colDescription" prefWidth="180.0" text="Descripción" />
                   <TableColumn fx:id="colImage" prefWidth="183.0" text="Imagen" />
               </columns>

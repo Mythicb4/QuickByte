@@ -1,0 +1,15 @@
+[
+  {
+    "id": "PRD-001",
+    "name": "Pastel de carne",
+    "price": 4000.0,
+    "category": "Fritos",
+    "description": "Pastel de carne",
+    "stock": 10,
+    "imagePath": "C:\\Users\\emman\\OneDrive\\Desktop\\QuickByte\\src\\main\\resources\\images\\icons\\products.png",
+    "cost": 2000.0,
+    "supplier": "Self",
+    "enabled": true,
+    "minStock": 0
+  }
+]

@@ -1,0 +1,28 @@
+[
+  {
+    "id": "PRD-001",
+    "name": "Cafe",
+    "price": 2000.0,
+    "category": "Bebidas calientes",
+    "description": "Cafe con leche",
+    "stock": 50,
+    "imagePath": "C:\\Users\\emman\\OneDrive\\Desktop\\QuickByte\\src\\main\\resources\\images\\icons\\logo.png",
+    "cost": 1000.0,
+    "supplier": "ColCafe",
+    "enabled": true,
+    "minStock": 0
+  },
+  {
+    "id": "PRD-002",
+    "name": "Banana",
+    "price": 500.0,
+    "category": "Frutas",
+    "description": "Banana",
+    "stock": 20,
+    "imagePath": "C:\\Users\\emman\\OneDrive\\Desktop\\QuickByte\\src\\main\\resources\\images\\icons\\remove.png",
+    "cost": 200.0,
+    "supplier": "Frutas.inc",
+    "enabled": true,
+    "minStock": 0
+  }
+]

@@ -4,6 +4,7 @@ import com.mycompany.quickbite.dao.BusinessDao;
 import com.mycompany.quickbite.dao.StudentDao;
 import com.mycompany.quickbite.util.AppState;
 import com.mycompany.quickbite.util.Navigator;
+import com.mycompany.quickbite.util.SessionContext;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -164,6 +165,8 @@ public class QBloginFX {
         boolean valid = false;
 
         if (selectedType.equals("negocio")) {
+            // Guardar el email en la sesión 
+            SessionContext.setLoggedInBusinessEmail(email);
             BusinessDao dao = new BusinessDao();
             valid = dao.validateCredentials(email, password);
         } else if (selectedType.equals("estudiante")) {

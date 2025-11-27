@@ -1,27 +1,54 @@
 package com.mycompany.quickbite;
 
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
- */
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TableView;
 
-import java.net.URL;
-import java.util.ResourceBundle;
-import javafx.fxml.Initializable;
+public class QBFacturaFX {
 
-/**
- * FXML Controller class
- *
- * @author emman
- */
-public class QBFacturaFX implements Initializable {
+    @FXML
+    private Button btnCerrar;
 
-    /**
-     * Initializes the controller class.
-     */
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-    }    
-    
+    @FXML
+    private Button btnImprimir;
+
+    @FXML
+    private Label lblCambio;
+
+    @FXML
+    private Label lblFecha;
+
+    @FXML
+    private Label lblHora;
+
+    @FXML
+    private Label lblId;
+
+    @FXML
+    private Label lblMetodo;
+
+    @FXML
+    private Label lblName;
+
+    @FXML
+    private Label lblRecibido;
+
+    @FXML
+    private Label lblTotal;
+
+    @FXML
+    private TableView<?> tblProductos;
+
+    @FXML
+    void onCerrar(ActionEvent event) {
+
+    }
+
+    @FXML
+    void onImprimir(ActionEvent event) {
+
+    }
+
 }

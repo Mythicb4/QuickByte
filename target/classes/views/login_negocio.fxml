@@ -56,7 +56,7 @@
             </VBox>
             <VBox prefHeight="843.0" prefWidth="360.0">
                <children>
-                  <Button fx:id="btnProduct" minHeight="-Infinity" mnemonicParsing="false" onAction="#onBtnProduct" prefHeight="76.0" prefWidth="360.0" text="Productos">
+                  <Button fx:id="btnProduct" minHeight="-Infinity" mnemonicParsing="false" onAction="#onProduct" prefHeight="76.0" prefWidth="360.0" text="Productos">
                      <graphic>
                         <ImageView fitHeight="41.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -68,7 +68,7 @@
                         <Insets bottom="2.0" />
                      </VBox.margin>
                   </Button>
-                  <Button fx:id="btnCarrito" minHeight="-Infinity" mnemonicParsing="false" prefHeight="76.0" prefWidth="360.0" text="Clientes">
+                  <Button fx:id="btnClientes" minHeight="-Infinity" mnemonicParsing="false" onAction="#onClientes" prefHeight="76.0" prefWidth="360.0" text="Clientes">
                      <graphic>
                         <ImageView fitHeight="41.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -80,7 +80,7 @@
                         <Insets bottom="2.0" />
                      </VBox.margin>
                   </Button>
-                  <Button fx:id="btnPreferencias" minHeight="-Infinity" mnemonicParsing="false" prefHeight="76.0" prefWidth="360.0" text="Ventas">
+                  <Button fx:id="btnVentas" minHeight="-Infinity" mnemonicParsing="false" onAction="#onVentas" prefHeight="76.0" prefWidth="360.0" text="Ventas">
                      <graphic>
                         <ImageView fitHeight="41.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -92,7 +92,7 @@
                         <Insets bottom="2.0" />
                      </VBox.margin>
                   </Button>
-                  <Button fx:id="btnHistorial" minHeight="-Infinity" mnemonicParsing="false" prefHeight="76.0" prefWidth="360.0" text="Inventario">
+                  <Button fx:id="btnInventario" minHeight="-Infinity" mnemonicParsing="false" onAction="#onInventario" prefHeight="76.0" prefWidth="360.0" text="Inventario">
                      <graphic>
                         <ImageView fitHeight="41.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -104,7 +104,7 @@
                         <Insets bottom="2.0" />
                      </VBox.margin>
                   </Button>
-                  <Button fx:id="btnPerfil" minHeight="-Infinity" mnemonicParsing="false" prefHeight="76.0" prefWidth="360.0" text="Reportes">
+                  <Button fx:id="btnReportes" minHeight="-Infinity" mnemonicParsing="false" onAction="#onReportes" prefHeight="76.0" prefWidth="360.0" text="Reportes">
                      <graphic>
                         <ImageView fitHeight="41.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -116,7 +116,7 @@
                         <Insets bottom="2.0" />
                      </VBox.margin>
                   </Button>
-                  <Button fx:id="btnHistorial1" minHeight="-Infinity" mnemonicParsing="false" prefHeight="76.0" prefWidth="360.0" text="QR Ventas">
+                  <Button fx:id="btnQr" minHeight="-Infinity" mnemonicParsing="false" onAction="#onQr" prefHeight="76.0" prefWidth="360.0" text="QR Ventas">
                      <graphic>
                         <ImageView fitHeight="41.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -125,7 +125,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="btnPerfil1" minHeight="-Infinity" mnemonicParsing="false" prefHeight="76.0" prefWidth="360.0" text="Configuración">
+                  <Button fx:id="btnConfiguracion" minHeight="-Infinity" mnemonicParsing="false" onAction="#onConfiguracion" prefHeight="76.0" prefWidth="360.0" text="Configuración">
                      <graphic>
                         <ImageView fitHeight="41.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -133,8 +133,23 @@
                            </image>
                         </ImageView>
                      </graphic>
+                     <VBox.margin>
+                        <Insets top="2.0" />
+                     </VBox.margin>
                   </Button>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#210002" height="292.0" stroke="BLACK" strokeType="INSIDE" width="360.0" />
+                  <Button fx:id="btnFacturacion" minHeight="-Infinity" mnemonicParsing="false" onAction="#onFacturacion" prefHeight="76.0" prefWidth="360.0" text="Facturación">
+                     <graphic>
+                        <ImageView fitHeight="41.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons/recibo.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets top="2.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#210002" height="215.0" stroke="BLACK" strokeType="INSIDE" width="360.0" />
                </children>
             </VBox>
          </children>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="1024.0" prefWidth="1440.0" style="-fx-background-color: F7D6A8;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.quickbite.QBClienteFX">
+   <children>
+      <Line endX="1421.0" layoutX="30.0" layoutY="202.0" startX="-38.0" />
+      <Button fx:id="btnAtras" layoutX="1260.0" layoutY="60.0" mnemonicParsing="false" onAction="#onBtnBack" prefHeight="50.0" prefWidth="140.0" text="ATRÁS">
+         <font>
+            <Font name="SansSerif Regular" size="15.4" />
+         </font>
+      </Button>
+      <VBox layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="309.0">
+         <children>
+            <HBox prefHeight="133.0" prefWidth="360.0">
+               <children>
+                  <ImageView fx:id="imgLogo" fitHeight="67.12" fitWidth="67.12" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons/logo.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="50.0" top="50.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label fx:id="lblLogo" text="QuickBite">
+                     <font>
+                        <Font name="SansSerif Bold" size="36.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="71.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <Label fx:id="lblLogo1" text="Negocio">
+               <font>
+                  <Font name="SansSerif Regular" size="25.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="50.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+      <HBox layoutX="10.0" layoutY="202.0" prefHeight="832.0" prefWidth="1440.0">
+         <children>
+            <TableView fx:id="tblClientes" minHeight="-Infinity" minWidth="-Infinity" prefHeight="779.0" prefWidth="936.0">
+               <columns>
+                  <TableColumn fx:id="colName" prefWidth="240.0" text="Nombre" />
+                  <TableColumn fx:id="colEmail" prefWidth="314.0" text="Email" />
+                  <TableColumn fx:id="colCedula" prefWidth="190.0" text="Cedula" />
+                  <TableColumn fx:id="colTelefono" prefWidth="190.0" text="Teléfono" />
+               </columns>
+               <HBox.margin>
+                  <Insets bottom="28.0" left="28.0" right="28.0" top="28.0" />
+               </HBox.margin>
+            </TableView>
+            <StackPane prefHeight="150.0" prefWidth="203.0">
+               <children>
+                  <TextField fx:id="txtBuscar" onAction="#onBuscarAction" prefHeight="42.0" prefWidth="243.0" promptText="Buscar" StackPane.alignment="TOP_CENTER">
+                     <StackPane.margin>
+                        <Insets top="41.0" />
+                     </StackPane.margin>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="30.0" />
+                     </padding>
+                     <font>
+                        <Font name="SansSerif Bold" size="15.0" />
+                     </font>
+                  </TextField>
+                  <ImageView fx:id="imgSearch" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="TOP_LEFT">
+                     <StackPane.margin>
+                        <Insets left="3.0" top="50.0" />
+                     </StackPane.margin>
+                     <image>
+                        <Image url="@../images/icons/search.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="217.0">
+               <HBox.margin>
+                  <Insets left="28.0" />
+               </HBox.margin>
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#210002" height="835.0" stroke="BLACK" strokeType="INSIDE" width="217.0">
+                     <StackPane.margin>
+                        <Insets right="-1.0" />
+                     </StackPane.margin></Rectangle>
+                  <Button fx:id="btnAdd" alignment="TOP_CENTER" mnemonicParsing="false" onAction="#onAdd" prefHeight="35.0" prefWidth="153.0" text="Crear">
+                     <StackPane.margin>
+                        <Insets top="-681.0" />
+                     </StackPane.margin>
+                     <graphic>
+                        <ImageView fitHeight="21.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons/add.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnRemove" alignment="TOP_CENTER" mnemonicParsing="false" onAction="#onRemove" prefHeight="35.0" prefWidth="153.0" text="Eliminar">
+                     <graphic>
+                        <ImageView fitHeight="21.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons/remove.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <StackPane.margin>
+                        <Insets top="-451.0" />
+                     </StackPane.margin>
+                  </Button>
+                  <Button fx:id="btnEdit" alignment="TOP_CENTER" mnemonicParsing="false" onAction="#onEdit" prefHeight="35.0" prefWidth="153.0" text="Modificar">
+                     <graphic>
+                        <ImageView fitHeight="21.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons/edit_24dp_602124_FILL0_wght400_GRAD0_opsz24.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <StackPane.margin>
+                        <Insets top="-566.0" />
+                     </StackPane.margin>
+                  </Button>
+               </children>
+            </StackPane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

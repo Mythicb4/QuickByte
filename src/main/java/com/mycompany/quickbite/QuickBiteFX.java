@@ -10,11 +10,17 @@ import java.net.URL;
 
 public class QuickBiteFX extends Application {
 
+    // Paso 1: Campo estático para almacenar el Stage principal
+    private static Stage mainStage; 
+
     @Override
     public void start(Stage stage) throws Exception {
+        // Paso 2: Asignar el Stage principal
+        mainStage = stage; 
+        
         // Usa ruta absoluta desde resources
-        URL fxmlUrl = getClass().getResource("/views/login.fxml");
-        System.out.println("Resolving resource /views/producto_negocio.fxml -> " + fxmlUrl);
+        URL fxmlUrl = getClass().getResource("/views/login_estudiante.fxml");
+        System.out.println("Resolving resource /views/login_negocio.fxml -> " + fxmlUrl);
         if (fxmlUrl == null) {
             throw new RuntimeException("FXML no encontrado: /views/producto_negocio.fxml. Verifica src/main/resources/views/producto_negocio.fxml");
         }
@@ -24,6 +30,11 @@ public class QuickBiteFX extends Application {
         stage.setScene(scene);
         stage.setTitle("QuickByte - Login");
         stage.show();
+    }
+    
+    // Paso 3: Método estático para obtener la referencia al Stage principal
+    public static Stage getMainStage() {
+        return mainStage;
     }
 
     public static void main(String[] args) {

@@ -1,0 +1,15 @@
+[
+  {
+    "id": "PRD-001",
+    "name": "Banana",
+    "price": 1500.0,
+    "category": "Frutas",
+    "description": "Banana",
+    "stock": 67,
+    "imagePath": "C:\\Users\\emman\\OneDrive\\Desktop\\QuickByte\\src\\main\\resources\\images\\icons\\calendar.png",
+    "cost": 400.0,
+    "supplier": "fruit.s.a.s",
+    "enabled": true,
+    "minStock": 0
+  }
+]

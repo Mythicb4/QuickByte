@@ -1,5 +1,6 @@
 package com.mycompany.quickbite;
 
+import com.mycompany.quickbite.util.Navigator;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -47,9 +48,6 @@ public class QBEstudianteFX {
     private Button btnHistorial;
 
     @FXML
-    private Button btnMore;
-
-    @FXML
     private Button btnPerfil;
 
     @FXML
@@ -83,6 +81,9 @@ public class QBEstudianteFX {
     private Label lblLogo;
 
     @FXML
+    private Label lblLogo1;
+
+    @FXML
     private Label lblPName;
 
     @FXML
@@ -107,8 +108,33 @@ public class QBEstudianteFX {
     private Label lblPPrice3;
 
     @FXML
-    void onBtnSingup(ActionEvent event) {
+    void onBtnSalir(ActionEvent event) {
+        Navigator.navigateTo("/views/login.fxml", "login", true, event);
+    }
 
+    @FXML
+    void onCarrito(ActionEvent event) {
+        Navigator.navigateTo("/views/carrito_estudiante.fxml", "carrito", true, event);
+    }
+
+    @FXML
+    void onHistorial(ActionEvent event) {
+        Navigator.navigateTo("/views/historial_estudiante.fxml", "historial", true, event);
+    }
+
+    @FXML
+    void onPerfil(ActionEvent event) {
+
+    }
+
+    @FXML
+    void onPreferencias(ActionEvent event) {
+        Navigator.navigateTo("/views/preferencia_estudiante.fxml", "preferencia", true, event);
+    }
+
+    @FXML
+    void onTienda(ActionEvent event) {
+        Navigator.navigateTo("/views/tiendas_estudiante.fxml", "tiendas", true, event);
     }
 
 }

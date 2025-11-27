@@ -1,26 +1,47 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
- */
 package com.mycompany.quickbite;
 
-import java.net.URL;
-import java.util.ResourceBundle;
-import javafx.fxml.Initializable;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 
-/**
- * FXML Controller class
- *
- * @author emman
- */
-public class QBConfiguracionFX implements Initializable {
+public class QBConfiguracionFX {
 
-    /**
-     * Initializes the controller class.
-     */
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-    }    
-    
+    @FXML
+    private Button btnCancel;
+
+    @FXML
+    private Button btnDelete;
+
+    @FXML
+    private Button btnSave;
+
+    @FXML
+    private Label lblEmail;
+
+    @FXML
+    private TextField txtContraseña;
+
+    @FXML
+    private TextField txtName;
+
+    @FXML
+    private TextField txtUbicacion;
+
+    @FXML
+    void onCancel(ActionEvent event) {
+        
+    }
+
+    @FXML
+    void onDeleteAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void onSave(ActionEvent event) {
+
+    }
+
 }

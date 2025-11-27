@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="480" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.quickbite.QBConfiguracionFX">
+    <children>
+        <VBox alignment="TOP_CENTER" prefWidth="480" spacing="12" AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20" AnchorPane.topAnchor="20">
+            <children>
+                <Label text="Configuracion">
+                    <font>
+                        <Font name="SansSerif Bold" size="22" />
+                    </font>
+                </Label>
+
+                <GridPane hgap="10" prefWidth="440.0" vgap="10">
+                    <columnConstraints>
+                        <ColumnConstraints percentWidth="40" />
+                        <ColumnConstraints percentWidth="60" />
+                    </columnConstraints>
+
+                    <children>
+                        <Label text="Nombre" GridPane.rowIndex="0" />
+                        <TextField fx:id="txtName" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                        <Label text="Contraseña" GridPane.rowIndex="1" />
+                        <TextField fx:id="txtContraseña" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                        <Label text="Ubicación" GridPane.rowIndex="2" />
+                        <TextField fx:id="txtUbicacion" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label text="Email" GridPane.rowIndex="4" />
+                  <Label fx:id="lblEmail" text="&quot;Email del negocio&quot;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                    </children>
+               <rowConstraints>
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+                  <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+               </rowConstraints>
+                </GridPane>
+      
+                <HBox alignment="CENTER" prefWidth="440.0" spacing="20">
+                    <Button fx:id="btnSave" onAction="#onSave" prefWidth="120" text="Confirmar" />
+                    <Button fx:id="btnCancel" onAction="#onCancel" prefWidth="120" text="Cancelar" />
+                </HBox>
+            </children>
+        </VBox>
+      <Button fx:id="btnDelete" layoutX="180.0" layoutY="310.0" onAction="#onDeleteAction" prefWidth="120" text="Eliminar Cuenta" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600" prefWidth="480" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.quickbite.QBQrFX">
+    <children>
+        <VBox alignment="TOP_CENTER" prefWidth="480" spacing="12" AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20" AnchorPane.topAnchor="20">
+            <children>
+                <Label text="Tu codigo Qr para validar">
+                    <font>
+                        <Font name="SansSerif Bold" size="22" />
+                    </font>
+                </Label>
+            <Label fx:id="lblName" text="¡Pedido Confirmado!">
+               <font>
+                  <Font name="SansSerif Bold" size="15.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Label>
+            <HBox alignment="CENTER" spacing="20" />
+            <ImageView fx:id="imgQr" fitHeight="251.0" fitWidth="273.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="lblTotal" text="Muestra esto en la cafetería">
+               <font>
+                  <Font name="SansSerif Bold" size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="lblName" text="My Cafetería p1 101">
+               <font>
+                  <Font name="SansSerif Bold" size="15.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="lblProductos" prefHeight="46.0" prefWidth="222.0" text="Pedido: Croisantt, Empanadas ">
+               <font>
+                  <Font name="SansSerif Bold" size="15.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="lblTotal" text="Total: ">
+               <font>
+                  <Font name="SansSerif Bold" size="15.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Label>
+
+                <HBox alignment="CENTER" spacing="20">
+                    <Button fx:id="btnCancelar" onAction="#onCancelar" prefWidth="120" text="Cancelar" />
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

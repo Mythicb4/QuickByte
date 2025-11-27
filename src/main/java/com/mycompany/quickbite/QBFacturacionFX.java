@@ -1,5 +1,6 @@
 package com.mycompany.quickbite;
 
+import com.mycompany.quickbite.util.Navigator;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -79,7 +80,7 @@ public class QBFacturacionFX {
 
     @FXML
     void onBtnBack(ActionEvent event) {
-
+        Navigator.navigateTo("/views/login_negocio.fxml", "dashboard_negocio", true, event);
     }
 
     @FXML

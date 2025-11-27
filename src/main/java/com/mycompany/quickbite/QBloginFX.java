@@ -177,9 +177,9 @@ public class QBloginFX {
         if (valid) {
            System.out.println("✅ Bienvenido, " + selectedType + "!");
             if (selectedType.equals("negocio")) {
-                Navigator.navigateTo("/views/login_negocio.fxml", "dashboard_negocio", event);
+                Navigator.navigateTo("/views/login_negocio.fxml", "dashboard_negocio", true, event);
             } else {
-                Navigator.navigateTo("/views/login_estudiante.fxml", "dashboard_estudiante", event);
+                Navigator.navigateTo("/views/login_estudiante.fxml", "dashboard_estudiante", true, event);
             }
         } else {
            System.out.println("❌ Email o contraseña incorrectos.");
@@ -189,7 +189,7 @@ public class QBloginFX {
     // Evento del botón "Singup"
     @FXML
     private void onBtnSingup(ActionEvent event) {
-        Navigator.navigateTo("/views/type.fxml", "type", event);
+        Navigator.navigateTo("/views/type.fxml", "type", true, event);
     }
 
     // Evento del Hyperlink "Recuperar contraseña"

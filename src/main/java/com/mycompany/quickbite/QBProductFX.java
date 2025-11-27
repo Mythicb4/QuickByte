@@ -165,7 +165,7 @@ public class QBProductFX implements Initializable {
     
     @FXML 
     private void onBtnBack(ActionEvent event) {
-        Navigator.navigateTo("/views/login_negocio.fxml", "dashboard_negocio", event);
+        Navigator.navigateTo("/views/login_negocio.fxml", "dashboard_negocio", true, event);
     }
     
     // --- Lógica de Formulario ---

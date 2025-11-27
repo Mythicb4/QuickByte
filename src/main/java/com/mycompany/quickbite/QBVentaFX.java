@@ -15,19 +15,19 @@ public class QBVentaFX {
     private Button btnSave;
 
     @FXML
-    private TextField txtCategory;
+    private TextField txtCliente;
 
     @FXML
-    private TextArea txtDescription;
+    private TextField txtIngreso;
 
     @FXML
-    private TextField txtName;
+    private TextField txtMetodo;
 
     @FXML
-    private TextField txtPrice;
+    private TextArea txtProductos;
 
     @FXML
-    private TextField txtStock;
+    private TextField txtTotal;
 
     @FXML
     void onCancel(ActionEvent event) {

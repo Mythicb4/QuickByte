@@ -19,7 +19,7 @@ public class QuickBiteFX extends Application {
         mainStage = stage; 
         
         // Usa ruta absoluta desde resources
-        URL fxmlUrl = getClass().getResource("/views/login_estudiante.fxml");
+        URL fxmlUrl = getClass().getResource("/views/login.fxml");
         System.out.println("Resolving resource /views/login_negocio.fxml -> " + fxmlUrl);
         if (fxmlUrl == null) {
             throw new RuntimeException("FXML no encontrado: /views/producto_negocio.fxml. Verifica src/main/resources/views/producto_negocio.fxml");

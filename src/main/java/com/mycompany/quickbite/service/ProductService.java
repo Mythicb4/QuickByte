@@ -93,4 +93,18 @@ public class ProductService {
                 .filter(p -> !p.isEnabled())
                 .count();
     }
+    
+    public void updateStock(String productId, int quantityChange) throws Exception {
+        Product product = getProductById(productId)
+            .orElseThrow(() -> new NoSuchElementException("Producto no encontrado para actualizar stock: " + productId));
+
+        int newStock = product.getStock() + quantityChange;
+        if (newStock < 0) {
+            throw new Exception("Stock insuficiente para el producto: " + product.getName() + 
+                                ". Disponible: " + product.getStock() + ", Solicitado: " + (-quantityChange));
+        }
+
+        product.setStock(newStock); 
+        productDao.updateProduct(product);
+    }
 }

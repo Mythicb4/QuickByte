@@ -1,0 +1,212 @@
+[
+  {
+    "id": "CLI-001",
+    "nombre": "Ana María López",
+    "cedula": "1000456789",
+    "email": "anamaria.lopez@elpoli.edu.co",
+    "telefono": "3001234567"
+  },
+  {
+    "id": "CLI-002",
+    "nombre": "Carlos Andrés Pérez",
+    "cedula": "1048439001",
+    "email": "carlos.perez@elpoli.edu.co",
+    "telefono": "3102345678"
+  },
+  {
+    "id": "CLI-003",
+    "nombre": "Diana Carolina Ruiz",
+    "cedula": "1048439002",
+    "email": "diana.ruiz@elpoli.edu.co",
+    "telefono": "3113456789"
+  },
+  {
+    "id": "CLI-004",
+    "nombre": "Carlos Eduardo Gomez",
+    "cedula": "9876543210",
+    "email": "carlos.gomez@elpoli.edu.co",
+    "telefono": "3204567890"
+  },
+  {
+    "id": "CLI-005",
+    "nombre": "Emma Echenique",
+    "cedula": "1048439490",
+    "email": "emmanuelechenique@elpoli",
+    "telefono": "3015678901"
+  },
+  {
+    "id": "CLI-006",
+    "nombre": "Fernando José Torres",
+    "cedula": "1001567890",
+    "email": "fernando.torres@elpoli.edu.co",
+    "telefono": "3126789012"
+  },
+  {
+    "id": "CLI-007",
+    "nombre": "Gabriela Paz",
+    "cedula": "1048439003",
+    "email": "gabriela.paz@elpoli.edu.co",
+    "telefono": "3137890123"
+  },
+  {
+    "id": "CLI-008",
+    "nombre": "Héctor Fabio Ramírez",
+    "cedula": "1002678901",
+    "email": "hector.ramirez@elpoli.edu.co",
+    "telefono": "3148901234"
+  },
+  {
+    "id": "CLI-009",
+    "nombre": "Isabel Cristina Soto",
+    "cedula": "1048439004",
+    "email": "isabel.soto@elpoli.edu.co",
+    "telefono": "3159012345"
+  },
+  {
+    "id": "CLI-010",
+    "nombre": "Juan Sebastián Vargas",
+    "cedula": "1003789012",
+    "email": "juan.vargas@elpoli.edu.co",
+    "telefono": "3000123456"
+  },
+  {
+    "id": "CLI-011",
+    "nombre": "Karen Julieta Morales",
+    "cedula": "1048439005",
+    "email": "karen.morales@elpoli.edu.co",
+    "telefono": "3101234567"
+  },
+  {
+    "id": "CLI-012",
+    "nombre": "Luis Alfredo Castro",
+    "cedula": "1004890123",
+    "email": "luis.castro@elpoli.edu.co",
+    "telefono": "3112345678"
+  },
+  {
+    "id": "CLI-013",
+    "nombre": "María Fernanda Gil",
+    "cedula": "1048439006",
+    "email": "maria.gil@elpoli.edu.co",
+    "telefono": "3203456789"
+  },
+  {
+    "id": "CLI-014",
+    "nombre": "Nicolás Esteban Ríos",
+    "cedula": "1005901234",
+    "email": "nicolas.rios@elpoli.edu.co",
+    "telefono": "3014567890"
+  },
+  {
+    "id": "CLI-015",
+    "nombre": "Oscar David Mendoza",
+    "cedula": "1048439007",
+    "email": "oscar.mendoza@elpoli.edu.co",
+    "telefono": "3125678901"
+  },
+  {
+    "id": "CLI-016",
+    "nombre": "Paula Andrea Jimenez",
+    "cedula": "1006012345",
+    "email": "paula.jimenez@elpoli.edu.co",
+    "telefono": "3136789012"
+  },
+  {
+    "id": "CLI-017",
+    "nombre": "María José Quintero",
+    "cedula": "1048439008",
+    "email": "mariajose.quintero@elpoli.edu.co",
+    "telefono": "3147890123"
+  },
+  {
+    "id": "CLI-018",
+    "nombre": "Ricardo Antonio Vega",
+    "cedula": "1007123456",
+    "email": "ricardo.vega@elpoli.edu.co",
+    "telefono": "3158901234"
+  },
+  {
+    "id": "CLI-019",
+    "nombre": "Sandra Milena Ortiz",
+    "cedula": "1048439009",
+    "email": "sandra.ortiz@elpoli.edu.co",
+    "telefono": "3009012345"
+  },
+  {
+    "id": "CLI-020",
+    "nombre": "Tomás Felipe Cruz",
+    "cedula": "1008234567",
+    "email": "tomas.cruz@elpoli.edu.co",
+    "telefono": "3100123456"
+  },
+  {
+    "id": "CLI-021",
+    "nombre": "Valentina Sofia Luna",
+    "cedula": "1048439010",
+    "email": "valentina.luna@elpoli.edu.co",
+    "telefono": "3111234567"
+  },
+  {
+    "id": "CLI-022",
+    "nombre": "William Javier Diaz",
+    "cedula": "1009345678",
+    "email": "william.diaz@elpoli.edu.co",
+    "telefono": "3202345678"
+  },
+  {
+    "id": "CLI-023",
+    "nombre": "Ximena Patricia Soler",
+    "cedula": "1048439011",
+    "email": "ximena.soler@elpoli.edu.co",
+    "telefono": "3013456789"
+  },
+  {
+    "id": "CLI-024",
+    "nombre": "Yerson Camilo Blanco",
+    "cedula": "1010456789",
+    "email": "yerson.blanco@elpoli.edu.co",
+    "telefono": "3124567890"
+  },
+  {
+    "id": "CLI-025",
+    "nombre": "Zulma Beatriz Cano",
+    "cedula": "1048439012",
+    "email": "zulma.cano@elpoli.edu.co",
+    "telefono": "3135678901"
+  },
+  {
+    "id": "CLI-026",
+    "nombre": "Carlos Alberto Leon",
+    "cedula": "1011567890",
+    "email": "carlos.leon@elpoli.edu.co",
+    "telefono": "3146789012"
+  },
+  {
+    "id": "CLI-027",
+    "nombre": "Ana Gabriela Pardo",
+    "cedula": "1048439013",
+    "email": "anagabriela.pardo@elpoli.edu.co",
+    "telefono": "3157890123"
+  },
+  {
+    "id": "CLI-028",
+    "nombre": "Jorge Ivan Mejia",
+    "cedula": "1012678901",
+    "email": "jorge.mejia@elpoli.edu.co",
+    "telefono": "3008901234"
+  },
+  {
+    "id": "CLI-029",
+    "nombre": "Laura Marcela Henao",
+    "cedula": "1048439014",
+    "email": "laura.henao@elpoli.edu.co",
+    "telefono": "3109012345"
+  },
+  {
+    "id": "CLI-030",
+    "nombre": "Martin Elias Orozco",
+    "cedula": "1013789012",
+    "email": "martin.orozco@elpoli.edu.co",
+    "telefono": "3110123456"
+  }
+]

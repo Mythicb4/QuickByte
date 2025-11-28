@@ -18,6 +18,7 @@ public class SessionContext {
         }
         loggedInBusinessEmail = email.trim();
     }
+    
 
     /**
      * Obtiene el email del negocio actual.

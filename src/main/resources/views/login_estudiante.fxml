@@ -16,7 +16,7 @@
 <AnchorPane prefHeight="1024.0" prefWidth="1440.0" style="-fx-background-color: F7D6A8;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.quickbite.QBEstudianteFX">
     <children>
       <Line endX="362.0" scaleX="3.0" startX="362.0" startY="1024.0" />
-      <Button fx:id="btnSalir" layoutX="1250.0" layoutY="50.0" mnemonicParsing="false" onAction="#onBtnSingup" prefHeight="50.0" prefWidth="140.0" text="SALIR">
+      <Button fx:id="btnSalir" layoutX="1250.0" layoutY="50.0" mnemonicParsing="false" onAction="#handleLogout" prefHeight="50.0" prefWidth="140.0" text="SALIR">
          <font>
             <Font name="SansSerif Regular" size="15.4" />
          </font>
@@ -69,7 +69,7 @@
                         <Insets bottom="2.0" />
                      </VBox.margin>
                   </Button>
-                  <Button fx:id="btnCarrito" minHeight="-Infinity" mnemonicParsing="false" prefHeight="76.0" prefWidth="360.0" text="Carrito">
+                  <Button fx:id="btnCarrito" minHeight="-Infinity" mnemonicParsing="false" prefHeight="76.0" prefWidth="360.0" text="Carrito" onAction="#handleViewCartAndGenerateQR">
                      <graphic>
                         <ImageView fitHeight="41.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -165,7 +165,7 @@
                               <Font name="SansSerif Regular" size="15.0" />
                            </font>
                         </Label>
-                        <Button fx:id="btnCompraExpress" mnemonicParsing="false" prefHeight="37.0" prefWidth="168.0" text="Compra express" StackPane.alignment="BOTTOM_CENTER">
+                        <Button fx:id="btnCompraExpress" mnemonicParsing="false" prefHeight="37.0" prefWidth="168.0" text="Compra express" StackPane.alignment="BOTTOM_CENTER" onAction="#handleProduct1Order">
                            <StackPane.margin>
                               <Insets bottom="34.0" />
                            </StackPane.margin>
@@ -200,7 +200,7 @@
                               <Font name="SansSerif Regular" size="15.0" />
                            </font>
                         </Label>
-                        <Button fx:id="btnCompraExpress1" mnemonicParsing="false" prefHeight="37.0" prefWidth="168.0" text="Compra express" StackPane.alignment="BOTTOM_CENTER">
+                        <Button fx:id="btnCompraExpress1" mnemonicParsing="false" prefHeight="37.0" prefWidth="168.0" text="Compra express" StackPane.alignment="BOTTOM_CENTER" onAction="#handleProduct2Order">
                            <StackPane.margin>
                               <Insets bottom="34.0" />
                            </StackPane.margin>
@@ -238,7 +238,7 @@
                               <Font name="SansSerif Regular" size="15.0" />
                            </font>
                         </Label>
-                        <Button fx:id="btnCompraExpress2" mnemonicParsing="false" prefHeight="37.0" prefWidth="168.0" text="Compra express" StackPane.alignment="BOTTOM_CENTER">
+                        <Button fx:id="btnCompraExpress2" mnemonicParsing="false" prefHeight="37.0" prefWidth="168.0" text="Compra express" StackPane.alignment="BOTTOM_CENTER" onAction="#handleProduct3Order">
                            <StackPane.margin>
                               <Insets bottom="34.0" />
                            </StackPane.margin>
@@ -276,7 +276,7 @@
                               <Font name="SansSerif Regular" size="15.0" />
                            </font>
                         </Label>
-                        <Button fx:id="btnCompraExpress3" mnemonicParsing="false" prefHeight="37.0" prefWidth="168.0" text="Compra express" StackPane.alignment="BOTTOM_CENTER">
+                        <Button fx:id="btnCompraExpress3" mnemonicParsing="false" prefHeight="37.0" prefWidth="168.0" text="Compra express" StackPane.alignment="BOTTOM_CENTER" onAction="#handleProduct4Order">
                            <StackPane.margin>
                               <Insets bottom="34.0" />
                            </StackPane.margin>

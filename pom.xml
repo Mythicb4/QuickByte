@@ -12,18 +12,25 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <!-- Ajusta a la versión de Java que usas (estás usando JDK 24) -->
-    <maven.compiler.source>24</maven.compiler.source>
-    <maven.compiler.target>24</maven.compiler.target>
-
+    
     <!-- Versión de JavaFX: usamos 24 porque tu JDK es 24 -->
     <javafx.version>24</javafx.version>
 
     <!-- Plataforma: windows / win / win-x64 según repositorio. 
          Si tu JDK/OS es Windows x64, usa 'win' o 'win-x64'. -->
     <javafx.platform>win</javafx.platform>
+    <zxing.version>3.5.3</zxing.version>
+    <!-- Ajusta a la versión de Java que usas (estás usando JDK 24) -->
+    <maven.compiler.release>24</maven.compiler.release>
   </properties>
-
+  
+  <repositories>
+    <repository>
+        <id>jitpack.io</id>
+        <url>https://jitpack.io</url>
+    </repository>
+  </repositories>
+    
   <dependencies>
     <!-- Control UI (incluye graphics, base) -->
     <dependency>
@@ -48,34 +55,55 @@
         <version>2.13.1</version>
       <type>jar</type>
     </dependency>
+    <dependency>
+        <groupId>com.google.zxing</groupId>
+        <artifactId>core</artifactId>
+        <version>${zxing.version}</version>
+    </dependency>
+    <dependency>
+        <groupId>com.google.zxing</groupId>
+        <artifactId>javase</artifactId>
+        <version>${zxing.version}</version>
+    </dependency>
+
+    <dependency>
+        <groupId>com.github.sarxos</groupId>
+        <artifactId>webcam-capture</artifactId>
+        <version>0.3.12</version>
+    </dependency>
   </dependencies>
 
   <build>
     <plugins>
       <!-- Compiler plugin: opcionalmente fija release si quieres -->
       <plugin>
+        <groupId>org.apache.maven.plugins</groupId>  
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.11.0</version>
+        <version>3.13.0</version>
         <configuration>
           <source>${maven.compiler.source}</source>
           <target>${maven.compiler.target}</target>
+          <source>21</source> <target>21</target>
           <compilerArgs>
             <arg>--enable-preview</arg>
           </compilerArgs>
         </configuration>
       </plugin>
-
+   
       <!-- Plugin oficial (openjfx) para correr con mvn javafx:run -->
       <plugin>
         <groupId>org.openjfx</groupId>
         <artifactId>javafx-maven-plugin</artifactId>
         <version>0.0.8</version>
         <configuration>
-          <!-- Pon aquí la clase principal completa con package -->
-          <mainClass>com.mycompany.quickbite.QuickBiteFX</mainClass>
+            <mainClass>com.mycompany.quickbite.QuickBiteFX</mainClass>
+        
+            <modulepath>
+                <dependency>javafx-controls</dependency>
+                <dependency>javafx-fxml</dependency>
+            </modulepath>
         </configuration>
       </plugin>
     </plugins>
   </build>
-    <name>QuickBite</name>
 </project>

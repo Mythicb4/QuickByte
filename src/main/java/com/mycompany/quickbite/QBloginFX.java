@@ -173,6 +173,8 @@ public class QBloginFX {
 
         if (valid) {
            System.out.println("✅ Bienvenido, " + selectedType + "!");
+           AppState.setUserEmail(email);
+           
             if (selectedType.equals("negocio")) {
                 Navigator.navigateTo("/views/login_negocio.fxml", "dashboard_negocio", event);
             } else {

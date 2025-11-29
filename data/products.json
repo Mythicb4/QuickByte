@@ -13,19 +13,6 @@
     "minStock": 5
   },
   {
-    "id": "PRD-002",
-    "name": "Banana",
-    "price": 500.0,
-    "category": "Frutas",
-    "description": "Banana",
-    "stock": 20,
-    "imagePath": "C:\\Users\\emman\\OneDrive\\Desktop\\QuickByte\\src\\main\\resources\\images\\icons\\logo.png",
-    "cost": 200.0,
-    "supplier": "Banana.inc",
-    "enabled": true,
-    "minStock": 5
-  },
-  {
     "id": "PRD-003",
     "name": "Manzana",
     "price": 1500.0,
@@ -35,6 +22,19 @@
     "imagePath": "C:\\Users\\emman\\OneDrive\\Desktop\\QuickByte\\src\\main\\resources\\images\\icons\\carrito.png",
     "cost": 500.0,
     "supplier": "Banana.inc",
+    "enabled": true,
+    "minStock": 5
+  },
+  {
+    "id": "PRD-004",
+    "name": "Buñuelo",
+    "price": 3000.0,
+    "category": "parba",
+    "description": "bon",
+    "stock": 50,
+    "imagePath": "",
+    "cost": 800.0,
+    "supplier": "Mybuñuelo",
     "enabled": true,
     "minStock": 5
   }

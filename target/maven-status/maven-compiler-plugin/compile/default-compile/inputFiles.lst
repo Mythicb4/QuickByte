@@ -1,17 +1,23 @@
-C:\Users\emman\OneDrive\Desktop\QuickByte\src\main\java\com\mycompany\quickbite\QBEstudianteFX.java
-C:\Users\emman\OneDrive\Desktop\QuickByte\src\main\java\com\mycompany\quickbite\dao\BusinessDao.java
-C:\Users\emman\OneDrive\Desktop\QuickByte\src\main\java\com\mycompany\quickbite\dao\ProductDao.java
-C:\Users\emman\OneDrive\Desktop\QuickByte\src\main\java\com\mycompany\quickbite\QBsingupFX.java
-C:\Users\emman\OneDrive\Desktop\QuickByte\src\main\java\com\mycompany\quickbite\service\ProductService.java
-C:\Users\emman\OneDrive\Desktop\QuickByte\src\main\java\com\mycompany\quickbite\model\Product.java
-C:\Users\emman\OneDrive\Desktop\QuickByte\src\main\java\com\mycompany\quickbite\ProductFormFX.java
-C:\Users\emman\OneDrive\Desktop\QuickByte\src\main\java\com\mycompany\quickbite\QBNegocioFX.java
-C:\Users\emman\OneDrive\Desktop\QuickByte\src\main\java\com\mycompany\quickbite\model\Student.java
-C:\Users\emman\OneDrive\Desktop\QuickByte\src\main\java\com\mycompany\quickbite\QBloginFX.java
-C:\Users\emman\OneDrive\Desktop\QuickByte\src\main\java\com\mycompany\quickbite\util\AppState.java
-C:\Users\emman\OneDrive\Desktop\QuickByte\src\main\java\com\mycompany\quickbite\util\Navigator.java
-C:\Users\emman\OneDrive\Desktop\QuickByte\src\main\java\com\mycompany\quickbite\QBtype.java
-C:\Users\emman\OneDrive\Desktop\QuickByte\src\main\java\com\mycompany\quickbite\QuickBiteFX.java
-C:\Users\emman\OneDrive\Desktop\QuickByte\src\main\java\com\mycompany\quickbite\dao\StudentDao.java
-C:\Users\emman\OneDrive\Desktop\QuickByte\src\main\java\com\mycompany\quickbite\QBProductFX.java
-C:\Users\emman\OneDrive\Desktop\QuickByte\src\main\java\com\mycompany\quickbite\model\Business.java
+C:\Users\USUARIO CAB\Desktop\NetbeansQB\QuickByte\QuickByte\src\main\java\com\mycompany\quickbite\dao\BusinessDao.java
+C:\Users\USUARIO CAB\Desktop\NetbeansQB\QuickByte\QuickByte\src\main\java\com\mycompany\quickbite\dao\ProductDao.java
+C:\Users\USUARIO CAB\Desktop\NetbeansQB\QuickByte\QuickByte\src\main\java\com\mycompany\quickbite\dao\StudentDao.java
+C:\Users\USUARIO CAB\Desktop\NetbeansQB\QuickByte\QuickByte\src\main\java\com\mycompany\quickbite\model\Business.java
+C:\Users\USUARIO CAB\Desktop\NetbeansQB\QuickByte\QuickByte\src\main\java\com\mycompany\quickbite\model\Product.java
+C:\Users\USUARIO CAB\Desktop\NetbeansQB\QuickByte\QuickByte\src\main\java\com\mycompany\quickbite\model\Student.java
+C:\Users\USUARIO CAB\Desktop\NetbeansQB\QuickByte\QuickByte\src\main\java\com\mycompany\quickbite\OrdenarProducto.java
+C:\Users\USUARIO CAB\Desktop\NetbeansQB\QuickByte\QuickByte\src\main\java\com\mycompany\quickbite\ProductFormFX.java
+C:\Users\USUARIO CAB\Desktop\NetbeansQB\QuickByte\QuickByte\src\main\java\com\mycompany\quickbite\QBcarritoFX.java
+C:\Users\USUARIO CAB\Desktop\NetbeansQB\QuickByte\QuickByte\src\main\java\com\mycompany\quickbite\QBEstudianteFX.java
+C:\Users\USUARIO CAB\Desktop\NetbeansQB\QuickByte\QuickByte\src\main\java\com\mycompany\quickbite\QBloginFX.java
+C:\Users\USUARIO CAB\Desktop\NetbeansQB\QuickByte\QuickByte\src\main\java\com\mycompany\quickbite\QBNegocioFX.java
+C:\Users\USUARIO CAB\Desktop\NetbeansQB\QuickByte\QuickByte\src\main\java\com\mycompany\quickbite\QBProductFX.java
+C:\Users\USUARIO CAB\Desktop\NetbeansQB\QuickByte\QuickByte\src\main\java\com\mycompany\quickbite\QBsingupFX.java
+C:\Users\USUARIO CAB\Desktop\NetbeansQB\QuickByte\QuickByte\src\main\java\com\mycompany\quickbite\QBtype.java
+C:\Users\USUARIO CAB\Desktop\NetbeansQB\QuickByte\QuickByte\src\main\java\com\mycompany\quickbite\QR\ControlGenerador.java
+C:\Users\USUARIO CAB\Desktop\NetbeansQB\QuickByte\QuickByte\src\main\java\com\mycompany\quickbite\QR\GeneradorQRFX.java
+C:\Users\USUARIO CAB\Desktop\NetbeansQB\QuickByte\QuickByte\src\main\java\com\mycompany\quickbite\QuickBiteFX.java
+C:\Users\USUARIO CAB\Desktop\NetbeansQB\QuickByte\QuickByte\src\main\java\com\mycompany\quickbite\service\ProductService.java
+C:\Users\USUARIO CAB\Desktop\NetbeansQB\QuickByte\QuickByte\src\main\java\com\mycompany\quickbite\util\AppState.java
+C:\Users\USUARIO CAB\Desktop\NetbeansQB\QuickByte\QuickByte\src\main\java\com\mycompany\quickbite\util\CarritoManager.java
+C:\Users\USUARIO CAB\Desktop\NetbeansQB\QuickByte\QuickByte\src\main\java\com\mycompany\quickbite\util\Navigator.java
+C:\Users\USUARIO CAB\Desktop\NetbeansQB\QuickByte\QuickByte\src\main\java\com\mycompany\quickbite\util\SerializadorPedido.java

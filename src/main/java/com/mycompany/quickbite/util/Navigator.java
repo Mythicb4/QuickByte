@@ -36,8 +36,9 @@ public class Navigator {
 
             System.out.println("✅ Navegación exitosa a: " + fxmlPath);
         } catch (IOException e) {
-            e.printStackTrace();
+            
             System.err.println("❌ Error al navegar a " + fxmlPath + ": " + e.getMessage());
+            e.printStackTrace();
         }
     }
 }

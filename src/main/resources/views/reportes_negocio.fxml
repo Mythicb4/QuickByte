@@ -17,7 +17,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="1024.0" prefWidth="1440.0" style="-fx-background-color: F7D6A8;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.quickbite.QBReportesFX">
+<AnchorPane prefHeight="1024.0" prefWidth="1440.0" style="-fx-background-color: F7D6A8;" xmlns="http://javafx.com/javafx/24" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.quickbite.QBReportesFX">
     <children>
       <Line endX="362.0" scaleX="3.0" startX="362.0" startY="1024.0" />
       <Button fx:id="btnAtras" layoutX="1250.0" layoutY="50.0" mnemonicParsing="false" onAction="#onBtnBack" prefHeight="50.0" prefWidth="140.0" text="Atras">

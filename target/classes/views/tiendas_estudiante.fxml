@@ -14,7 +14,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="1024.0" prefWidth="1440.0" style="-fx-background-color: F7D6A8;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.quickbite.QBTiendaFX">
+<AnchorPane prefHeight="1024.0" prefWidth="1440.0" style="-fx-background-color: F7D6A8;" xmlns="http://javafx.com/javafx/24" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.quickbite.QBTiendaFX">
     <children>
       <Line endX="362.0" scaleX="3.0" startX="362.0" startY="1024.0" />
       <Button fx:id="btnAtras" layoutX="1250.0" layoutY="50.0" mnemonicParsing="false" onAction="#onAtras" prefHeight="50.0" prefWidth="140.0" text="ATRÁS">
@@ -70,7 +70,7 @@
                         <Insets bottom="2.0" />
                      </VBox.margin>
                   </Button>
-                  <Button fx:id="btnCarrito" minHeight="-Infinity" mnemonicParsing="false" onAction="#onCarrito" prefHeight="76.0" prefWidth="360.0" text="Carrito">
+                  <Button fx:id="btnCarrito" minHeight="-Infinity" mnemonicParsing="false" onAction="#handleViewCartAndGenerateQR" prefHeight="76.0" prefWidth="360.0" text="Carrito">
                      <graphic>
                         <ImageView fitHeight="41.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
                            <image>

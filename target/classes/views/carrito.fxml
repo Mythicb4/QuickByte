@@ -9,7 +9,7 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.cell.PropertyValueFactory?>
 
-<VBox fx:controller="com.mycompany.quickbite.QBcarritoFX" 
+<VBox fx:controller="com.mycompany.quickbite.QBCarritoFX" 
       spacing="15" 
       alignment="TOP_CENTER" 
       xmlns:fx="http://javafx.com/fxml/1" 

@@ -57,7 +57,7 @@
             </VBox>
             <VBox prefHeight="843.0" prefWidth="360.0">
                <children>
-                  <Button fx:id="btnTienda" minHeight="-Infinity" mnemonicParsing="false" prefHeight="76.0" prefWidth="360.0" text="Tienda">
+                  <Button fx:id="btnTienda" minHeight="-Infinity" mnemonicParsing="false" onAction="#onTienda" prefHeight="76.0" prefWidth="360.0" text="Tienda">
                      <graphic>
                         <ImageView fitHeight="41.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -81,7 +81,7 @@
                         <Insets bottom="2.0" />
                      </VBox.margin>
                   </Button>
-                  <Button fx:id="btnPreferencias" minHeight="-Infinity" mnemonicParsing="false" prefHeight="76.0" prefWidth="360.0" text="Preferencias">
+                  <Button fx:id="btnPreferencias" minHeight="-Infinity" mnemonicParsing="false" onAction="#onPreferencias" prefHeight="76.0" prefWidth="360.0" text="Preferencias">
                      <graphic>
                         <ImageView fitHeight="41.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -93,7 +93,7 @@
                         <Insets bottom="2.0" />
                      </VBox.margin>
                   </Button>
-                  <Button fx:id="btnHistorial" minHeight="-Infinity" mnemonicParsing="false" prefHeight="76.0" prefWidth="360.0" text="Historial">
+                  <Button fx:id="btnHistorial" minHeight="-Infinity" mnemonicParsing="false" onAction="#onHistorial" prefHeight="76.0" prefWidth="360.0" text="Historial">
                      <graphic>
                         <ImageView fitHeight="41.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -105,7 +105,7 @@
                         <Insets bottom="2.0" />
                      </VBox.margin>
                   </Button>
-                  <Button fx:id="btnPerfil" minHeight="-Infinity" mnemonicParsing="false" prefHeight="76.0" prefWidth="360.0" text="Perfil">
+                  <Button fx:id="btnPerfil" minHeight="-Infinity" mnemonicParsing="false" onAction="#onPerfil" prefHeight="76.0" prefWidth="360.0" text="Perfil">
                      <graphic>
                         <ImageView fitHeight="41.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
                            <image>

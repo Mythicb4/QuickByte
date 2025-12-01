@@ -151,7 +151,7 @@ public class QBEstudianteFX {
 
     @FXML
     void onPerfil(ActionEvent event) {
-        // Actualmente vacío, se mantiene la definición.
+        Navigator.navigateTo("/views/perfil_estudiante.fxml", "perfil", true, event);
     }
 
     @FXML

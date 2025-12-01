@@ -2,8 +2,10 @@ package com.mycompany.quickbite;
 
 import com.mycompany.quickbite.util.Navigator;
 import com.mycompany.quickbite.util.AppState;
+import com.mycompany.quickbite.util.CarritoManager;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
@@ -58,13 +60,24 @@ public class QBPerfilFX {
     }
 
     @FXML
-    void onTienda(ActionEvent event) {
-        Navigator.navigateTo("/views/tiendas_estudiante.fxml", "tiendas", true, event);
+    private void handleViewCartAndGenerateQR(ActionEvent event) {
+
+        // Verificar si hay productos en el carrito antes de navegar.
+        if (CarritoManager.getInstancia().getItems().isEmpty()) {
+            new Alert(Alert.AlertType.WARNING, "El carrito está vacío. Agregue productos antes de generar el QR.")
+                    .showAndWait();
+            return;
+        }
+
+        Navigator.navigateTo("/views/carrito.fxml", "QuickBite - Mi Carrito", false, event);
     }
 
     @FXML
-    void onCarrito(ActionEvent event) {
-        Navigator.navigateTo("/views/carrito_estudiante.fxml", "carrito", true, event);
+    void onBtnSalir(ActionEvent event) {
+        // Nota: El método handleLogout anterior vaciaba el carrito.
+        // Si el botón Salir debe vaciar el carrito, puedes añadir:
+        // CarritoManager.getInstancia().vaciarCarrito();
+        Navigator.navigateTo("/views/login.fxml", "login", true, event);
     }
 
     @FXML
@@ -82,4 +95,8 @@ public class QBPerfilFX {
         Navigator.navigateTo("/views/preferencia_estudiante.fxml", "preferencia", true, event);
     }
 
+    @FXML
+    void onTienda(ActionEvent event) {
+        Navigator.navigateTo("/views/tiendas_estudiante.fxml", "tiendas", true, event);
+    }
 }

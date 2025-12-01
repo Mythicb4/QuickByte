@@ -120,6 +120,7 @@ public class QBTiendaFX {
     void onEntrarAction(ActionEvent event) {
         Navigator.navigateTo("/views/cafeteria_estudiante.fxml", "cafeteria", true, event);
     }
+
     @FXML
     void onAtras(ActionEvent event) {
         Navigator.navigateTo("/views/login_estudiante.fxml", "estudiante", true, event);

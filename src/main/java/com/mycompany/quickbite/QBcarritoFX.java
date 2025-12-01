@@ -24,7 +24,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
-public class QBcarritoFX implements Initializable {
+public class QBCarritoFX implements Initializable {
 
     @FXML
     private TableView<OrdenarProducto> tablaCarrito;
@@ -40,11 +40,11 @@ public class QBcarritoFX implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // Carga los items del CarritoManager a la TableView
         tablaCarrito.setItems(FXCollections.observableArrayList(CarritoManager.getInstancia().getItems()));
-        
+
         // Calcula el total inicial
         actualizarTotal();
     }
-    
+
     /**
      * Recalcula y actualiza el Label con el total a pagar.
      */
@@ -60,7 +60,7 @@ public class QBcarritoFX implements Initializable {
     @FXML
     private void handleGenerarQR(ActionEvent event) {
         double total = CarritoManager.getInstancia().calcularTotal();
-        
+
         if (total <= 0) {
             // Muestra una alerta si el carrito está vacío
             Alert alert = new Alert(Alert.AlertType.WARNING);
@@ -70,25 +70,25 @@ public class QBcarritoFX implements Initializable {
             alert.showAndWait();
             return;
         }
-        
+
         try {
             // 1. Serializa el pedido
             String pedidoSerializado = SerializadorPedido.serializar();
-            
+
             // 2. Carga la escena del generador (IMPORTANTE: USA FXMLLoader directo)
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/QR.fxml"));
             Parent root = loader.load();
-            
+
             // 3. Obtiene el controlador del QR y le pasa el dato
             ControlGenerador controller = loader.getController();
             controller.handleGenerarQR(pedidoSerializado); // Llama al nuevo método
-            
+
             // 4. Navega a la nueva escena
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.setScene(new Scene(root));
             stage.setTitle("QuickBite - Código QR de Pedido");
             stage.show();
-            
+
         } catch (Exception e) {
             System.err.println("Error al generar QR o navegar: " + e.getMessage());
             e.printStackTrace();
@@ -96,7 +96,7 @@ public class QBcarritoFX implements Initializable {
             new Alert(Alert.AlertType.ERROR, "Error al procesar el pedido.").showAndWait();
         }
     }
-    
+
     /**
      * Regresa a la vista de selección de productos.
      */

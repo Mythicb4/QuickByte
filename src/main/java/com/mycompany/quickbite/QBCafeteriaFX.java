@@ -169,6 +169,7 @@ public class QBCafeteriaFX {
     void onCategoria(ActionEvent event) {
 
     }
+
     @FXML
     void onAtras(ActionEvent event) {
         Navigator.navigateTo("/views/tiendas_estudiante.fxml", "tiendas", true, event);

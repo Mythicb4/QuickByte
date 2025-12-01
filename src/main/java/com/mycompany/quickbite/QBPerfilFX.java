@@ -1,27 +1,20 @@
 package com.mycompany.quickbite;
 
 import com.mycompany.quickbite.util.Navigator;
+import com.mycompany.quickbite.util.AppState;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.text.Text;
 
-public class QBHistorialFX {
+public class QBPerfilFX {
 
     @FXML
     private Button btnAtras;
 
     @FXML
     private Button btnCarrito;
-
-    @FXML
-    private Button btnEstablecerFecha;
 
     @FXML
     private Button btnHistorial;
@@ -36,25 +29,16 @@ public class QBHistorialFX {
     private Button btnTienda;
 
     @FXML
-    private TableColumn<?, ?> colCafeteria;
-
-    @FXML
-    private TableColumn<?, ?> colCosto;
-
-    @FXML
-    private TableColumn<?, ?> colFecha;
-
-    @FXML
-    private TableColumn<?, ?> colMetodo;
-
-    @FXML
-    private TableColumn<?, ?> colTProductos;
-
-    @FXML
-    private ImageView imgFechaInicio;
-
-    @FXML
     private ImageView imgLogo;
+
+    @FXML
+    private Label lblCarrera;
+
+    @FXML
+    private Label lblDireccion;
+
+    @FXML
+    private Label lblEmail;
 
     @FXML
     private Label lblLogo;
@@ -63,30 +47,19 @@ public class QBHistorialFX {
     private Label lblLogo1;
 
     @FXML
-    private TableView<?> tblCompras;
+    private Label lblNombre;
 
     @FXML
-    private TextField txtFechaFin;
-
-    @FXML
-    private TextField txtFechaInicio;
-
-    @FXML
-    private Text txtTotal;
-
-    @FXML
-    void onCalendar(MouseEvent event) {
-
-    }
-
-    @FXML
-    void onEstablecerFechaAction(ActionEvent event) {
-
-    }
+    private Label lblTelefono;
 
     @FXML
     void onAtras(ActionEvent event) {
-        Navigator.navigateTo("/views/login_estudiante.fxml", "estudiante", true, event);
+        Navigator.navigateTo("/views/tiendas_estudiante.fxml", "tiendas", true, event);
+    }
+
+    @FXML
+    void onTienda(ActionEvent event) {
+        Navigator.navigateTo("/views/tiendas_estudiante.fxml", "tiendas", true, event);
     }
 
     @FXML
@@ -107,11 +80,6 @@ public class QBHistorialFX {
     @FXML
     void onPreferencias(ActionEvent event) {
         Navigator.navigateTo("/views/preferencia_estudiante.fxml", "preferencia", true, event);
-    }
-
-    @FXML
-    void onTienda(ActionEvent event) {
-        Navigator.navigateTo("/views/tiendas_estudiante.fxml", "tiendas", true, event);
     }
 
 }

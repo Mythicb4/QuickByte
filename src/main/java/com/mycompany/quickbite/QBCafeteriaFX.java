@@ -186,7 +186,7 @@ public class QBCafeteriaFX {
 
     @FXML
     void onPerfil(ActionEvent event) {
-
+        Navigator.navigateTo("/views/perfil_estudiante.fxml", "perfil", true, event);
     }
 
     @FXML

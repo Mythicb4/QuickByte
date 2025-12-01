@@ -104,4 +104,38 @@ public class QBcarritoFX implements Initializable {
     private void handleRegresar(ActionEvent event) {
         Navigator.navigateTo("/views/login_estudiante.fxml", "QuickBite - Menú", true, event);
     }
+
+    // -------------------------------------------------------------------------
+    // --- MÉTODOS DE NAVEGACIÓN ---
+    // -------------------------------------------------------------------------
+
+    @FXML
+    void onAtras(ActionEvent event) {
+        Navigator.navigateTo("/views/tiendas_estudiante.fxml", "tiendas", true, event);
+    }
+
+    @FXML
+    void onTienda(ActionEvent event) {
+        Navigator.navigateTo("/views/tiendas_estudiante.fxml", "tiendas", true, event);
+    }
+
+    @FXML
+    void onCarrito(ActionEvent event) {
+        Navigator.navigateTo("/views/carrito_estudiante.fxml", "carrito", true, event);
+    }
+
+    @FXML
+    void onHistorial(ActionEvent event) {
+        Navigator.navigateTo("/views/historial_estudiante.fxml", "historial", true, event);
+    }
+
+    @FXML
+    void onPerfil(ActionEvent event) {
+        Navigator.navigateTo("/views/perfil_estudiante.fxml", "perfil", true, event);
+    }
+
+    @FXML
+    void onPreferencias(ActionEvent event) {
+        Navigator.navigateTo("/views/preferencia_estudiante.fxml", "preferencia", true, event);
+    }
 }

@@ -28,20 +28,20 @@ public class QBtype {
     private ToggleGroup typeGroup;
     
     public void onBackClick(ActionEvent event){
-        Navigator.navigateTo("/views/login.fxml", "login", event);
+        Navigator.navigateTo("/views/login.fxml", "login", true, event);
     }
     
     public void onNegocioSelected(ActionEvent event){
         if(rbNegocio.isSelected()){
             AppState.setUserType("negocio");
-            Navigator.navigateTo("/views/singupN.fxml", "singup_negocio", event);
+            Navigator.navigateTo("/views/singupN.fxml", "singup_negocio", true, event);
         }
     }
     
     public void onEstudianteSelected(ActionEvent event){
         if(rbEstudiante.isSelected()){
             AppState.setUserType("estudiante");
-            Navigator.navigateTo("/views/singupE.fxml", "singup_estudiante", event);
+            Navigator.navigateTo("/views/singupE.fxml", "singup_estudiante", true, event);
         }
     }
 

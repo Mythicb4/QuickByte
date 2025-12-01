@@ -1,8 +1,6 @@
 package com.mycompany.quickbite;
+
 import com.mycompany.quickbite.util.*;
-import com.mycompany.quickbite.QR.*;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -11,11 +9,6 @@ import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
-import javafx.fxml.FXMLLoader; 
-import javafx.scene.Parent; 
-import javafx.scene.Scene; 
-import javafx.stage.Stage;
-import java.io.IOException;
 
 public class QBEstudianteFX {
     
@@ -23,16 +16,11 @@ public class QBEstudianteFX {
     // --- VARIABLES DE GESTIÓN DEL PEDIDO ---
     // -------------------------------------------------------------------------
     
-    // Lista para almacenar los ítems del carrito (Pedido)
-    
-    
-    //private final ObservableList<OrdenarProducto> currentOrder = FXCollections.observableArrayList();
-    
     // Nombre de usuario simulado (Debería venir del login)
     private final String currentUser = AppState.getUserEmail(); 
 
     // -------------------------------------------------------------------------
-    // --- FXML FIELDS (SIN CAMBIOS) ---
+    // --- FXML FIELDS (ACTUALIZADO) ---
     // -------------------------------------------------------------------------
 
     @FXML private HBox HBCompraExpress;
@@ -47,7 +35,7 @@ public class QBEstudianteFX {
     @FXML private Button btnCompraExpress2;
     @FXML private Button btnCompraExpress3;
     @FXML private Button btnHistorial;
-    @FXML private Button btnMore;
+    @FXML private Button btnMore; // Preservado del archivo original
     @FXML private Button btnPerfil;
     @FXML private Button btnPreferencias;
     @FXML private Button btnSalir;
@@ -59,6 +47,7 @@ public class QBEstudianteFX {
     @FXML private ImageView imgProduct3;
     @FXML private Label lblCNames;
     @FXML private Label lblLogo;
+    @FXML private Label lblLogo1; // <--- CAMPO NUEVO AÑADIDO
     @FXML private Label lblPName;
     @FXML private Label lblPName1;
     @FXML private Label lblPName2;
@@ -69,7 +58,7 @@ public class QBEstudianteFX {
     @FXML private Label lblPPrice3;
     
     // -------------------------------------------------------------------------
-    // --- MÉTODOS DE LÓGICA DEL PEDIDO ---
+    // --- MÉTODOS DE LÓGICA DEL PEDIDO (PRESERVADOS) ---
     // -------------------------------------------------------------------------
     
     /**
@@ -97,34 +86,6 @@ public class QBEstudianteFX {
             CarritoManager.getInstancia().getItems().size()
         );
         new Alert(Alert.AlertType.INFORMATION, mensaje).showAndWait();
-    }
-
-    // --- HANDLERS ESPECÍFICOS PARA CADA BOTÓN DE PRODUCTO ---
-    
-    @FXML
-    void handleNavigation(ActionEvent event) {
-        Button source = (Button) event.getSource();
-        String fxmlPath = "";
-        String title = "";
-        
-        if (source == btnTienda) {
-            // Asumiendo que esta es la vista de catálogo actual
-            fxmlPath = "/views/login_estudiante.fxml"; 
-            title = "Tienda QuickBite";
-        } else if (source == btnPerfil) {
-            fxmlPath = "/views/perfil_estudiante.fxml"; 
-            title = "Mi Perfil";
-        } else if (source == btnHistorial) {
-            fxmlPath = "/views/historial_estudiante.fxml"; 
-            title = "Historial de Pedidos";
-        } else if (source == btnPreferencias) {
-            fxmlPath = "/views/preferencias.fxml"; 
-            title = "Preferencias";
-        }
-        
-        if (!fxmlPath.isEmpty()) {
-            Navigator.navigateTo(fxmlPath, title, event);
-        }
     }
         
     @FXML
@@ -165,23 +126,41 @@ public class QBEstudianteFX {
     // -------------------------------------------------------------------------
 
     @FXML
-    void handleLogout(ActionEvent event) {
-        // Navegar al login principal
-        CarritoManager.getInstancia().vaciarCarrito();
-    }
-    
-    
-    @FXML
     private void handleViewCartAndGenerateQR(ActionEvent event) {
 
-        String pedidoString = SerializadorPedido.serializar();
-        
-        // 1. Verificar si hay productos después de usar SerializadorPedido (que usa CarritoManager)
-        if (pedidoString == null || CarritoManager.getInstancia().getItems().isEmpty()) {
+        // Verificar si hay productos en el carrito antes de navegar.
+        if (CarritoManager.getInstancia().getItems().isEmpty()) {
             new Alert(Alert.AlertType.WARNING, "El carrito está vacío. Agregue productos antes de generar el QR.").showAndWait();
             return;
         }
-        Navigator.navigateTo("/views/carrito.fxml", "QuickBite - Mi Carrito", event);
+
+        Navigator.navigateTo("/views/carrito.fxml", "QuickBite - Mi Carrito", false, event);
     }
     
+    @FXML
+    void onBtnSalir(ActionEvent event) {
+        // Nota: El método handleLogout anterior vaciaba el carrito. 
+        // Si el botón Salir debe vaciar el carrito, puedes añadir: CarritoManager.getInstancia().vaciarCarrito();
+        Navigator.navigateTo("/views/login.fxml", "login", true, event);
+    }
+
+    @FXML
+    void onHistorial(ActionEvent event) {
+        Navigator.navigateTo("/views/historial_estudiante.fxml", "historial", true, event);
+    }
+
+    @FXML
+    void onPerfil(ActionEvent event) {
+        // Actualmente vacío, se mantiene la definición.
+    }
+
+    @FXML
+    void onPreferencias(ActionEvent event) {
+        Navigator.navigateTo("/views/preferencia_estudiante.fxml", "preferencia", true, event);
+    }
+
+    @FXML
+    void onTienda(ActionEvent event) {
+        Navigator.navigateTo("/views/tiendas_estudiante.fxml", "tiendas", true, event);
+    }
 }

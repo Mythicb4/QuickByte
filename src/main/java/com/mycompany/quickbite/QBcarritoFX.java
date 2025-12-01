@@ -102,6 +102,6 @@ public class QBcarritoFX implements Initializable {
      */
     @FXML
     private void handleRegresar(ActionEvent event) {
-        Navigator.navigateTo("/views/login_estudiante.fxml", "QuickBite - Menú", event);
+        Navigator.navigateTo("/views/login_estudiante.fxml", "QuickBite - Menú", true, event);
     }
 }

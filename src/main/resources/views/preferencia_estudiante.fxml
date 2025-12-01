@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="1024.0" prefWidth="1440.0" style="-fx-background-color: F7D6A8;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.quickbite.QBPreferenciasFX">
+    <children>
+      <Line endX="362.0" scaleX="3.0" startX="362.0" startY="1024.0" />
+      <Button fx:id="btnAtras" layoutX="1250.0" layoutY="50.0" mnemonicParsing="false" onAction="#onAtras" prefHeight="50.0" prefWidth="140.0" text="ATRÁS">
+         <font>
+            <Font name="SansSerif Regular" size="15.4" />
+         </font>
+      </Button>
+      <VBox prefHeight="1024.0" prefWidth="360.0">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <HBox prefHeight="133.0" prefWidth="360.0">
+                     <children>
+                        <ImageView fx:id="imgLogo" fitHeight="67.12" fitWidth="67.12" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons/logo.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="50.0" top="50.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Label fx:id="lblLogo" text="QuickBite">
+                           <font>
+                              <Font name="SansSerif Bold" size="36.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="71.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Label fx:id="lblLogo1" text="Estudiante">
+                     <font>
+                        <Font name="SansSerif Regular" size="25.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="50.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox prefHeight="843.0" prefWidth="360.0">
+               <children>
+                  <Button fx:id="btnTienda" minHeight="-Infinity" mnemonicParsing="false" onAction="#onTienda" prefHeight="76.0" prefWidth="360.0" text="Tienda">
+                     <graphic>
+                        <ImageView fitHeight="41.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons/store_2.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets bottom="2.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="btnCarrito" minHeight="-Infinity" mnemonicParsing="false" onAction="#onCarrito" prefHeight="76.0" prefWidth="360.0" text="Carrito">
+                     <graphic>
+                        <ImageView fitHeight="41.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons/carrito.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets bottom="2.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="btnPreferencias" minHeight="-Infinity" mnemonicParsing="false" onAction="#onPreferencias" prefHeight="76.0" prefWidth="360.0" text="Preferencias">
+                     <graphic>
+                        <ImageView fitHeight="41.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons/favorite.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets bottom="2.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="btnHistorial" minHeight="-Infinity" mnemonicParsing="false" onAction="#onHistorial" prefHeight="76.0" prefWidth="360.0" text="Historial">
+                     <graphic>
+                        <ImageView fitHeight="41.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons/historial.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets bottom="2.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="btnPerfil" minHeight="-Infinity" mnemonicParsing="false" onAction="#onPerfil" prefHeight="76.0" prefWidth="360.0" text="Perfil">
+                     <graphic>
+                        <ImageView fitHeight="41.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons/user_2.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets bottom="2.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#210002" height="451.0" stroke="BLACK" strokeType="INSIDE" width="360.0" />
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <VBox layoutX="440.0" layoutY="131.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="792.0" prefWidth="950.0" AnchorPane.leftAnchor="431.0">
+         <children>
+            <StackPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="44.0" prefWidth="950.0">
+               <children>
+                      <Label text="Productos" textFill="#00294d" StackPane.alignment="TOP_LEFT">
+                          <font>
+                              <Font name="SansSerif Regular" size="35.0" />
+                          </font>
+                      </Label>
+               </children>
+            </StackPane>
+            <HBox fx:id="HBCompraExpress" maxHeight="-Infinity" prefHeight="264.0">
+               <VBox.margin>
+                  <Insets bottom="20.0" top="20.0" />
+               </VBox.margin>
+               <children>
+                  <StackPane fx:id="SPProduct4" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="264.0" prefWidth="193.0">
+                     <children>
+                        <ImageView fx:id="imgProduct" cache="true" fitHeight="264.0" fitWidth="194.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../images/product_1.jpg" />
+                           </image>
+                        </ImageView>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f5d4a9cc" height="137.0" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0" width="194.0" StackPane.alignment="BOTTOM_CENTER">
+                           <StackPane.margin>
+                              <Insets bottom="20.0" />
+                           </StackPane.margin>
+                        </Rectangle>
+                        <Label fx:id="lblPName" text="Croissant" StackPane.alignment="CENTER_LEFT">
+                           <font>
+                              <Font name="SansSerif Bold" size="18.0" />
+                           </font>
+                           <StackPane.margin>
+                              <Insets left="13.0" />
+                           </StackPane.margin>
+                        </Label>
+                        <Label fx:id="lblPPrice" text="\$ 3500" StackPane.alignment="CENTER_RIGHT">
+                           <StackPane.margin>
+                              <Insets right="13.0" />
+                           </StackPane.margin>
+                           <font>
+                              <Font name="SansSerif Regular" size="15.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btnAñadirExpress" mnemonicParsing="false" onAction="#onAñadirExpress" prefHeight="37.0" prefWidth="168.0" text="Eliminar de prefereridos" StackPane.alignment="BOTTOM_CENTER">
+                           <StackPane.margin>
+                              <Insets bottom="34.0" />
+                           </StackPane.margin>
+                        </Button>
+                        <Button fx:id="btnAñadir" mnemonicParsing="false" onAction="#onAñadir" prefHeight="37.0" prefWidth="168.0" text="Añadir al carrito">
+                           <StackPane.margin>
+                              <Insets top="70.0" />
+                           </StackPane.margin>
+                        </Button>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="SPProduct41" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="264.0" prefWidth="193.0">
+                     <children>
+                        <ImageView fx:id="imgProduct1" cache="true" fitHeight="264.0" fitWidth="194.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../images/product_1.jpg" />
+                           </image>
+                           <StackPane.margin>
+                              <Insets />
+                           </StackPane.margin>
+                        </ImageView>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f5d4a9cc" height="137.0" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0" width="194.0" StackPane.alignment="BOTTOM_CENTER">
+                           <StackPane.margin>
+                              <Insets bottom="20.0" />
+                           </StackPane.margin>
+                        </Rectangle>
+                        <Label fx:id="lblPName1" text="Croissant" StackPane.alignment="CENTER_LEFT">
+                           <font>
+                              <Font name="SansSerif Bold" size="18.0" />
+                           </font>
+                           <StackPane.margin>
+                              <Insets left="13.0" />
+                           </StackPane.margin>
+                        </Label>
+                        <Label fx:id="lblPPrice1" text="\$ 3500" StackPane.alignment="CENTER_RIGHT">
+                           <StackPane.margin>
+                              <Insets right="13.0" />
+                           </StackPane.margin>
+                           <font>
+                              <Font name="SansSerif Regular" size="15.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btnAñadirExpress1" mnemonicParsing="false" onAction="#onAñadirExpress" prefHeight="37.0" prefWidth="168.0" text="Eliminar de prefereridos" StackPane.alignment="BOTTOM_CENTER">
+                           <StackPane.margin>
+                              <Insets bottom="34.0" />
+                           </StackPane.margin>
+                        </Button>
+                        <Button fx:id="btnAñadir1" mnemonicParsing="false" onAction="#onAñadir" prefHeight="37.0" prefWidth="168.0" text="Añadir al carrito">
+                           <StackPane.margin>
+                              <Insets top="70.0" />
+                           </StackPane.margin>
+                        </Button>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </StackPane>
+                  <StackPane fx:id="SPProduct42" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="264.0" prefWidth="193.0">
+                     <children>
+                        <ImageView fx:id="imgProduct2" cache="true" fitHeight="264.0" fitWidth="194.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../images/product_1.jpg" />
+                           </image>
+                        </ImageView>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f5d4a9cc" height="137.0" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0" width="194.0" StackPane.alignment="BOTTOM_CENTER">
+                           <StackPane.margin>
+                              <Insets bottom="20.0" />
+                           </StackPane.margin>
+                        </Rectangle>
+                        <Label fx:id="lblPName2" text="Croissant" StackPane.alignment="CENTER_LEFT">
+                           <font>
+                              <Font name="SansSerif Bold" size="18.0" />
+                           </font>
+                           <StackPane.margin>
+                              <Insets left="13.0" />
+                           </StackPane.margin>
+                        </Label>
+                        <Label fx:id="lblPPrice2" text="\$ 3500" StackPane.alignment="CENTER_RIGHT">
+                           <StackPane.margin>
+                              <Insets right="13.0" />
+                           </StackPane.margin>
+                           <font>
+                              <Font name="SansSerif Regular" size="15.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btnAñadir2" mnemonicParsing="false" onAction="#onAñadir" prefHeight="37.0" prefWidth="168.0" text="Añadir al carrito">
+                           <StackPane.margin>
+                              <Insets top="70.0" />
+                           </StackPane.margin>
+                        </Button>
+                        <Button fx:id="btnAñadirExpress2" mnemonicParsing="false" onAction="#onAñadirExpress" prefHeight="37.0" prefWidth="168.0" text="Eliminar de prefereridos" StackPane.alignment="BOTTOM_CENTER">
+                           <StackPane.margin>
+                              <Insets bottom="34.0" />
+                           </StackPane.margin>
+                        </Button>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </StackPane>
+                  <StackPane fx:id="SPProduct1" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="264.0" prefWidth="193.0">
+                     <children>
+                        <ImageView fitHeight="243.0" fitWidth="193.0" pickOnBounds="true" preserveRatio="true" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f5d4a9cc" height="96.0" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0" width="194.0" StackPane.alignment="BOTTOM_CENTER">
+                           <StackPane.margin>
+                              <Insets bottom="20.0" />
+                           </StackPane.margin>
+                        </Rectangle>
+                        <Label fx:id="lblName" text="Croissant" StackPane.alignment="CENTER_LEFT">
+                           <font>
+                              <Font name="SansSerif Bold" size="18.0" />
+                           </font>
+                           <StackPane.margin>
+                              <Insets left="13.0" top="60.0" />
+                           </StackPane.margin>
+                        </Label>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff6969cc" height="39.0" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0" width="146.0" StackPane.alignment="BOTTOM_CENTER">
+                           <StackPane.margin>
+                              <Insets bottom="30.0" />
+                           </StackPane.margin>
+                        </Rectangle>
+                        <Label fx:id="lblEstado" text="Agotado" StackPane.alignment="BOTTOM_CENTER">
+                           <font>
+                              <Font name="SansSerif Bold" size="18.0" />
+                           </font>
+                           <StackPane.margin>
+                              <Insets bottom="39.0" />
+                           </StackPane.margin>
+                        </Label>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </StackPane>
+               </children>
+            </HBox>
+            <Label text="Combos" textFill="#00294d">
+               <font>
+                  <Font name="SansSerif Regular" size="35.0" />
+               </font>
+            </Label>
+            <HBox fx:id="HBCompraExpress1" maxHeight="-Infinity" prefHeight="264.0">
+               <VBox.margin>
+                  <Insets bottom="20.0" top="20.0" />
+               </VBox.margin>
+               <children>
+                  <StackPane fx:id="SPProduct43" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="264.0" prefWidth="193.0">
+                     <children>
+                        <ImageView fx:id="imgProduct3" cache="true" fitHeight="264.0" fitWidth="194.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../images/product_1.jpg" />
+                           </image>
+                        </ImageView>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f5d4a9cc" height="137.0" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0" width="194.0" StackPane.alignment="BOTTOM_CENTER">
+                           <StackPane.margin>
+                              <Insets bottom="20.0" />
+                           </StackPane.margin>
+                        </Rectangle>
+                        <Label fx:id="lblPName3" text="Croissant" StackPane.alignment="CENTER_LEFT">
+                           <font>
+                              <Font name="SansSerif Bold" size="18.0" />
+                           </font>
+                           <StackPane.margin>
+                              <Insets left="13.0" />
+                           </StackPane.margin>
+                        </Label>
+                        <Label fx:id="lblPPrice3" text="\$ 3500" StackPane.alignment="CENTER_RIGHT">
+                           <StackPane.margin>
+                              <Insets right="13.0" />
+                           </StackPane.margin>
+                           <font>
+                              <Font name="SansSerif Regular" size="15.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btnAñadirExpress3" mnemonicParsing="false" onAction="#onAñadirExpress" prefHeight="37.0" prefWidth="168.0" text="Eliminar de prefereridos" StackPane.alignment="BOTTOM_CENTER">
+                           <StackPane.margin>
+                              <Insets bottom="34.0" />
+                           </StackPane.margin>
+                        </Button>
+                        <Button fx:id="btnAñadir3" mnemonicParsing="false" onAction="#onAñadir" prefHeight="37.0" prefWidth="168.0" text="Añadir al carrito">
+                           <StackPane.margin>
+                              <Insets top="70.0" />
+                           </StackPane.margin>
+                        </Button>
+                     </children>
+                  </StackPane>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+    </children>
+</AnchorPane>

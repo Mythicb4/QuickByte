@@ -16,7 +16,7 @@
 <AnchorPane prefHeight="1024.0" prefWidth="1440.0" style="-fx-background-color: F7D6A8;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.quickbite.QBEstudianteFX">
     <children>
       <Line endX="362.0" scaleX="3.0" startX="362.0" startY="1024.0" />
-      <Button fx:id="btnSalir" layoutX="1250.0" layoutY="50.0" mnemonicParsing="false" onAction="#handleLogout" prefHeight="50.0" prefWidth="140.0" text="SALIR">
+      <Button fx:id="btnSalir" layoutX="1250.0" layoutY="50.0" mnemonicParsing="false" onAction="#onBtnSalir" prefHeight="50.0" prefWidth="140.0" text="SALIR">
          <font>
             <Font name="SansSerif Regular" size="15.4" />
          </font>
@@ -69,7 +69,7 @@
                         <Insets bottom="2.0" />
                      </VBox.margin>
                   </Button>
-                  <Button fx:id="btnCarrito" minHeight="-Infinity" mnemonicParsing="false" prefHeight="76.0" prefWidth="360.0" text="Carrito" onAction="#handleViewCartAndGenerateQR">
+                  <Button fx:id="btnCarrito" minHeight="-Infinity" mnemonicParsing="false" onAction="#handleViewCartAndGenerateQR" prefHeight="76.0" prefWidth="360.0" text="Carrito">
                      <graphic>
                         <ImageView fitHeight="41.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -165,7 +165,7 @@
                               <Font name="SansSerif Regular" size="15.0" />
                            </font>
                         </Label>
-                        <Button fx:id="btnCompraExpress" mnemonicParsing="false" prefHeight="37.0" prefWidth="168.0" text="Compra express" StackPane.alignment="BOTTOM_CENTER" onAction="#handleProduct1Order">
+                        <Button fx:id="btnCompraExpress" mnemonicParsing="false" onAction="#handleProduct1Order" prefHeight="37.0" prefWidth="168.0" text="Compra express" StackPane.alignment="BOTTOM_CENTER">
                            <StackPane.margin>
                               <Insets bottom="34.0" />
                            </StackPane.margin>
@@ -200,7 +200,7 @@
                               <Font name="SansSerif Regular" size="15.0" />
                            </font>
                         </Label>
-                        <Button fx:id="btnCompraExpress1" mnemonicParsing="false" prefHeight="37.0" prefWidth="168.0" text="Compra express" StackPane.alignment="BOTTOM_CENTER" onAction="#handleProduct2Order">
+                        <Button fx:id="btnCompraExpress1" mnemonicParsing="false" onAction="#handleProduct2Order" prefHeight="37.0" prefWidth="168.0" text="Compra express" StackPane.alignment="BOTTOM_CENTER">
                            <StackPane.margin>
                               <Insets bottom="34.0" />
                            </StackPane.margin>
@@ -238,7 +238,7 @@
                               <Font name="SansSerif Regular" size="15.0" />
                            </font>
                         </Label>
-                        <Button fx:id="btnCompraExpress2" mnemonicParsing="false" prefHeight="37.0" prefWidth="168.0" text="Compra express" StackPane.alignment="BOTTOM_CENTER" onAction="#handleProduct3Order">
+                        <Button fx:id="btnCompraExpress2" mnemonicParsing="false" onAction="#handleProduct3Order" prefHeight="37.0" prefWidth="168.0" text="Compra express" StackPane.alignment="BOTTOM_CENTER">
                            <StackPane.margin>
                               <Insets bottom="34.0" />
                            </StackPane.margin>
@@ -276,7 +276,7 @@
                               <Font name="SansSerif Regular" size="15.0" />
                            </font>
                         </Label>
-                        <Button fx:id="btnCompraExpress3" mnemonicParsing="false" prefHeight="37.0" prefWidth="168.0" text="Compra express" StackPane.alignment="BOTTOM_CENTER" onAction="#handleProduct4Order">
+                        <Button fx:id="btnCompraExpress3" mnemonicParsing="false" onAction="#handleProduct4Order" prefHeight="37.0" prefWidth="168.0" text="Compra express" StackPane.alignment="BOTTOM_CENTER">
                            <StackPane.margin>
                               <Insets bottom="34.0" />
                            </StackPane.margin>
@@ -286,65 +286,7 @@
                         <Insets left="7.0" right="7.0" />
                      </HBox.margin>
                   </StackPane>
-                  <Button fx:id="btnMore" contentDisplay="TOP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="100.0" prefWidth="264.0" rotate="-90.0" text="Más">
-                     <HBox.margin>
-                        <Insets left="-76.0" right="-70.0" top="82.0" />
-                     </HBox.margin>
-                     <font>
-                        <Font name="SansSerif Bold" size="25.0" />
-                     </font>
-                  </Button>
                </children>
-            </HBox>
-            <Label text="Mi Combo Express" textFill="#00294d">
-               <font>
-                  <Font name="SansSerif Regular" size="35.0" />
-               </font>
-            </Label>
-            <HBox fx:id="HBCompraExpress1" maxHeight="-Infinity" prefHeight="264.0">
-               <children>
-                  <StackPane fx:id="SPProduct1" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="264.0" prefWidth="193.0">
-                     <HBox.margin>
-                        <Insets left="7.0" right="7.0" />
-                     </HBox.margin>
-                     <children>
-                        <ImageView fx:id="imgProduct1" cache="true" fitHeight="264.0" fitWidth="194.0" pickOnBounds="true">
-                           <image>
-                              <Image url="@../images/product_1.jpg" />
-                           </image>
-                        </ImageView>
-                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f5d4a9cc" height="127.0" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0" width="194.0" StackPane.alignment="BOTTOM_CENTER">
-                           <StackPane.margin>
-                              <Insets bottom="20.0" />
-                           </StackPane.margin>
-                        </Rectangle>
-                        <Label fx:id="lblCNames" text="Croissant" StackPane.alignment="CENTER_LEFT">
-                           <font>
-                              <Font name="SansSerif Bold" size="18.0" />
-                           </font>
-                           <StackPane.margin>
-                              <Insets left="13.0" />
-                           </StackPane.margin>
-                        </Label>
-                        <Button fx:id="btnCompraExpress1" mnemonicParsing="false" prefHeight="37.0" prefWidth="168.0" text="Compra express" StackPane.alignment="BOTTOM_CENTER">
-                           <StackPane.margin>
-                              <Insets bottom="34.0" />
-                           </StackPane.margin>
-                        </Button>
-                     </children>
-                  </StackPane>
-                  <Button contentDisplay="TOP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="100.0" prefWidth="264.0" rotate="-90.0" text="Más">
-                     <HBox.margin>
-                        <Insets left="-76.0" right="-70.0" top="82.0" />
-                     </HBox.margin>
-                     <font>
-                        <Font name="SansSerif Bold" size="25.0" />
-                     </font>
-                  </Button>
-               </children>
-               <VBox.margin>
-                  <Insets bottom="20.0" top="20.0" />
-               </VBox.margin>
             </HBox>
          </children>
       </VBox>

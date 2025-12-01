@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="1024.0" prefWidth="1440.0" style="-fx-background-color: F7D6A8;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.quickbite.QBFacturacionFX">
+   <children>
+      <Line endX="1421.0" layoutX="30.0" layoutY="202.0" startX="-38.0" />
+      <Button fx:id="btnAtras" layoutX="1260.0" layoutY="60.0" mnemonicParsing="false" onAction="#onBtnBack" prefHeight="50.0" prefWidth="140.0" text="ATRÁS">
+         <font>
+            <Font name="SansSerif Regular" size="15.4" />
+         </font>
+      </Button>
+      <VBox layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="309.0">
+         <children>
+            <HBox prefHeight="133.0" prefWidth="360.0">
+               <children>
+                  <ImageView fx:id="imgLogo" fitHeight="67.12" fitWidth="67.12" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons/logo.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="50.0" top="50.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label fx:id="lblLogo" text="QuickBite">
+                     <font>
+                        <Font name="SansSerif Bold" size="36.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="71.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <Label fx:id="lblLogo1" text="Negocio">
+               <font>
+                  <Font name="SansSerif Regular" size="25.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="50.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+      <StackPane prefHeight="150.0" prefWidth="200.0" />
+      <HBox layoutX="10.0" layoutY="202.0" prefHeight="832.0" prefWidth="1440.0">
+         <children>
+            <VBox prefHeight="870.0" prefWidth="1196.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <StackPane prefHeight="150.0" prefWidth="765.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Filtro De Fecha" StackPane.alignment="TOP_LEFT">
+                                 <font>
+                                    <Font name="SansSerif Regular" size="25.0" />
+                                 </font>
+                                 <StackPane.margin>
+                                    <Insets left="20.0" top="20.0" />
+                                 </StackPane.margin>
+                              </Text>
+                              <Button fx:id="btnEstablecerFecha" mnemonicParsing="false" onAction="#onEstablecerFecha" prefHeight="35.0" prefWidth="180.0" text="Establecer Fecha" StackPane.alignment="TOP_RIGHT">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <StackPane.margin>
+                                    <Insets top="56.0" />
+                                 </StackPane.margin>
+                              </Button>
+                              <DatePicker fx:id="dateFrom" prefHeight="30.0" prefWidth="261.0" StackPane.alignment="CENTER_LEFT">
+                                 <StackPane.margin>
+                                    <Insets left="13.0" top="50.0" />
+                                 </StackPane.margin>
+                              </DatePicker>
+                              <DatePicker fx:id="dateTo" prefHeight="30.0" prefWidth="261.0">
+                                 <StackPane.margin>
+                                    <Insets left="70.0" top="50.0" />
+                                 </StackPane.margin>
+                              </DatePicker>
+                           </children>
+                        </StackPane>
+                        <StackPane prefHeight="91.0" prefWidth="403.0">
+                           <children>
+                              <TextField fx:id="txtBuscar" maxHeight="-Infinity" maxWidth="-Infinity" onAction="#onBuscar" prefHeight="42.0" prefWidth="243.0" promptText="Buscar" StackPane.alignment="TOP_CENTER">
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <padding>
+                                    <Insets left="30.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="SansSerif Bold" size="15.0" />
+                                 </font>
+                                 <StackPane.margin>
+                                    <Insets top="50.0" />
+                                 </StackPane.margin>
+                              </TextField>
+                              <ImageView fx:id="imgSearch" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="TOP_CENTER">
+                                 <image>
+                                    <Image url="@../images/icons/search.png" />
+                                 </image>
+                                 <StackPane.margin>
+                                    <Insets right="210.0" top="60.0" />
+                                 </StackPane.margin>
+                              </ImageView>
+                           </children>
+                        </StackPane>
+                     </children>
+                  </HBox>
+                  <TableView fx:id="tblFacturacion" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1206.0">
+                     <columns>
+                        <TableColumn fx:id="colId" prefWidth="100.0" text="Id" />
+                        <TableColumn fx:id="colFecha" prefWidth="150.0" text="Fecha" />
+                        <TableColumn fx:id="colCliente" prefWidth="150.0" text="Cliente" />
+                        <TableColumn fx:id="colRecibido" prefWidth="140.0" text="Recibido" />
+                        <TableColumn fx:id="colCambio" prefWidth="140.0" text="Cambio" />
+                        <TableColumn fx:id="colTotal" prefWidth="140.0" text="Total" />
+                        <TableColumn fx:id="colProductos" prefWidth="184.0" text="Productos" />
+                        <TableColumn fx:id="colMetodo" prefWidth="200.0" text="Método de pago" />
+                     </columns>
+                     <VBox.margin>
+                        <Insets top="40.0" />
+                     </VBox.margin>
+                  </TableView>
+               </children>
+               <HBox.margin>
+                  <Insets right="-10.0" />
+               </HBox.margin>
+            </VBox>
+            <StackPane prefHeight="150.0" prefWidth="217.0">
+               <HBox.margin>
+                  <Insets left="28.0" />
+               </HBox.margin>
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#210002" height="870.0" stroke="BLACK" strokeType="INSIDE" width="218.0">
+                     <StackPane.margin>
+                        <Insets right="-1.0" />
+                     </StackPane.margin>
+                  </Rectangle>
+                  <Button fx:id="btnVer" alignment="TOP_CENTER" mnemonicParsing="false" onAction="#onVer" prefHeight="35.0" prefWidth="153.0" text="Ver Factura">
+                     <StackPane.margin>
+                        <Insets top="-681.0" />
+                     </StackPane.margin>
+                     <graphic>
+                        <ImageView fitHeight="21.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons/search.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </StackPane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

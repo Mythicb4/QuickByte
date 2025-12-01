@@ -42,7 +42,18 @@ public class CarritoManager {
     }
 
     public void addItem(OrdenarProducto item) {
-        // En una app completa, aquí se debe verificar si el producto ya existe para solo aumentar la cantidad.
+        // Si ya existe un ítem con el mismo usuario y producto, aumentamos la cantidad
+        for (OrdenarProducto existing : items) {
+            if (existing.getUserEmail() != null
+                    && item.getUserEmail() != null
+                    && existing.getUserEmail().equals(item.getUserEmail())
+                    && existing.getProductName().equalsIgnoreCase(item.getProductName())) {
+                existing.increaseQuantity(item.getQuantity());
+                return;
+            }
+        }
+
+        // Si no existe, lo añadimos
         items.add(item);
     }
 

@@ -5,41 +5,48 @@ package com.mycompany.quickbite;
  * Representa un ítem que se añade al pedido/carrito.
  */
 public class OrdenarProducto {
-    private final String nombre;
-    private final double precio;
-    private final int cantidad;
-    private String producto;
+    private final String userEmail; // Usuario que hizo el pedido
+    private final String productName; // Nombre del producto
+    private final double price;
+    private int quantity; // mutable para permitir combinar items
 
-    public OrdenarProducto(String nombre, String producto, double precio, int cantidad) {
-        this.nombre = nombre;
-        this.producto = producto;
-        this.precio = precio;
-        this.cantidad = cantidad;
+    public OrdenarProducto(String userEmail, String productName, double price, int quantity) {
+        this.userEmail = userEmail;
+        this.productName = productName;
+        this.price = price;
+        this.quantity = quantity;
     }
 
     // Getters
-    public String getName(){
-        return nombre;
+    public String getUserEmail() {
+        return userEmail;
     }
+
     public String getProductName() {
-        return producto;
+        return productName;
     }
 
     public double getPrice() {
-        return precio;
+        return price;
     }
 
     public int getQuantity() {
-        return cantidad;
-    }
-    
-    public double getSubtotal(){
-        return precio* cantidad;
+        return quantity;
     }
 
-    // Método para imprimir la orden (ejemplo)
+    public double getSubtotal() {
+        return price * quantity;
+    }
+
+    // Permite aumentar la cantidad cuando se agrega el mismo producto
+    public void increaseQuantity(int delta) {
+        if (delta > 0) {
+            this.quantity += delta;
+        }
+    }
+
     @Override
     public String toString() {
-        return cantidad+ " x " + nombre + " @ $" + precio + " (Total: $" + (precio * cantidad) + ")";
+        return quantity + " x " + productName + " @ $" + price + " (Total: $" + (price * quantity) + ")";
     }
 }

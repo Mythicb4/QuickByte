@@ -2,6 +2,7 @@ package com.mycompany.quickbite.service;
 
 import com.mycompany.quickbite.dao.ProductDao;
 import com.mycompany.quickbite.model.Product;
+import com.mycompany.quickbite.model.SaleItem;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -68,8 +69,11 @@ public class ProductService {
         return productDao.loadAll();
     }
 
-    public Optional<Product> getProductById(String id) {
-        return productDao.findById(id);
+    public Product getProductById(String id) throws NoSuchElementException { // ⬅️ MÉTODO AÑADIDO
+        return productDao.loadAll().stream() // Asume loadAll() es accesible en ProductDao
+                .filter(p -> id.equals(p.getId()))
+                .findFirst()
+                .orElseThrow(() -> new NoSuchElementException("Producto con ID " + id + " no encontrado."));
     }
 
     public List<Product> getProductsByCategory(String category) {
@@ -92,5 +96,29 @@ public class ProductService {
         return productDao.loadAll().stream()
                 .filter(p -> !p.isEnabled())
                 .count();
+    }
+    
+    // Verifica este bloque en ProductService.java
+    public void updateStock(String productId, int quantityChange) throws Exception {
+        // 1. Cargar el producto
+        Product product = getProductById(productId); 
+
+        // Validar si el producto existe
+        if (product == null) {
+            throw new NoSuchElementException("Producto con ID " + productId + " no encontrado.");
+        }
+
+        // 2. Calcular nuevo stock
+        int newStock = product.getStock() + quantityChange;
+
+        // 3. Validar stock insuficiente (solo cuando quantityChange es negativo, es decir, una venta)
+        if (newStock < 0) {
+            throw new IllegalArgumentException("Stock insuficiente para el producto: " + product.getName() + 
+                                                ". Disponible: " + product.getStock() + ", Solicitado: " + (-quantityChange));
+        }
+
+        // 4. Actualizar y guardar
+        product.setStock(newStock); 
+        productDao.updateProduct(product);
     }
 }

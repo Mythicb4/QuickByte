@@ -1,0 +1,20 @@
+/* Estilo para el estado "Bien" (Stock Correcto) - Color Verde */
+.table-cell.status-bien {
+    -fx-text-fill: #1a7c29; /* Verde oscuro */
+    -fx-font-weight: bold;
+}
+
+/* Estilo para el estado "Stock Bajo" - Color Rojo */
+.table-cell.status-bajo {
+    -fx-text-fill: #cc0000; /* Rojo fuerte */
+    -fx-font-weight: bold;
+}
+
+/* Opcional: Asegura que el color se mantenga incluso al seleccionar la fila */
+.table-row-cell:selected > .table-cell.status-bien {
+    -fx-text-fill: #1a7c29;
+}
+
+.table-row-cell:selected > .table-cell.status-bajo {
+    -fx-text-fill: #cc0000;
+}

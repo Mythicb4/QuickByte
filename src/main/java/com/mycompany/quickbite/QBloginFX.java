@@ -4,6 +4,7 @@ import com.mycompany.quickbite.dao.BusinessDao;
 import com.mycompany.quickbite.dao.StudentDao;
 import com.mycompany.quickbite.util.AppState;
 import com.mycompany.quickbite.util.Navigator;
+import com.mycompany.quickbite.util.SessionContext;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -56,7 +57,7 @@ public class QBloginFX {
 
     @FXML
     private ImageView visibilityImageOn;
-    
+
     @FXML
     private RadioButton rbEstudiante;
 
@@ -65,11 +66,11 @@ public class QBloginFX {
 
     // indica si la contraseña está visible (texto plano)
     private boolean passwordVisible = false;
-    
+
     // guarda si eligió estudiante o negocio
-     private String selectedType = null; 
-     
-     @FXML
+    private String selectedType = null;
+
+    @FXML
     private void onEstudianteSelected(ActionEvent event) {
         selectedType = "estudiante";
     }
@@ -78,7 +79,7 @@ public class QBloginFX {
     private void onNegocioSelected(ActionEvent event) {
         selectedType = "negocio";
     }
-    
+
     @FXML
     private void initialize() {
         // 1) sincronizar el texto entre PasswordField y TextField
@@ -94,7 +95,8 @@ public class QBloginFX {
             tfPasswordVisible.setManaged(false);
         }
 
-        // 2) asegurar estado inicial de iconos (off = ojo cerrado visible; on = ojo abierto oculto)
+        // 2) asegurar estado inicial de iconos (off = ojo cerrado visible; on = ojo
+        // abierto oculto)
         if (visibilityImageOff != null && visibilityImageOn != null) {
             visibilityImageOff.setVisible(true);
             visibilityImageOn.setVisible(false);
@@ -131,7 +133,8 @@ public class QBloginFX {
             // opcional: mover el foco al campo visible para mejor UX
             if (passwordVisible) {
                 tfPasswordVisible.requestFocus();
-                tfPasswordVisible.positionCaret(tfPasswordVisible.getText() != null ? tfPasswordVisible.getText().length() : 0);
+                tfPasswordVisible
+                        .positionCaret(tfPasswordVisible.getText() != null ? tfPasswordVisible.getText().length() : 0);
             } else {
                 tfPassword.requestFocus();
                 tfPassword.positionCaret(tfPassword.getText() != null ? tfPassword.getText().length() : 0);
@@ -146,24 +149,26 @@ public class QBloginFX {
     }
 
     // Evento del botón "Entrar"
-@FXML
+    @FXML
     private void onLoginClick(ActionEvent event) {
         String email = txtEmail.getText().trim();
         String password = tfPassword.getText();
 
         if (email.isEmpty() || password.isEmpty()) {
-           System.out.println("Por favor ingresa email y contraseña.");
+            System.out.println("Por favor ingresa email y contraseña.");
             return;
         }
 
         if (selectedType == null) {
-           System.out.println("⚠️ Selecciona el tipo de usuario primero.");
+            System.out.println("⚠️ Selecciona el tipo de usuario primero.");
             return;
         }
 
         boolean valid = false;
 
         if (selectedType.equals("negocio")) {
+            // Guardar el email en la sesión
+            SessionContext.setLoggedInBusinessEmail(email);
             BusinessDao dao = new BusinessDao();
             valid = dao.validateCredentials(email, password);
         } else if (selectedType.equals("estudiante")) {
@@ -172,23 +177,25 @@ public class QBloginFX {
         }
 
         if (valid) {
-           System.out.println("✅ Bienvenido, " + selectedType + "!");
-           AppState.setUserEmail(email);
-           
+            System.out.println("✅ Bienvenido, " + selectedType + "!");
+            // Guardar información mínima de sesión/global para otras vistas
+            AppState.setUserType(selectedType);
+            AppState.setUserEmail(email);
+
             if (selectedType.equals("negocio")) {
-                Navigator.navigateTo("/views/login_negocio.fxml", "dashboard_negocio", event);
+                Navigator.navigateTo("/views/login_negocio.fxml", "dashboard_negocio", true, event);
             } else {
-                Navigator.navigateTo("/views/login_estudiante.fxml", "dashboard_estudiante", event);
+                Navigator.navigateTo("/views/login_estudiante.fxml", "dashboard_estudiante", true, event);
             }
         } else {
-           System.out.println("❌ Email o contraseña incorrectos.");
+            System.out.println("❌ Email o contraseña incorrectos.");
         }
     }
 
     // Evento del botón "Singup"
     @FXML
     private void onBtnSingup(ActionEvent event) {
-        Navigator.navigateTo("/views/type.fxml", "type", event);
+        Navigator.navigateTo("/views/type.fxml", "type", true, event);
     }
 
     // Evento del Hyperlink "Recuperar contraseña"

@@ -69,7 +69,7 @@ public class QBsingupFX {
     @FXML
     private void onBackClick(ActionEvent event) {
         AppState.setUserType(null);
-        Navigator.navigateTo("/views/type.fxml", "type", event);
+        Navigator.navigateTo("/views/type.fxml", "type", true, event);
     }
     
     // indica si la contraseña está visible (texto plano)
@@ -180,7 +180,7 @@ public class QBsingupFX {
 
             bDao.addBusiness(new Business(name, location, email, password));
             System.out.println("Negocio registrado correctamente.");
-            Navigator.navigateTo("/views/login.fxml", "login", event);
+            Navigator.navigateTo("/views/login.fxml", "login", true, event);
         } else {
             StudentDao sDao = new StudentDao();
             if (sDao.emailExists(email)) {
@@ -190,7 +190,7 @@ public class QBsingupFX {
 
             sDao.addStudent(new Student(email, password));
             System.out.println("Estudiante registrado correctamente.");
-            Navigator.navigateTo("/views/login.fxml", "login", event);
+            Navigator.navigateTo("/views/login.fxml", "login", true, event);
         }
     }
 }

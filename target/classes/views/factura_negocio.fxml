@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600" prefWidth="480" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.quickbite.QBFacturaFX">
+    <children>
+        <VBox alignment="TOP_CENTER" prefWidth="480" spacing="12" AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20" AnchorPane.topAnchor="20">
+            <children>
+                <Label text="QuickBite">
+                    <font>
+                        <Font name="SansSerif Bold" size="22" />
+                    </font>
+                </Label>
+            <Label fx:id="lblName" text="My cafetería">
+               <font>
+                  <Font name="SansSerif Bold" size="15.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="lblId" text="Id">
+               <font>
+                  <Font name="SansSerif Bold" size="15.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Label>
+            <HBox alignment="CENTER" spacing="20">
+               <children>
+                  <Label fx:id="lblFecha" text="Fecha: dd/mm/aaaa">
+                     <font>
+                        <Font name="SansSerif Bold" size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="lblHora" text="Hora: hh:mm">
+                     <font>
+                        <Font name="SansSerif Bold" size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="60.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <TableView fx:id="tblProductos" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="360.0">
+              <columns>
+                <TableColumn fx:id="colProducto" prefWidth="180.0" text="Producto" />
+                <TableColumn fx:id="colCantidad" prefWidth="180.0" text="Cantidad" />
+                  <TableColumn fx:id="colPrecioUnitario" prefWidth="90.0" text="Precio .und" />
+                  <TableColumn fx:id="colSubtotal" prefWidth="90.0" text="Subtotal" />
+              </columns>
+            </TableView>
+            <Label fx:id="lblTotal" text="Total de venta">
+               <font>
+                  <Font name="SansSerif Bold" size="15.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="lblMetodo" text="Metodo de pago">
+               <font>
+                  <Font name="SansSerif Bold" size="15.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="lblRecibido" text="Recibido">
+               <font>
+                  <Font name="SansSerif Bold" size="15.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="lblCambio" text="Cambio">
+               <font>
+                  <Font name="SansSerif Bold" size="15.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Label>
+
+                <HBox alignment="CENTER" spacing="20">
+                    <Button fx:id="btnImprimir" onAction="#onImprimir" prefWidth="120" text="Imprimir" />
+                    <Button fx:id="btnCerrar" onAction="#onCerrar" prefWidth="120" text="Cerrar" />
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

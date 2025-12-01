@@ -24,48 +24,83 @@ public class ProductDao {
     private final Gson gson;
     private final Object lock = new Object();
 
-    public ProductDao(String filePathStr) {
-        this.filePath = Paths.get(filePathStr);
+    public ProductDao(String businessEmail) {
+        // 1. Sanitizar el email para usarlo como nombre de archivo
+        // Reemplazamos caracteres especiales por si el sistema de archivos los rechaza.
+        String safeFileName = businessEmail
+                .toLowerCase()
+                .replace("@", "_at_")
+                .replace(".", "_dot_");
+        
+        String fileName = safeFileName + ".json";
+        
+        // 2. Definir la ruta: data/productos_negocio/email_at_negocio.json
+        this.filePath = Paths.get("data", "productos_negocio", fileName);
         this.gson = new GsonBuilder().setPrettyPrinting().create();
+        
         ensureDataFileExists();
     }
-
+    
+    // *** ensureDataFileExists() CORREGIDO PARA CREAR CARPETAS ***
     private void ensureDataFileExists() {
         try {
             Path parent = filePath.getParent();
+            // Asegura que la carpeta 'data/productos_negocio' exista
             if (parent != null && !Files.exists(parent)) {
                 Files.createDirectories(parent);
             }
+            
+            // Crea el archivo JSON si no existe
             if (!Files.exists(filePath)) {
                 try (FileWriter writer = new FileWriter(filePath.toFile())) {
+                    // Escribe un array JSON vacío [] para inicializar
                     writer.write("[]");
                 }
             }
         } catch (Exception e) {
-            throw new RuntimeException("No se pudo crear el archivo de datos: " + filePath, e);
+            System.err.println("Error al asegurar la existencia del archivo de datos: " + e.getMessage());
+            // Dependiendo de tu manejo de errores, podrías relanzar o ignorar.
+            throw new RuntimeException("Fallo al inicializar el DAO.", e);
         }
     }
 
+    // ProductDao.java
+// ...
+
     public List<Product> loadAll() {
         synchronized (lock) {
+            if (!Files.exists(filePath)) {
+                return Collections.emptyList();
+            }
             try (FileReader reader = new FileReader(filePath.toFile())) {
-                Type listType = new TypeToken<List<Product>>() {}.getType();
-                List<Product> list = gson.fromJson(reader, listType);
-                if (list == null) return new ArrayList<>();
-                return list;
+                Type productListType = new TypeToken<List<Product>>() {}.getType();
+                List<Product> products = gson.fromJson(reader, productListType);
+                return products != null ? products : Collections.emptyList();
             } catch (Exception e) {
-                e.printStackTrace();
-                return new ArrayList<>();
+                // Si la carga falla (ej: archivo corrupto), movemos el archivo
+                // para evitar que se sobrescriba con una lista vacía en el próximo guardado.
+                System.err.println("Error al cargar productos. El archivo puede estar corrupto: " + e.getMessage());
+                try {
+                    Path corruptedPath = Paths.get(filePath.toString() + ".corrupted." + System.currentTimeMillis());
+                    Files.move(filePath, corruptedPath);
+                    System.err.println("Archivo corrupto movido a: " + corruptedPath);
+                } catch (Exception moveE) {
+                    System.err.println("Fallo al mover el archivo corrupto: " + moveE.getMessage());
+                }
+                // Se devuelve una lista vacía, y la app continuará como si no hubiera datos.
+                return Collections.emptyList();
             }
         }
     }
 
-    public void saveAll(List<Product> products) {
+    private void saveAll(List<Product> products) {
         synchronized (lock) {
             try (FileWriter writer = new FileWriter(filePath.toFile())) {
                 gson.toJson(products, writer);
             } catch (Exception e) {
-                throw new RuntimeException("Error guardando productos en " + filePath, e);
+                System.err.println("Error al guardar productos: " + e.getMessage());
+                // Propagamos la excepción al servicio/controlador
+                throw new RuntimeException("Fallo la persistencia en el archivo de datos: " + e.getMessage(), e);
             }
         }
     }

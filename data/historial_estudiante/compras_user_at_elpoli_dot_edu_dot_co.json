@@ -1,0 +1,42 @@
+[
+  {
+    "id": "PUR-773EB9EC",
+    "studentEmail": "user@elpoli.edu.co",
+    "businessName": "Cafeteria Poli",
+    "businessLocation": "p40 103",
+    "purchaseDate": "2025-12-01T19:02:53.3279376",
+    "totalAmount": 5000.0,
+    "paymentMethod": "QR",
+    "items": [
+      {
+        "productName": "Americano",
+        "quantity": 2,
+        "unitPrice": 2500.0,
+        "subtotal": 5000.0
+      }
+    ]
+  },
+  {
+    "id": "PUR-E7991384",
+    "studentEmail": "user@elpoli.edu.co",
+    "businessName": "Cafeteria Poli",
+    "businessLocation": "p40 103",
+    "purchaseDate": "2025-12-01T20:26:39.0511453",
+    "totalAmount": 9300.0,
+    "paymentMethod": "QR",
+    "items": [
+      {
+        "productName": "Empanada de Jamón",
+        "quantity": 1,
+        "unitPrice": 5500.0,
+        "subtotal": 5500.0
+      },
+      {
+        "productName": "Jugo de Naranja",
+        "quantity": 1,
+        "unitPrice": 3800.0,
+        "subtotal": 3800.0
+      }
+    ]
+  }
+]

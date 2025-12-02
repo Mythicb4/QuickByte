@@ -31,24 +31,6 @@ public class QBPerfilFX implements Initializable {
     private Student currentStudent;
 
     @FXML
-    private Button btnAtras;
-
-    @FXML
-    private Button btnCarrito;
-
-    @FXML
-    private Button btnHistorial;
-
-    @FXML
-    private Button btnPerfil;
-
-    @FXML
-    private Button btnPreferencias;
-
-    @FXML
-    private Button btnTienda;
-
-    @FXML
     private Button btnSave;
 
     @FXML
@@ -61,16 +43,7 @@ public class QBPerfilFX implements Initializable {
     private TextField txtPassword;
 
     @FXML
-    private ImageView imgLogo;
-
-    @FXML
     private Label lblEmail;
-
-    @FXML
-    private Label lblLogo;
-
-    @FXML
-    private Label lblLogo1;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -146,9 +119,8 @@ public class QBPerfilFX implements Initializable {
 
     @FXML
     void onCancel(ActionEvent event) {
-        // Recargar datos originales
-        loadStudentData();
-        new Alert(Alert.AlertType.INFORMATION, "Cambios cancelados.").showAndWait();
+        // Cerrar la ventana sin mensaje
+        btnCancel.getScene().getWindow().hide();
     }
 
     @FXML
@@ -213,49 +185,4 @@ public class QBPerfilFX implements Initializable {
         }
     }
 
-    @FXML
-    void onAtras(ActionEvent event) {
-        Navigator.navigateTo("/views/login_estudiante.fxml", "estudiante", true, event);
-    }
-
-    @FXML
-    private void handleViewCartAndGenerateQR(ActionEvent event) {
-
-        // Verificar si hay productos en el carrito antes de navegar.
-        if (CarritoManager.getInstancia().getItems().isEmpty()) {
-            new Alert(Alert.AlertType.WARNING, "El carrito está vacío. Agregue productos antes de generar el QR.")
-                    .showAndWait();
-            return;
-        }
-
-        Navigator.navigateTo("/views/carrito.fxml", "QuickBite - Mi Carrito", false, event);
-    }
-
-    @FXML
-    void onBtnSalir(ActionEvent event) {
-        // Nota: El método handleLogout anterior vaciaba el carrito.
-        // Si el botón Salir debe vaciar el carrito, puedes añadir:
-        // CarritoManager.getInstancia().vaciarCarrito();
-        Navigator.navigateTo("/views/login.fxml", "login", true, event);
-    }
-
-    @FXML
-    void onHistorial(ActionEvent event) {
-        Navigator.navigateTo("/views/historial_estudiante.fxml", "historial", true, event);
-    }
-
-    @FXML
-    void onPerfil(ActionEvent event) {
-        Navigator.navigateTo("/views/perfil_estudiante.fxml", "perfil", true, event);
-    }
-
-    @FXML
-    void onPreferencias(ActionEvent event) {
-        Navigator.navigateTo("/views/preferencia_estudiante.fxml", "preferencia", true, event);
-    }
-
-    @FXML
-    void onTienda(ActionEvent event) {
-        Navigator.navigateTo("/views/tiendas_estudiante.fxml", "tiendas", true, event);
-    }
 }

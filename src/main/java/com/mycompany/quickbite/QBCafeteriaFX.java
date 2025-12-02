@@ -544,7 +544,7 @@ public class QBCafeteriaFX implements Initializable {
 
     @FXML
     void onPerfil(ActionEvent event) {
-        Navigator.navigateTo("/views/perfil_estudiante.fxml", "perfil", true, event);
+        Navigator.navigateTo("/views/perfil_estudiante.fxml", "perfil", false, event);
     }
 
     @FXML

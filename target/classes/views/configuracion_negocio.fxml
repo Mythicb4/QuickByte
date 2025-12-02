@@ -36,6 +36,14 @@
 
                         <Label text="Ubicación" GridPane.rowIndex="2" />
                         <TextField fx:id="txtUbicacion" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        
+                        <Label text="Ruta imagen" GridPane.rowIndex="3" />
+                        <HBox GridPane.columnIndex="1" GridPane.rowIndex="3" spacing="8">
+                            <children>
+                                <TextField fx:id="txtImagePath" prefWidth="280" />
+                                <Button fx:id="btnBrowse" text="Buscar..." onAction="#onBrowseImage" />
+                            </children>
+                        </HBox>
                   <Label text="Email" GridPane.rowIndex="4" />
                   <Label fx:id="lblEmail" text="&quot;Email del negocio&quot;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                     </children>

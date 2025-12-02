@@ -11,7 +11,9 @@ com\mycompany\quickbite\model\Product.class
 com\mycompany\quickbite\service\SaleService.class
 com\mycompany\quickbite\util\AppState.class
 com\mycompany\quickbite\QBHistorialFX.class
+com\mycompany\quickbite\QBHistorialFX$1.class
 com\mycompany\quickbite\dao\ClientDao.class
+com\mycompany\quickbite\dao\StudentPurchaseDao.class
 com\mycompany\quickbite\OrdenarProducto.class
 com\mycompany\quickbite\dao\SaleDao.class
 com\mycompany\quickbite\service\ProductService.class
@@ -29,6 +31,7 @@ com\mycompany\quickbite\service\ReportGenerator.class
 com\mycompany\quickbite\util\SessionContext.class
 com\mycompany\quickbite\QBtype.class
 com\mycompany\quickbite\dao\StudentDao$1.class
+com\mycompany\quickbite\model\StudentPurchase.class
 com\mycompany\quickbite\QBInventarioFX$1.class
 com\mycompany\quickbite\util\Navigator.class
 com\mycompany\quickbite\model\Student.class
@@ -38,15 +41,19 @@ com\mycompany\quickbite\QBsingupFX.class
 com\mycompany\quickbite\util\CarritoManager.class
 com\mycompany\quickbite\QBEstudianteFX.class
 com\mycompany\quickbite\model\SaleItem.class
+com\mycompany\quickbite\dao\PreferenciasDao.class
 com\mycompany\quickbite\service\ReportService$ProductStatsBuilder.class
+com\mycompany\quickbite\dao\StudentPurchaseDao$1.class
 com\mycompany\quickbite\model\Client.class
 com\mycompany\quickbite\QBConfiguracionFX.class
 com\mycompany\quickbite\dao\ProductDao$1.class
 com\mycompany\quickbite\dao\ClientDao$1.class
+com\mycompany\quickbite\model\PurchaseItem.class
 com\mycompany\quickbite\QBFacturaFX$1.class
 com\mycompany\quickbite\QBClienteFX.class
 com\mycompany\quickbite\QBCarritoFX.class
 com\mycompany\quickbite\QBPreferenciasFX.class
+com\mycompany\quickbite\dao\PreferenciasDao$1.class
 com\mycompany\quickbite\model\SaleItemReport.class
 com\mycompany\quickbite\QBloginFX.class
 com\mycompany\quickbite\model\Sale.class

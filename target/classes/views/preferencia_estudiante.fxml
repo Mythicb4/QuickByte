@@ -150,17 +150,14 @@
                               <Insets bottom="20.0" />
                            </StackPane.margin>
                         </Rectangle>
-                        <Label fx:id="lblPName" text="Croissant" StackPane.alignment="CENTER_LEFT">
+                        <Label fx:id="lblPName" text="Croissant" StackPane.alignment="CENTER">
                            <font>
                               <Font name="SansSerif Bold" size="18.0" />
                            </font>
-                           <StackPane.margin>
-                              <Insets left="13.0" />
-                           </StackPane.margin>
                         </Label>
-                        <Label fx:id="lblPPrice" text="\$ 3500" StackPane.alignment="CENTER_RIGHT">
+                        <Label fx:id="lblPPrice" text="\$ 3500" StackPane.alignment="BOTTOM_CENTER">
                            <StackPane.margin>
-                              <Insets right="13.0" />
+                              <Insets bottom="80.0" />
                            </StackPane.margin>
                            <font>
                               <Font name="SansSerif Regular" size="15.0" />
@@ -303,11 +300,7 @@
                   </StackPane>
                </children>
             </HBox>
-            <Label text="Combos" textFill="#00294d">
-               <font>
-                  <Font name="SansSerif Regular" size="35.0" />
-               </font>
-            </Label>
+            <!-- "Combos" label removed as requested -->
             <HBox fx:id="HBCompraExpress1" maxHeight="-Infinity" prefHeight="264.0">
                <VBox.margin>
                   <Insets bottom="20.0" top="20.0" />

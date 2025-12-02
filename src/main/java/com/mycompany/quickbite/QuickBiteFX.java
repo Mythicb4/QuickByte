@@ -17,7 +17,7 @@ public class QuickBiteFX extends Application {
     // Modo de desarrollo: si es true, se saltará el login y se abrirá
     // directamente la vista de estudiante con credenciales provisionales.
     // Cambia a false antes de mergear o eliminar cuando no se necesite.
-    private static final boolean DEV_BYPASS_LOGIN = true;
+    private static final boolean DEV_BYPASS_LOGIN = false;
 
     @Override
     public void start(Stage stage) throws Exception {

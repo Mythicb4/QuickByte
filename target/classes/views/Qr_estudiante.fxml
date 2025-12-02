@@ -13,12 +13,12 @@
     <children>
         <VBox alignment="TOP_CENTER" prefWidth="480" spacing="12" AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20" AnchorPane.topAnchor="20">
             <children>
-                <Label text="Tu codigo Qr para validar">
+                <Label text="Tu código QR para validar">
                     <font>
                         <Font name="SansSerif Bold" size="22" />
                     </font>
                 </Label>
-            <Label fx:id="lblName" text="¡Pedido Confirmado!">
+            <Label text="¡Pedido Confirmado!">
                <font>
                   <Font name="SansSerif Bold" size="15.0" />
                </font>
@@ -28,7 +28,7 @@
             </Label>
             <HBox alignment="CENTER" spacing="20" />
             <ImageView fx:id="imgQr" fitHeight="251.0" fitWidth="273.0" pickOnBounds="true" preserveRatio="true" />
-            <Label fx:id="lblTotal" text="Muestra esto en la cafetería">
+            <Label text="Muestra esto en la cafetería">
                <font>
                   <Font name="SansSerif Bold" size="20.0" />
                </font>

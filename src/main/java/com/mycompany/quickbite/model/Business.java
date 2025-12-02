@@ -5,8 +5,10 @@ public class Business {
     private String location;
     private String email;
     private String password;
+    private String imagePath;
 
-    public Business() {}
+    public Business() {
+    }
 
     public Business(String businessName, String location, String email, String password) {
         this.businessName = businessName;
@@ -34,7 +36,7 @@ public class Business {
     public String getEmail() {
         return email;
     }
-    
+
     public void setEmail(String email) {
         this.email = email;
     }
@@ -42,8 +44,16 @@ public class Business {
     public String getPassword() {
         return password;
     }
-    
+
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getImagePath() {
+        return imagePath;
+    }
+
+    public void setImagePath(String imagePath) {
+        this.imagePath = imagePath;
     }
 }

@@ -72,22 +72,8 @@ public class QBCarritoFX implements Initializable {
         }
 
         try {
-            // 1. Serializa el pedido
-            String pedidoSerializado = SerializadorPedido.serializar();
-
-            // 2. Carga la escena del generador (IMPORTANTE: USA FXMLLoader directo)
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/QR.fxml"));
-            Parent root = loader.load();
-
-            // 3. Obtiene el controlador del QR y le pasa el dato
-            ControlGenerador controller = loader.getController();
-            controller.handleGenerarQR(pedidoSerializado); // Llama al nuevo método
-
-            // 4. Navega a la nueva escena
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            stage.setScene(new Scene(root));
-            stage.setTitle("QuickBite - Código QR de Pedido");
-            stage.show();
+            // Navegar a la vista del QR del estudiante
+            Navigator.navigateTo("/views/Qr_estudiante.fxml", "QuickBite - Código QR", false, event);
 
         } catch (Exception e) {
             System.err.println("Error al generar QR o navegar: " + e.getMessage());

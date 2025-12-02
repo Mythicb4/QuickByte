@@ -123,12 +123,17 @@
          </children>
       </VBox>
       <VBox layoutX="440.0" layoutY="160.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="950.0" AnchorPane.leftAnchor="431.0">
-         <children>
-                <Label text="Mi Compra Express" textFill="#00294d">
-                    <font>
-                        <Font name="SansSerif Regular" size="35.0" />
-                    </font>
-                </Label>
+          <children>
+               <Label text="Mi Compra Express" textFill="#00294d">
+                  <font>
+                     <Font name="SansSerif Regular" size="35.0" />
+                  </font>
+               </Label>
+               <Label fx:id="lblNoPreferidos" text="No tienes productos preferidos" visible="false" textFill="#00294d">
+                  <font>
+                     <Font name="SansSerif Regular" size="18.0" />
+                  </font>
+               </Label>
             <HBox fx:id="HBCompraExpress" maxHeight="-Infinity" prefHeight="264.0">
                <VBox.margin>
                   <Insets bottom="20.0" top="20.0" />
@@ -144,22 +149,22 @@
                               <Image url="@../images/product_1.jpg" />
                            </image>
                         </ImageView>
-                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f5d4a9cc" height="98.0" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0" width="194.0" StackPane.alignment="BOTTOM_CENTER">
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f5d4a9cc" height="137.0" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0" width="194.0" StackPane.alignment="BOTTOM_CENTER">
                            <StackPane.margin>
                               <Insets bottom="20.0" />
                            </StackPane.margin>
                         </Rectangle>
-                        <Label fx:id="lblPName" text="Croissant" StackPane.alignment="CENTER_LEFT">
+                        <Label fx:id="lblPName" text="Croissant" StackPane.alignment="CENTER">
                            <font>
                               <Font name="SansSerif Bold" size="18.0" />
                            </font>
                            <StackPane.margin>
-                              <Insets left="13.0" top="70.0" />
+                              <Insets />
                            </StackPane.margin>
                         </Label>
-                        <Label fx:id="lblPPrice" text="\$ 3500" StackPane.alignment="CENTER_RIGHT">
+                        <Label fx:id="lblPPrice" text="\$ 3500" StackPane.alignment="BOTTOM_CENTER">
                            <StackPane.margin>
-                              <Insets right="13.0" top="70.0" />
+                              <Insets bottom="80.0" />
                            </StackPane.margin>
                            <font>
                               <Font name="SansSerif Regular" size="15.0" />
@@ -179,22 +184,22 @@
                               <Image url="@../images/product_1.jpg" />
                            </image>
                         </ImageView>
-                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f5d4a9cc" height="98.0" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0" width="194.0" StackPane.alignment="BOTTOM_CENTER">
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f5d4a9cc" height="137.0" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0" width="194.0" StackPane.alignment="BOTTOM_CENTER">
                            <StackPane.margin>
                               <Insets bottom="20.0" />
                            </StackPane.margin>
                         </Rectangle>
-                        <Label fx:id="lblPName1" text="Croissant" StackPane.alignment="CENTER_LEFT">
+                        <Label fx:id="lblPName1" text="Croissant" StackPane.alignment="CENTER">
                            <font>
                               <Font name="SansSerif Bold" size="18.0" />
                            </font>
                            <StackPane.margin>
-                              <Insets left="13.0" top="70.0" />
+                              <Insets />
                            </StackPane.margin>
                         </Label>
-                        <Label fx:id="lblPPrice1" text="\$ 3500" StackPane.alignment="CENTER_RIGHT">
+                        <Label fx:id="lblPPrice1" text="\$ 3500" StackPane.alignment="BOTTOM_CENTER">
                            <StackPane.margin>
-                              <Insets right="13.0" top="70.0" />
+                              <Insets bottom="80.0" />
                            </StackPane.margin>
                            <font>
                               <Font name="SansSerif Regular" size="15.0" />
@@ -217,22 +222,22 @@
                               <Image url="@../images/product_1.jpg" />
                            </image>
                         </ImageView>
-                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f5d4a9cc" height="98.0" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0" width="194.0" StackPane.alignment="BOTTOM_CENTER">
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f5d4a9cc" height="137.0" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0" width="194.0" StackPane.alignment="BOTTOM_CENTER">
                            <StackPane.margin>
                               <Insets bottom="20.0" />
                            </StackPane.margin>
                         </Rectangle>
-                        <Label fx:id="lblPName2" text="Croissant" StackPane.alignment="CENTER_LEFT">
+                        <Label fx:id="lblPName2" text="Croissant" StackPane.alignment="CENTER">
                            <font>
                               <Font name="SansSerif Bold" size="18.0" />
                            </font>
                            <StackPane.margin>
-                              <Insets left="13.0" top="70.0" />
+                              <Insets />
                            </StackPane.margin>
                         </Label>
-                        <Label fx:id="lblPPrice2" text="\$ 3500" StackPane.alignment="CENTER_RIGHT">
+                        <Label fx:id="lblPPrice2" text="\$ 3500" StackPane.alignment="BOTTOM_CENTER">
                            <StackPane.margin>
-                              <Insets right="13.0" top="70.0" />
+                              <Insets bottom="80.0" />
                            </StackPane.margin>
                            <font>
                               <Font name="SansSerif Regular" size="15.0" />
@@ -255,22 +260,22 @@
                               <Image url="@../images/product_1.jpg" />
                            </image>
                         </ImageView>
-                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f5d4a9cc" height="98.0" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0" width="194.0" StackPane.alignment="BOTTOM_CENTER">
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f5d4a9cc" height="137.0" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0" width="194.0" StackPane.alignment="BOTTOM_CENTER">
                            <StackPane.margin>
                               <Insets bottom="20.0" />
                            </StackPane.margin>
                         </Rectangle>
-                        <Label fx:id="lblPName3" text="Croissant" StackPane.alignment="CENTER_LEFT">
+                        <Label fx:id="lblPName3" text="Croissant" StackPane.alignment="CENTER">
                            <font>
                               <Font name="SansSerif Bold" size="18.0" />
                            </font>
                            <StackPane.margin>
-                              <Insets left="13.0" top="70.0" />
+                              <Insets />
                            </StackPane.margin>
                         </Label>
-                        <Label fx:id="lblPPrice3" text="\$ 3500" StackPane.alignment="CENTER_RIGHT">
+                        <Label fx:id="lblPPrice3" text="\$ 3500" StackPane.alignment="BOTTOM_CENTER">
                            <StackPane.margin>
-                              <Insets right="13.0" top="70.0" />
+                              <Insets bottom="80.0" />
                            </StackPane.margin>
                            <font>
                               <Font name="SansSerif Regular" size="15.0" />

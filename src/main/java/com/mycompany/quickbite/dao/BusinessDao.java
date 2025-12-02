@@ -29,7 +29,8 @@ public class BusinessDao {
 
     public List<Business> getAllBusinesses() {
         try (FileReader reader = new FileReader(BUSINESSES_FILE.toFile())) {
-            Type listType = new TypeToken<List<Business>>() {}.getType();
+            Type listType = new TypeToken<List<Business>>() {
+            }.getType();
             List<Business> businesses = gson.fromJson(reader, listType);
             return (businesses != null) ? businesses : new ArrayList<>();
         } catch (IOException e) {
@@ -56,10 +57,33 @@ public class BusinessDao {
         return getAllBusinesses().stream()
                 .anyMatch(b -> b.getEmail().equalsIgnoreCase(email));
     }
-    
+
     public boolean validateCredentials(String email, String password) {
         return getAllBusinesses().stream()
                 .anyMatch(b -> b.getEmail().equalsIgnoreCase(email)
                         && b.getPassword().equals(password));
+    }
+
+    public void updateBusiness(Business updated) {
+        List<Business> businesses = getAllBusinesses();
+        boolean replaced = false;
+        for (int i = 0; i < businesses.size(); i++) {
+            Business b = businesses.get(i);
+            if (b.getEmail() != null && b.getEmail().equalsIgnoreCase(updated.getEmail())) {
+                businesses.set(i, updated);
+                replaced = true;
+                break;
+            }
+        }
+        if (!replaced) {
+            businesses.add(updated);
+        }
+        saveAll(businesses);
+    }
+
+    public void deleteBusinessByEmail(String email) {
+        List<Business> businesses = getAllBusinesses();
+        businesses.removeIf(b -> b.getEmail() != null && b.getEmail().equalsIgnoreCase(email));
+        saveAll(businesses);
     }
 }

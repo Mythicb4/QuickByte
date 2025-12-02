@@ -140,6 +140,14 @@
                         <Insets top="40.0" />
                      </StackPane.margin>
                   </Label>
+                  <Label fx:id="lblUbicacion" text="p10 101" textFill="#00294d" StackPane.alignment="TOP_LEFT">
+                     <font>
+                        <Font name="SansSerif Regular" size="18.0" />
+                     </font>
+                     <StackPane.margin>
+                        <Insets top="75.0" />
+                     </StackPane.margin>
+                  </Label>
                   <TextField fx:id="txtBuscar" maxHeight="-Infinity" maxWidth="-Infinity" onAction="#onBuscarAction" prefHeight="42.0" prefWidth="359.0" promptText="Buscar" StackPane.alignment="BOTTOM_LEFT">
                      <opaqueInsets>
                         <Insets />
@@ -166,6 +174,11 @@
             </StackPane>
             <HBox prefHeight="60.0" prefWidth="950.0">
                <children>
+                  <Button fx:id="btnMostrarTodos" mnemonicParsing="false" onAction="#onMostrarTodos" prefHeight="50.0" prefWidth="160.0" text="Mostrar todos">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Button>
                   <Button fx:id="btnCategoria" mnemonicParsing="false" onAction="#onCategoria" prefHeight="50.0" prefWidth="120.0" text="Categoria 1">
                      <HBox.margin>
                         <Insets right="10.0" />
@@ -206,22 +219,19 @@
                               <Image url="@../images/product_1.jpg" />
                            </image>
                         </ImageView>
-                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f5d4a9cc" height="137.0" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0" width="194.0" StackPane.alignment="BOTTOM_CENTER">
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f5d4a9cc" height="169.0" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0" width="194.0" StackPane.alignment="BOTTOM_CENTER">
                            <StackPane.margin>
                               <Insets bottom="20.0" />
                            </StackPane.margin>
                         </Rectangle>
-                        <Label fx:id="lblPName" text="Croissant" StackPane.alignment="CENTER_LEFT">
+                        <Label fx:id="lblPName" text="Croissant" StackPane.alignment="CENTER">
                            <font>
                               <Font name="SansSerif Bold" size="18.0" />
                            </font>
-                           <StackPane.margin>
-                              <Insets left="13.0" />
-                           </StackPane.margin>
                         </Label>
-                        <Label fx:id="lblPPrice" text="\$ 3500" StackPane.alignment="CENTER_RIGHT">
+                        <Label fx:id="lblPPrice" text="\$ 3500" StackPane.alignment="BOTTOM_CENTER">
                            <StackPane.margin>
-                              <Insets right="13.0" />
+                              <Insets bottom="80.0" />
                            </StackPane.margin>
                            <font>
                               <Font name="SansSerif Regular" size="15.0" />
@@ -249,7 +259,7 @@
                               <Insets />
                            </StackPane.margin>
                         </ImageView>
-                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f5d4a9cc" height="137.0" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0" width="194.0" StackPane.alignment="BOTTOM_CENTER">
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f5d4a9cc" height="167.0" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0" width="194.0" StackPane.alignment="BOTTOM_CENTER">
                            <StackPane.margin>
                               <Insets bottom="20.0" />
                            </StackPane.margin>
@@ -259,7 +269,7 @@
                               <Font name="SansSerif Bold" size="18.0" />
                            </font>
                            <StackPane.margin>
-                              <Insets left="13.0" />
+                              <Insets bottom="60.0" left="13.0" />
                            </StackPane.margin>
                         </Label>
                         <Label fx:id="lblPPrice1" text="\$ 3500" StackPane.alignment="CENTER_RIGHT">
@@ -292,7 +302,7 @@
                               <Image url="@../images/product_1.jpg" />
                            </image>
                         </ImageView>
-                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f5d4a9cc" height="137.0" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0" width="194.0" StackPane.alignment="BOTTOM_CENTER">
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f5d4a9cc" height="167.0" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0" width="194.0" StackPane.alignment="BOTTOM_CENTER">
                            <StackPane.margin>
                               <Insets bottom="20.0" />
                            </StackPane.margin>
@@ -302,7 +312,7 @@
                               <Font name="SansSerif Bold" size="18.0" />
                            </font>
                            <StackPane.margin>
-                              <Insets left="13.0" />
+                              <Insets bottom="60.0" left="13.0" />
                            </StackPane.margin>
                         </Label>
                         <Label fx:id="lblPPrice2" text="\$ 3500" StackPane.alignment="CENTER_RIGHT">
@@ -335,7 +345,7 @@
                               <Image url="@../images/product_1.jpg" />
                            </image>
                         </ImageView>
-                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f5d4a9cc" height="137.0" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0" width="194.0" StackPane.alignment="BOTTOM_CENTER">
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f5d4a9cc" height="163.0" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0" width="194.0" StackPane.alignment="BOTTOM_CENTER">
                            <StackPane.margin>
                               <Insets bottom="20.0" />
                            </StackPane.margin>
@@ -345,7 +355,7 @@
                               <Font name="SansSerif Bold" size="18.0" />
                            </font>
                            <StackPane.margin>
-                              <Insets left="13.0" />
+                              <Insets bottom="60.0" left="13.0" />
                            </StackPane.margin>
                         </Label>
                         <Label fx:id="lblPPrice3" text="\$ 3500" StackPane.alignment="CENTER_RIGHT">
@@ -378,36 +388,91 @@
                   <Insets bottom="20.0" top="20.0" />
                </VBox.margin>
                <children>
-                  <StackPane fx:id="SPProduct1" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="264.0" prefWidth="193.0">
+                  <StackPane fx:id="SPProduct44" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="264.0" prefWidth="193.0">
                      <children>
-                        <ImageView fitHeight="243.0" fitWidth="193.0" pickOnBounds="true" preserveRatio="true" />
-                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f5d4a9cc" height="96.0" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0" width="194.0" StackPane.alignment="BOTTOM_CENTER">
+                        <ImageView fx:id="imgProduct4" cache="true" fitHeight="264.0" fitWidth="194.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../images/product_1.jpg" />
+                           </image>
+                        </ImageView>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f5d4a9cc" height="173.0" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0" width="194.0" StackPane.alignment="BOTTOM_CENTER">
                            <StackPane.margin>
                               <Insets bottom="20.0" />
                            </StackPane.margin>
                         </Rectangle>
-                        <Label fx:id="lblName" text="Croissant" StackPane.alignment="CENTER_LEFT">
+                        <Label fx:id="lblPName4" text="Croissant" StackPane.alignment="CENTER_LEFT">
                            <font>
                               <Font name="SansSerif Bold" size="18.0" />
                            </font>
                            <StackPane.margin>
-                              <Insets left="13.0" top="60.0" />
+                              <Insets bottom="60.0" left="13.0" />
                            </StackPane.margin>
                         </Label>
-                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff6969cc" height="39.0" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0" width="146.0" StackPane.alignment="BOTTOM_CENTER">
+                        <Label fx:id="lblPPrice4" text="\$ 3500" StackPane.alignment="CENTER_RIGHT">
                            <StackPane.margin>
-                              <Insets bottom="30.0" />
+                              <Insets right="13.0" />
+                           </StackPane.margin>
+                           <font>
+                              <Font name="SansSerif Regular" size="15.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btnAñadirExpress4" mnemonicParsing="false" onAction="#onAñadirExpress" prefHeight="37.0" prefWidth="168.0" text="Añadir a compra express" StackPane.alignment="BOTTOM_CENTER">
+                           <StackPane.margin>
+                              <Insets bottom="34.0" />
+                           </StackPane.margin>
+                        </Button>
+                        <Button fx:id="btnAñadir4" mnemonicParsing="false" onAction="#onAñadir" prefHeight="37.0" prefWidth="168.0" text="Añadir al carrito">
+                           <StackPane.margin>
+                              <Insets top="70.0" />
+                           </StackPane.margin>
+                        </Button>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </StackPane>
+                  <StackPane fx:id="SPProduct45" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="264.0" prefWidth="193.0">
+                     <children>
+                        <ImageView fx:id="imgProduct5" cache="true" fitHeight="264.0" fitWidth="194.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../images/product_1.jpg" />
+                           </image>
+                        </ImageView>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f5d4a9cc" height="175.0" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0" width="194.0" StackPane.alignment="BOTTOM_CENTER">
+                           <StackPane.margin>
+                              <Insets bottom="20.0" />
                            </StackPane.margin>
                         </Rectangle>
-                        <Label fx:id="lblEstado" text="Cerrado" StackPane.alignment="BOTTOM_CENTER">
+                        <Label fx:id="lblPName5" text="Croissant" StackPane.alignment="CENTER_LEFT">
                            <font>
                               <Font name="SansSerif Bold" size="18.0" />
                            </font>
                            <StackPane.margin>
-                              <Insets bottom="39.0" />
+                              <Insets bottom="60.0" left="13.0" />
                            </StackPane.margin>
                         </Label>
+                        <Label fx:id="lblPPrice5" text="\$ 3500" StackPane.alignment="CENTER_RIGHT">
+                           <StackPane.margin>
+                              <Insets right="13.0" />
+                           </StackPane.margin>
+                           <font>
+                              <Font name="SansSerif Regular" size="15.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btnAñadirExpress5" mnemonicParsing="false" onAction="#onAñadirExpress" prefHeight="37.0" prefWidth="168.0" text="Añadir a compra express" StackPane.alignment="BOTTOM_CENTER">
+                           <StackPane.margin>
+                              <Insets bottom="34.0" />
+                           </StackPane.margin>
+                        </Button>
+                        <Button fx:id="btnAñadir5" mnemonicParsing="false" onAction="#onAñadir" prefHeight="37.0" prefWidth="168.0" text="Añadir al carrito">
+                           <StackPane.margin>
+                              <Insets top="70.0" />
+                           </StackPane.margin>
+                        </Button>
                      </children>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
                   </StackPane>
                </children>
             </HBox>

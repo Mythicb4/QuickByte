@@ -26,6 +26,7 @@ com\mycompany\quickbite\ProductFormFX.class
 com\mycompany\quickbite\QBNegocioFX.class
 com\mycompany\quickbite\QBTiendaFX.class
 com\mycompany\quickbite\dao\BusinessDao$1.class
+com\mycompany\quickbite\QBAdminFX.class
 com\mycompany\quickbite\QBCafeteriaFX.class
 com\mycompany\quickbite\dao\ProductDao.class
 com\mycompany\quickbite\service\ReportGenerator.class

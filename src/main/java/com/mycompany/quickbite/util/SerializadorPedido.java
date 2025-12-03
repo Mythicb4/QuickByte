@@ -44,8 +44,8 @@ public class SerializadorPedido {
             if (i > 0)
                 sb.append(";");
 
-            // nombre,cantidad,precio
-            sb.append(item.getProductName()).append(",")
+            // productId,cantidad,precio
+            sb.append(item.getProductId()).append(",")
                     .append(item.getQuantity()).append(",")
                     .append(String.format("%.0f", item.getPrice()));
 

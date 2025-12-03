@@ -8,6 +8,8 @@ import com.mycompany.quickbite.util.AppState;
 import com.mycompany.quickbite.util.Navigator;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
@@ -29,7 +31,7 @@ public class QBsingupFX {
 
     @FXML
     private ImageView logoImage;
-    
+
     @FXML
     private PasswordField tfPassword;
 
@@ -59,7 +61,7 @@ public class QBsingupFX {
 
     @FXML
     private ImageView visibilityImage;
-    
+
     @FXML
     private ImageView visibilityImageOff;
 
@@ -71,16 +73,17 @@ public class QBsingupFX {
         AppState.setUserType(null);
         Navigator.navigateTo("/views/type.fxml", "type", true, event);
     }
-    
+
     // indica si la contraseña está visible (texto plano)
     private boolean passwordVisible = false;
     private boolean isBusiness = false;
 
     @FXML
     private void initialize() {
-         String type = AppState.getUserType();
+        String type = AppState.getUserType();
 
-        // Si el AppState no se setea (por usar fxmls distintos), lo detectamos por nombre del FXML cargado
+        // Si el AppState no se setea (por usar fxmls distintos), lo detectamos por
+        // nombre del FXML cargado
         if ("negocio".equalsIgnoreCase(type)) {
             isBusiness = true;
         } else {
@@ -102,7 +105,8 @@ public class QBsingupFX {
             tfPasswordVisible.setManaged(false);
         }
 
-        // 2) asegurar estado inicial de iconos (off = ojo cerrado visible; on = ojo abierto oculto)
+        // 2) asegurar estado inicial de iconos (off = ojo cerrado visible; on = ojo
+        // abierto oculto)
         if (visibilityImageOff != null && visibilityImageOn != null) {
             visibilityImageOff.setVisible(true);
             visibilityImageOn.setVisible(false);
@@ -139,7 +143,8 @@ public class QBsingupFX {
             // opcional: mover el foco al campo visible para mejor UX
             if (passwordVisible) {
                 tfPasswordVisible.requestFocus();
-                tfPasswordVisible.positionCaret(tfPasswordVisible.getText() != null ? tfPasswordVisible.getText().length() : 0);
+                tfPasswordVisible
+                        .positionCaret(tfPasswordVisible.getText() != null ? tfPasswordVisible.getText().length() : 0);
             } else {
                 tfPassword.requestFocus();
                 tfPassword.positionCaret(tfPassword.getText() != null ? tfPassword.getText().length() : 0);
@@ -152,14 +157,26 @@ public class QBsingupFX {
             visibilityImageOn.setVisible(passwordVisible);
         }
     }
-    
+
     @FXML
     private void onCrearClick(ActionEvent event) {
         String email = txtEmail.getText().trim();
         String password = tfPassword.getText();
 
         if (email.isEmpty() || password.isEmpty()) {
-            System.out.println("Por favor completa todos los campos obligatorios.");
+            showAlert(AlertType.WARNING, "Campos vacíos", "Por favor completa todos los campos obligatorios.");
+            return;
+        }
+
+        // 🔒 VALIDACIÓN: Email debe terminar en @elpoli.edu.co
+        if (!email.endsWith("@elpoli.edu.co")) {
+            showAlert(AlertType.WARNING, "Email no válido", "El email no es del Poli. Debe terminar en @elpoli.edu.co");
+            return;
+        }
+
+        // 🔒 VALIDACIÓN: Contraseña no puede contener espacios
+        if (password.contains(" ")) {
+            showAlert(AlertType.WARNING, "Contraseña no válida", "La contraseña no puede tener espacios.");
             return;
         }
 
@@ -192,5 +209,13 @@ public class QBsingupFX {
             System.out.println("Estudiante registrado correctamente.");
             Navigator.navigateTo("/views/login.fxml", "login", true, event);
         }
+    }
+
+    private void showAlert(AlertType type, String title, String message) {
+        Alert alert = new Alert(type);
+        alert.setTitle(title);
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.showAndWait();
     }
 }

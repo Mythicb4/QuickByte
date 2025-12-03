@@ -27,6 +27,12 @@ public class QBEstudianteFX implements Initializable {
     // Nombre de usuario simulado (Debería venir del login)
     private final String currentUser = AppState.getUserEmail();
 
+    // Variables para almacenar los productos preferidos y poder acceder a sus IDs
+    private Product preferredProduct1;
+    private Product preferredProduct2;
+    private Product preferredProduct3;
+    private Product preferredProduct4;
+
     // -------------------------------------------------------------------------
     // --- FXML FIELDS (ACTUALIZADO) ---
     // -------------------------------------------------------------------------
@@ -107,9 +113,10 @@ public class QBEstudianteFX implements Initializable {
     /**
      * Lógica común para añadir un producto al pedido/carrito.
      */
-    private void addProductToOrder(String currentUser, String productName, double price, int quantity) {
+    private void addProductToOrder(String currentUser, String productId, String productName, double price,
+            int quantity) {
         // Creamos el ítem del pedido
-        OrdenarProducto nuevoProducto = new OrdenarProducto(currentUser, productName, price, quantity);
+        OrdenarProducto nuevoProducto = new OrdenarProducto(currentUser, productId, productName, price, quantity);
 
         // Lo añadimos a la lista (carrito)
         CarritoManager.getInstancia().addItem(nuevoProducto);
@@ -133,35 +140,34 @@ public class QBEstudianteFX implements Initializable {
 
     @FXML
     void handleProduct1Order(ActionEvent event) {
-        // Datos estáticos del FXML: Croissant, $3500, Cantidad 1
-        String name = lblPName.getText();
-
-        // Eliminar el "$" y convertir el texto del precio a un número.
-        // Asumiendo que el formato es "$ 3500" o similar
-        double price = Double.parseDouble(lblPPrice.getText().replace("$", "").trim());
-
-        addProductToOrder(currentUser, name, price, 1);
+        if (preferredProduct1 != null) {
+            addProductToOrder(currentUser, preferredProduct1.getId(), preferredProduct1.getName(),
+                    preferredProduct1.getPrice(), 1);
+        }
     }
 
     @FXML
     void handleProduct2Order(ActionEvent event) {
-        String name = lblPName1.getText();
-        double price = Double.parseDouble(lblPPrice1.getText().replace("$", "").trim());
-        addProductToOrder(currentUser, name, price, 1);
+        if (preferredProduct2 != null) {
+            addProductToOrder(currentUser, preferredProduct2.getId(), preferredProduct2.getName(),
+                    preferredProduct2.getPrice(), 1);
+        }
     }
 
     @FXML
     void handleProduct3Order(ActionEvent event) {
-        String name = lblPName2.getText();
-        double price = Double.parseDouble(lblPPrice2.getText().replace("$", "").trim());
-        addProductToOrder(currentUser, name, price, 1);
+        if (preferredProduct3 != null) {
+            addProductToOrder(currentUser, preferredProduct3.getId(), preferredProduct3.getName(),
+                    preferredProduct3.getPrice(), 1);
+        }
     }
 
     @FXML
     void handleProduct4Order(ActionEvent event) {
-        String name = lblPName3.getText();
-        double price = Double.parseDouble(lblPPrice3.getText().replace("$", "").trim());
-        addProductToOrder(currentUser, name, price, 1);
+        if (preferredProduct4 != null) {
+            addProductToOrder(currentUser, preferredProduct4.getId(), preferredProduct4.getName(),
+                    preferredProduct4.getPrice(), 1);
+        }
     }
 
     // -------------------------------------------------------------------------
@@ -280,6 +286,7 @@ public class QBEstudianteFX implements Initializable {
                 if (SPProduct != null) {
                     if (size >= 1) {
                         Product p = prefs.get(0);
+                        preferredProduct1 = p;
                         lblPName.setText(p.getName() != null ? p.getName() : "");
                         lblPPrice.setText(String.format("$ %.0f", p.getPrice()));
                         loadProductImage(p.getImagePath(), imgProduct);
@@ -295,6 +302,7 @@ public class QBEstudianteFX implements Initializable {
                 if (SPProduct1 != null) {
                     if (size >= 2) {
                         Product p = prefs.get(1);
+                        preferredProduct2 = p;
                         lblPName1.setText(p.getName() != null ? p.getName() : "");
                         lblPPrice1.setText(String.format("$ %.0f", p.getPrice()));
                         loadProductImage(p.getImagePath(), imgProduct1);
@@ -310,6 +318,7 @@ public class QBEstudianteFX implements Initializable {
                 if (SPProduct2 != null) {
                     if (size >= 3) {
                         Product p = prefs.get(2);
+                        preferredProduct3 = p;
                         lblPName2.setText(p.getName() != null ? p.getName() : "");
                         lblPPrice2.setText(String.format("$ %.0f", p.getPrice()));
                         loadProductImage(p.getImagePath(), imgProduct2);
@@ -325,6 +334,7 @@ public class QBEstudianteFX implements Initializable {
                 if (SPProduct3 != null) {
                     if (size >= 4) {
                         Product p = prefs.get(3);
+                        preferredProduct4 = p;
                         lblPName3.setText(p.getName() != null ? p.getName() : "");
                         lblPPrice3.setText(String.format("$ %.0f", p.getPrice()));
                         loadProductImage(p.getImagePath(), imgProduct3);

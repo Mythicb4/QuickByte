@@ -203,5 +203,74 @@
         "subtotal": 2500.0
       }
     ]
+  },
+  {
+    "id": "PUR-4F0C9E89",
+    "studentEmail": "user@elpoli.edu.co",
+    "businessName": "Cafeteria Poli",
+    "businessLocation": "p40 103",
+    "purchaseDate": "2025-12-03T06:31:53.1630351",
+    "totalAmount": 17800.0,
+    "paymentMethod": "QR",
+    "items": [
+      {
+        "productName": "Americano",
+        "quantity": 1,
+        "unitPrice": 2500.0,
+        "subtotal": 2500.0
+      },
+      {
+        "productName": "Empanada de Jamón",
+        "quantity": 1,
+        "unitPrice": 5500.0,
+        "subtotal": 5500.0
+      },
+      {
+        "productName": "Jugo de Naranja",
+        "quantity": 1,
+        "unitPrice": 3800.0,
+        "subtotal": 3800.0
+      },
+      {
+        "productName": "Brownie Chocolate",
+        "quantity": 2,
+        "unitPrice": 3000.0,
+        "subtotal": 6000.0
+      }
+    ]
+  },
+  {
+    "id": "PUR-CA9F1B66",
+    "studentEmail": "user@elpoli.edu.co",
+    "businessName": "Cafe-Amarrila",
+    "businessLocation": "p40 202",
+    "purchaseDate": "2025-12-03T06:37:54.7537613",
+    "totalAmount": 33000.0,
+    "paymentMethod": "QR",
+    "items": [
+      {
+        "productName": "Capuchino",
+        "quantity": 11,
+        "unitPrice": 3000.0,
+        "subtotal": 33000.0
+      }
+    ]
+  },
+  {
+    "id": "PUR-0D172BF2",
+    "studentEmail": "user@elpoli.edu.co",
+    "businessName": "Cafetería",
+    "businessLocation": "",
+    "purchaseDate": "2025-12-03T07:18:08.4812706",
+    "totalAmount": 9000.0,
+    "paymentMethod": "QR",
+    "items": [
+      {
+        "productName": "Capuchino",
+        "quantity": 3,
+        "unitPrice": 3000.0,
+        "subtotal": 9000.0
+      }
+    ]
   }
 ]

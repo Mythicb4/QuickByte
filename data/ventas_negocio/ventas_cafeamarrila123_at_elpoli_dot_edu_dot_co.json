@@ -1,0 +1,56 @@
+[
+  {
+    "id": "VEN-001",
+    "saleDate": "2025-12-03T07:00:41.5167664",
+    "totalAmount": 3000.0,
+    "clientName": "cafeamarrila@elpoli.edu.co",
+    "paymentMethod": "QR",
+    "receivedAmount": 3000.0,
+    "change": 0.0,
+    "items": [
+      {
+        "productIdForPersistence": "PRD-001",
+        "nameForPersistence": "Capuchino",
+        "quantityForPersistence": 1,
+        "unitPriceForPersistence": 3000.0,
+        "subtotalForPersistence": 3000.0
+      }
+    ]
+  },
+  {
+    "id": "VEN-002",
+    "saleDate": "2025-12-03T07:01:46.6362754",
+    "totalAmount": 12000.0,
+    "clientName": "cafeamarrila@elpoli.edu.co",
+    "paymentMethod": "QR",
+    "receivedAmount": 12000.0,
+    "change": 0.0,
+    "items": [
+      {
+        "productIdForPersistence": "PRD-001",
+        "nameForPersistence": "Capuchino",
+        "quantityForPersistence": 4,
+        "unitPriceForPersistence": 3000.0,
+        "subtotalForPersistence": 12000.0
+      }
+    ]
+  },
+  {
+    "id": "VEN-003",
+    "saleDate": "2025-12-03T07:18:30.0665193",
+    "totalAmount": 9000.0,
+    "clientName": "user@elpoli.edu.co",
+    "paymentMethod": "QR",
+    "receivedAmount": 9000.0,
+    "change": 0.0,
+    "items": [
+      {
+        "productIdForPersistence": "PRD-001",
+        "nameForPersistence": "Capuchino",
+        "quantityForPersistence": 3,
+        "unitPriceForPersistence": 3000.0,
+        "subtotalForPersistence": 9000.0
+      }
+    ]
+  }
+]

@@ -1,0 +1,15 @@
+[
+  {
+    "id": "PRD-001",
+    "name": "Capuchino",
+    "price": 3000.0,
+    "category": "Bebidas Calientes",
+    "description": "Cafe sin azucar capuchino",
+    "stock": 7,
+    "imagePath": "C:\\Users\\emman\\OneDrive\\Desktop\\QuickByte\\src\\main\\resources\\images\\cafeteria\\productos\\Americano.jpg",
+    "cost": 1500.0,
+    "supplier": "ColCafe",
+    "enabled": true,
+    "minStock": 10
+  }
+]

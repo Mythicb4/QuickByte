@@ -205,7 +205,8 @@ public class QBPreferenciasFX implements Initializable {
         if (user == null)
             user = "anon";
 
-        OrdenarProducto item = new OrdenarProducto(user, product.getName(), product.getPrice(), quantity);
+        OrdenarProducto item = new OrdenarProducto(user, product.getId(), product.getName(), product.getPrice(),
+                quantity);
         CarritoManager.getInstancia().addItem(item);
         String mensaje = String.format(
                 "Producto añadido\nUsuario: %s\nProducto: %s\nPrecio Unitario: $%.2f\nCantidad: %d\nTotal Actual del Carrito: %d ítems.",

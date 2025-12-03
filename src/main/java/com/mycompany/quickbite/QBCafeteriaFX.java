@@ -567,7 +567,8 @@ public class QBCafeteriaFX implements Initializable {
         if (user == null)
             user = "anon";
 
-        OrdenarProducto item = new OrdenarProducto(user, product.getName(), product.getPrice(), quantity);
+        OrdenarProducto item = new OrdenarProducto(user, product.getId(), product.getName(), product.getPrice(),
+                quantity);
         CarritoManager.getInstancia().addItem(item);
 
         String mensaje = String.format(

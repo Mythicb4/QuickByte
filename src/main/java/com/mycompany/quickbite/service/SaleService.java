@@ -35,16 +35,11 @@ public class SaleService {
             throw new IllegalArgumentException("El total de la venta debe ser positivo.");
         }
 
-        // 1. Validar y actualizar stock de productos (solo si es venta desde
-        // inventario)
-        // Si el paymentMethod es "QR", significa que viene del estudiante y no
-        // actualizamos stock
-        if (!"QR".equals(sale.getPaymentMethod())) {
-            for (SaleItem item : sale.getItems()) {
-                // El método updateStock debe restar la cantidad vendida (por eso la cantidad es
-                // negativa)
-                productService.updateStock(item.getProductId(), -item.getQuantity());
-            }
+        // 1. Validar y actualizar stock de productos
+        for (SaleItem item : sale.getItems()) {
+            // El método updateStock debe restar la cantidad vendida (por eso la cantidad es
+            // negativa)
+            productService.updateStock(item.getProductId(), -item.getQuantity());
         }
 
         // 2. Guardar la venta
@@ -81,11 +76,20 @@ public class SaleService {
         }
 
         for (SaleItem item : sale.getItems()) {
-            // 1. Buscar el producto usando el ID guardado en el JSON
-            Product product = productService.getProductById(item.getProductId());
+            try {
+                // 1. Buscar el producto usando el ID guardado en el JSON
+                Product product = productService.getProductByIdSafe(item.getProductId());
 
-            // 2. Rellenar las propiedades FX del SaleItem
-            item.setProductDetails(product);
+                // 2. Rellenar las propiedades FX del SaleItem
+                if (product != null) {
+                    item.setProductDetails(product);
+                } else {
+                    System.err.println("Advertencia: Producto con ID " + item.getProductId()
+                            + " no encontrado. Usando nombre del item.");
+                }
+            } catch (Exception e) {
+                System.err.println("Error al cargar producto " + item.getProductId() + ": " + e.getMessage());
+            }
         }
     }
 }

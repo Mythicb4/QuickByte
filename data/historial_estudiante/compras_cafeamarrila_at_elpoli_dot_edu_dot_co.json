@@ -1,0 +1,36 @@
+[
+  {
+    "id": "PUR-0C00357D",
+    "studentEmail": "cafeamarrila@elpoli.edu.co",
+    "businessName": "Cafe-Amarrila",
+    "businessLocation": "p40 202",
+    "purchaseDate": "2025-12-03T07:00:24.5718041",
+    "totalAmount": 3000.0,
+    "paymentMethod": "QR",
+    "items": [
+      {
+        "productName": "Capuchino",
+        "quantity": 1,
+        "unitPrice": 3000.0,
+        "subtotal": 3000.0
+      }
+    ]
+  },
+  {
+    "id": "PUR-1D94BAF1",
+    "studentEmail": "cafeamarrila@elpoli.edu.co",
+    "businessName": "Cafe-Amarrila",
+    "businessLocation": "p40 202",
+    "purchaseDate": "2025-12-03T07:01:32.4470782",
+    "totalAmount": 12000.0,
+    "paymentMethod": "QR",
+    "items": [
+      {
+        "productName": "Capuchino",
+        "quantity": 4,
+        "unitPrice": 3000.0,
+        "subtotal": 12000.0
+      }
+    ]
+  }
+]

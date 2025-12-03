@@ -1,24 +1,5 @@
 [
   {
-    "id": "9dd43664-661e-486c-ae6b-d893e40fbe54",
-    "businessEmail": "",
-    "saleDate": "2025-12-02T19:54:21.4929815",
-    "totalAmount": 2500.0,
-    "clientName": "user@elpoli.edu.co",
-    "paymentMethod": "QR",
-    "receivedAmount": 2500.0,
-    "change": 0.0,
-    "items": [
-      {
-        "productIdForPersistence": "Americano",
-        "nameForPersistence": "Americano",
-        "quantityForPersistence": 1,
-        "unitPriceForPersistence": 2500.0,
-        "subtotalForPersistence": 2500.0
-      }
-    ]
-  },
-  {
     "id": "VEN-001",
     "saleDate": "2025-12-02T20:05:11.3041731",
     "totalAmount": 3000.0,
@@ -118,6 +99,104 @@
         "quantityForPersistence": 1,
         "unitPriceForPersistence": 2500.0,
         "subtotalForPersistence": 2500.0
+      }
+    ]
+  },
+  {
+    "id": "VEN-006",
+    "saleDate": "2025-12-02T23:12:56.9458495",
+    "totalAmount": 3000.0,
+    "clientName": "fg",
+    "paymentMethod": "Efectivo",
+    "receivedAmount": 5000.0,
+    "change": 2000.0,
+    "items": [
+      {
+        "productIdForPersistence": "PRD-004",
+        "quantityForPersistence": 0,
+        "unitPriceForPersistence": 0.0,
+        "subtotalForPersistence": 0.0
+      }
+    ]
+  },
+  {
+    "id": "VEN-007",
+    "saleDate": "2025-12-03T06:32:21.3775634",
+    "totalAmount": 17800.0,
+    "clientName": "user@elpoli.edu.co",
+    "paymentMethod": "QR",
+    "receivedAmount": 17800.0,
+    "change": 0.0,
+    "items": [
+      {
+        "productIdForPersistence": "Americano",
+        "nameForPersistence": "Americano",
+        "quantityForPersistence": 1,
+        "unitPriceForPersistence": 2500.0,
+        "subtotalForPersistence": 2500.0
+      },
+      {
+        "productIdForPersistence": "Empanada de Jamón",
+        "nameForPersistence": "Empanada de Jamón",
+        "quantityForPersistence": 1,
+        "unitPriceForPersistence": 5500.0,
+        "subtotalForPersistence": 5500.0
+      },
+      {
+        "productIdForPersistence": "Jugo de Naranja",
+        "nameForPersistence": "Jugo de Naranja",
+        "quantityForPersistence": 1,
+        "unitPriceForPersistence": 3800.0,
+        "subtotalForPersistence": 3800.0
+      },
+      {
+        "productIdForPersistence": "Brownie Chocolate",
+        "nameForPersistence": "Brownie Chocolate",
+        "quantityForPersistence": 2,
+        "unitPriceForPersistence": 3000.0,
+        "subtotalForPersistence": 6000.0
+      }
+    ]
+  },
+  {
+    "id": "VEN-008",
+    "saleDate": "2025-12-03T07:25:33.9737837",
+    "totalAmount": 2500.0,
+    "clientName": "Consumidor Final",
+    "paymentMethod": "Efectivo",
+    "receivedAmount": 12500.0,
+    "change": 10000.0,
+    "items": [
+      {
+        "productIdForPersistence": "PRD-001",
+        "quantityForPersistence": 0,
+        "unitPriceForPersistence": 0.0,
+        "subtotalForPersistence": 0.0
+      }
+    ]
+  },
+  {
+    "id": "VEN-009",
+    "saleDate": "2025-12-03T07:36:03.9583008",
+    "totalAmount": 8000.0,
+    "clientName": "yo@elpoli.edu.co",
+    "paymentMethod": "QR",
+    "receivedAmount": 8000.0,
+    "change": 0.0,
+    "items": [
+      {
+        "productIdForPersistence": "PRD-001",
+        "nameForPersistence": "Americano",
+        "quantityForPersistence": 1,
+        "unitPriceForPersistence": 2500.0,
+        "subtotalForPersistence": 2500.0
+      },
+      {
+        "productIdForPersistence": "PRD-002",
+        "nameForPersistence": "Empanada de Jamón",
+        "quantityForPersistence": 1,
+        "unitPriceForPersistence": 5500.0,
+        "subtotalForPersistence": 5500.0
       }
     ]
   }

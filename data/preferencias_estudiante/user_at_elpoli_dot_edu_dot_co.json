@@ -11,5 +11,31 @@
     "supplier": "Cafeína Express",
     "enabled": true,
     "minStock": 120
+  },
+  {
+    "id": "PRD-004",
+    "name": "Brownie Chocolate",
+    "price": 3000.0,
+    "category": "Postres",
+    "description": "Brownie con trozos de chocolate.",
+    "stock": 40,
+    "imagePath": "C:\\Users\\emman\\OneDrive\\Desktop\\QuickByte\\src\\main\\resources\\images\\cafeteria\\productos\\Brownie Chocolate.jpg",
+    "cost": 1200.0,
+    "supplier": "Dulce Tentación",
+    "enabled": true,
+    "minStock": 15
+  },
+  {
+    "id": "PRD-001",
+    "name": "Capuchino",
+    "price": 3000.0,
+    "category": "Bebidas Calientes",
+    "description": "Cafe sin azucar capuchino",
+    "stock": 20,
+    "imagePath": "C:\\Users\\emman\\OneDrive\\Desktop\\QuickByte\\src\\main\\resources\\images\\cafeteria\\productos\\Americano.jpg",
+    "cost": 1500.0,
+    "supplier": "ColCafe",
+    "enabled": true,
+    "minStock": 10
   }
 ]

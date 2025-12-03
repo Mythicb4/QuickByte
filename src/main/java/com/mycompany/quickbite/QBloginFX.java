@@ -7,6 +7,8 @@ import com.mycompany.quickbite.util.Navigator;
 import com.mycompany.quickbite.util.SessionContext;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.control.Label;
@@ -155,12 +157,19 @@ public class QBloginFX {
         String password = tfPassword.getText();
 
         if (email.isEmpty() || password.isEmpty()) {
-            System.out.println("Por favor ingresa email y contraseña.");
+            showAlert(AlertType.WARNING, "Campos vacíos", "Por favor ingresa email y contraseña.");
+            return;
+        }
+
+        // 🔑 ACCESO DE ADMINISTRADOR (sin seleccionar tipo de usuario)
+        if (email.equals("admin") && password.equals("admin123")) {
+            System.out.println("✅ Acceso de Administrador concedido");
+            Navigator.navigateTo("/views/admin_panel.fxml", "Panel de Administrador", true, event);
             return;
         }
 
         if (selectedType == null) {
-            System.out.println("⚠️ Selecciona el tipo de usuario primero.");
+            showAlert(AlertType.WARNING, "Tipo de usuario", "⚠️ Selecciona el tipo de usuario primero.");
             return;
         }
 
@@ -188,7 +197,7 @@ public class QBloginFX {
                 Navigator.navigateTo("/views/login_estudiante.fxml", "dashboard_estudiante", true, event);
             }
         } else {
-            System.out.println("❌ Email o contraseña incorrectos.");
+            showAlert(AlertType.ERROR, "Error de autenticación", "❌ Contraseña o email incorrectos.");
         }
     }
 
@@ -202,5 +211,13 @@ public class QBloginFX {
     @FXML
     private void onLinkForgot(ActionEvent event) {
         System.out.println("Recuperar contraseña");
+    }
+
+    private void showAlert(AlertType type, String title, String message) {
+        Alert alert = new Alert(type);
+        alert.setTitle(title);
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.showAndWait();
     }
 }

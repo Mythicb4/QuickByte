@@ -9,6 +9,7 @@ import com.google.zxing.client.j2se.BufferedImageLuminanceSource;
 import com.google.zxing.common.HybridBinarizer;
 import com.mycompany.quickbite.dao.ProductDao;
 import com.mycompany.quickbite.dao.SaleDao;
+import com.mycompany.quickbite.model.Product;
 import com.mycompany.quickbite.model.Sale;
 import com.mycompany.quickbite.model.SaleItem;
 import com.mycompany.quickbite.service.ProductService;
@@ -59,6 +60,7 @@ public class QBQrScannerFX implements Initializable {
     private volatile boolean isScanning = true;
     private Sale scannedSale;
     private SaleService saleService;
+    private ProductService productService;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -67,7 +69,7 @@ public class QBQrScannerFX implements Initializable {
             String businessEmail = SessionContext.getLoggedInBusinessEmail();
             SaleDao saleDao = new SaleDao(businessEmail);
             ProductDao productDao = new ProductDao(businessEmail);
-            ProductService productService = new ProductService(productDao);
+            this.productService = new ProductService(productDao);
             this.saleService = new SaleService(saleDao, productService);
 
             // Inicializar webcam
@@ -212,11 +214,15 @@ public class QBQrScannerFX implements Initializable {
                     for (String itemStr : itemList) {
                         String[] itemParts = itemStr.split(",");
                         if (itemParts.length == 3) {
-                            String name = itemParts[0];
+                            String productId = itemParts[0];
                             int quantity = Integer.parseInt(itemParts[1]);
                             double price = Double.parseDouble(itemParts[2]);
 
-                            SaleItem item = new SaleItem(name, name, quantity, price);
+                            // Obtener el nombre del producto usando ProductService
+                            Product product = productService.getProductByIdSafe(productId);
+                            String productName = product != null ? product.getName() : "Desconocido";
+
+                            SaleItem item = new SaleItem(productId, productName, quantity, price);
                             items.add(item);
                         }
                     }

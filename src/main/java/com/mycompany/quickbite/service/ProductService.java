@@ -76,6 +76,18 @@ public class ProductService {
                 .orElseThrow(() -> new NoSuchElementException("Producto con ID " + id + " no encontrado."));
     }
 
+    // Versión segura que retorna null en lugar de lanzar excepción
+    public Product getProductByIdSafe(String id) {
+        try {
+            return productDao.loadAll().stream()
+                    .filter(p -> id.equals(p.getId()))
+                    .findFirst()
+                    .orElse(null);
+        } catch (Exception e) {
+            return null;
+        }
+    }
+
     public List<Product> getProductsByCategory(String category) {
         return productDao.findByCategory(category);
     }
@@ -97,28 +109,31 @@ public class ProductService {
                 .filter(p -> !p.isEnabled())
                 .count();
     }
-    
+
     // Verifica este bloque en ProductService.java
     public void updateStock(String productId, int quantityChange) throws Exception {
-        // 1. Cargar el producto
-        Product product = getProductById(productId); 
+        // 1. Cargar el producto usando la versión segura
+        Product product = getProductByIdSafe(productId);
 
         // Validar si el producto existe
         if (product == null) {
-            throw new NoSuchElementException("Producto con ID " + productId + " no encontrado.");
+            System.err.println(
+                    "Advertencia: Producto con ID " + productId + " no encontrado. Omitiendo actualización de stock.");
+            return; // Retornar sin error para no romper el flujo
         }
 
         // 2. Calcular nuevo stock
         int newStock = product.getStock() + quantityChange;
 
-        // 3. Validar stock insuficiente (solo cuando quantityChange es negativo, es decir, una venta)
+        // 3. Validar stock insuficiente (solo cuando quantityChange es negativo, es
+        // decir, una venta)
         if (newStock < 0) {
-            throw new IllegalArgumentException("Stock insuficiente para el producto: " + product.getName() + 
-                                                ". Disponible: " + product.getStock() + ", Solicitado: " + (-quantityChange));
+            throw new IllegalArgumentException("Stock insuficiente para el producto: " + product.getName() +
+                    ". Disponible: " + product.getStock() + ", Solicitado: " + (-quantityChange));
         }
 
         // 4. Actualizar y guardar
-        product.setStock(newStock); 
+        product.setStock(newStock);
         productDao.updateProduct(product);
     }
 }

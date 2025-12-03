@@ -6,12 +6,14 @@ package com.mycompany.quickbite;
  */
 public class OrdenarProducto {
     private final String userEmail; // Usuario que hizo el pedido
+    private final String productId; // ID del producto
     private final String productName; // Nombre del producto
     private final double price;
     private int quantity; // mutable para permitir combinar items
 
-    public OrdenarProducto(String userEmail, String productName, double price, int quantity) {
+    public OrdenarProducto(String userEmail, String productId, String productName, double price, int quantity) {
         this.userEmail = userEmail;
+        this.productId = productId;
         this.productName = productName;
         this.price = price;
         this.quantity = quantity;
@@ -20,6 +22,10 @@ public class OrdenarProducto {
     // Getters
     public String getUserEmail() {
         return userEmail;
+    }
+
+    public String getProductId() {
+        return productId;
     }
 
     public String getProductName() {

@@ -5,6 +5,7 @@ com\mycompany\quickbite\dao\SaleDao$1.class
 com\mycompany\quickbite\QBPerfilFX.class
 com\mycompany\quickbite\QBProductFX.class
 com\mycompany\quickbite\QBFacturacionFX$1.class
+com\mycompany\quickbite\QBQrScannerFX$1.class
 com\mycompany\quickbite\QBInventarioFX$2.class
 com\mycompany\quickbite\QBReportesFX.class
 com\mycompany\quickbite\model\Product.class
@@ -58,6 +59,7 @@ com\mycompany\quickbite\model\SaleItemReport.class
 com\mycompany\quickbite\QBloginFX.class
 com\mycompany\quickbite\model\Sale.class
 com\mycompany\quickbite\dao\BusinessDao.class
+com\mycompany\quickbite\QBQrScannerFX.class
 com\mycompany\quickbite\QR\GeneradorQRFX.class
 com\mycompany\quickbite\QuickBiteFX.class
 com\mycompany\quickbite\QBInventarioFX.class

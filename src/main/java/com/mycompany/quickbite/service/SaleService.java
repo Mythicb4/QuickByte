@@ -22,6 +22,7 @@ public class SaleService {
 
     /**
      * Registra una nueva venta, genera ID y actualiza el stock de los productos.
+     * 
      * @param sale La venta a registrar.
      * @return La venta registrada (con ID generado).
      * @throws Exception Si hay problemas con stock o la base de datos.
@@ -33,21 +34,25 @@ public class SaleService {
         if (sale.getTotalAmount() <= 0) {
             throw new IllegalArgumentException("El total de la venta debe ser positivo.");
         }
-        
-        // 1. Validar y actualizar stock de productos
-        // ❌ Línea 33 anterior: productService.updateStockForSale(sale.getItems());
-        // ✅ SOLUCIÓN: Iterar y llamar al método updateStock() por cada artículo
-        for (SaleItem item : sale.getItems()) {
-            // El método updateStock debe restar la cantidad vendida (por eso la cantidad es negativa)
-            productService.updateStock(item.getProductId(), -item.getQuantity()); 
+
+        // 1. Validar y actualizar stock de productos (solo si es venta desde
+        // inventario)
+        // Si el paymentMethod es "QR", significa que viene del estudiante y no
+        // actualizamos stock
+        if (!"QR".equals(sale.getPaymentMethod())) {
+            for (SaleItem item : sale.getItems()) {
+                // El método updateStock debe restar la cantidad vendida (por eso la cantidad es
+                // negativa)
+                productService.updateStock(item.getProductId(), -item.getQuantity());
+            }
         }
 
         // 2. Guardar la venta
         saleDao.addSale(sale);
-        
+
         return sale;
     }
-    
+
     // Nuevo método en SaleService
     public List<Sale> getSalesByDateRange(LocalDate startDate, LocalDate endDate) {
         LocalDateTime start = startDate.atStartOfDay();
@@ -58,29 +63,29 @@ public class SaleService {
                 .filter(sale -> !sale.getSaleDate().isBefore(start) && !sale.getSaleDate().isAfter(end))
                 .collect(Collectors.toList());
     }
-    
-    public List<Sale> getAllSales() { 
-        List<Sale> allSales = saleDao.loadAll(); 
-        
+
+    public List<Sale> getAllSales() {
+        List<Sale> allSales = saleDao.loadAll();
+
         // 🔑 PASO CLAVE: Buscar los detalles del producto y asignarlos a SaleItem
         for (Sale sale : allSales) {
             loadProductDetails(sale);
         }
-        
+
         return allSales;
     }
-    
+
     private void loadProductDetails(Sale sale) {
         if (sale.getItems() == null) {
             return;
         }
-        
+
         for (SaleItem item : sale.getItems()) {
             // 1. Buscar el producto usando el ID guardado en el JSON
             Product product = productService.getProductById(item.getProductId());
-            
+
             // 2. Rellenar las propiedades FX del SaleItem
-            item.setProductDetails(product); 
+            item.setProductDetails(product);
         }
     }
 }

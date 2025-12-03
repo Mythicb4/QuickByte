@@ -1,1 +1,15 @@
-[]
+[
+  {
+    "id": "PRD-001",
+    "name": "Americano",
+    "price": 2500.0,
+    "category": "Bebidas Calientes",
+    "description": "Café tradicional, 8oz.",
+    "stock": 125,
+    "imagePath": "C:\\Users\\emman\\OneDrive\\Desktop\\QuickByte\\src\\main\\resources\\images\\cafeteria\\productos\\Americano.jpg",
+    "cost": 800.0,
+    "supplier": "Cafeína Express",
+    "enabled": true,
+    "minStock": 120
+  }
+]

@@ -6,44 +6,54 @@ import java.util.List;
 public class SerializadorPedido {
 
     /**
-     * Convierte los ítems del carrito en un String compacto para el QR.
-     * Formato: Usuario:EMAIL|Producto:NOMBRE|Precio:X|Cant:Y...
+     * Convierte los ítems del carrito en un String ultra compacto para el QR.
+     * Formato: U:email|B:negocio|T:total|I:nombre,cant,precio;nombre2,cant2,precio2
      * 
-     * @return El String serializado.
+     * @return El String serializado minimalista.
      */
     public static String serializar() {
-        // 1. Obtener la lista de ítems del carrito
         List<OrdenarProducto> pedido = CarritoManager.getInstancia().getItems();
-
-        // 2. Obtener el usuario logueado
         if (pedido.isEmpty()) {
             return null;
         }
 
-        String currentUser = AppState.getUserEmail();
-        // Si AppState no tiene usuario, intentar obtenerlo del primer ítem del pedido
-        if (currentUser == null && !pedido.isEmpty()) {
-            currentUser = pedido.get(0).getUserEmail();
+        // Obtener datos básicos
+        String user = AppState.getUserEmail();
+        if (user == null && !pedido.isEmpty()) {
+            user = pedido.get(0).getUserEmail();
         }
-        // Si aún así no hay usuario, usar un marcador genérico
-        if (currentUser == null) {
-            currentUser = "unknown";
-        }
-
-        // 3. Iniciar la serialización con el usuario
-        StringBuilder qrContent = new StringBuilder("Usuario:").append(currentUser);
-
-        // 4. Serializar cada ítem
-        for (OrdenarProducto item : pedido) {
-            qrContent.append("|Producto:")
-                    .append(item.getProductName())
-                    .append("|Precio:")
-                    // Usamos String.format para asegurar que los decimales sean consistentes
-                    .append(String.format("%.2f", item.getPrice()))
-                    .append("|Cant:")
-                    .append(item.getQuantity());
+        if (user == null) {
+            user = "unknown";
         }
 
-        return qrContent.toString();
+        String business = "";
+        if (AppState.getSelectedBusiness() != null) {
+            business = AppState.getSelectedBusiness().getEmail();
+        }
+
+        // Calcular total y construir string compacto
+        StringBuilder sb = new StringBuilder();
+        sb.append("U:").append(user);
+        sb.append("|B:").append(business);
+
+        double total = 0.0;
+        sb.append("|I:");
+
+        for (int i = 0; i < pedido.size(); i++) {
+            OrdenarProducto item = pedido.get(i);
+            if (i > 0)
+                sb.append(";");
+
+            // nombre,cantidad,precio
+            sb.append(item.getProductName()).append(",")
+                    .append(item.getQuantity()).append(",")
+                    .append(String.format("%.0f", item.getPrice()));
+
+            total += item.getPrice() * item.getQuantity();
+        }
+
+        sb.append("|T:").append(String.format("%.0f", total));
+
+        return sb.toString();
     }
 }

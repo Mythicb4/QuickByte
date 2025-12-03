@@ -11,6 +11,8 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
 
 <AnchorPane prefHeight="1024.0" prefWidth="1440.0" style="-fx-background-color: F7D6A8;" xmlns="http://javafx.com/javafx/24" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.quickbite.QBNegocioFX">
     <children>
@@ -161,11 +163,17 @@
                         <Font name="SansSerif Regular" size="35.0" />
                     </font>
                 </Label>
-            <HBox fx:id="HBCompraExpress" maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="340.0" prefWidth="950.0">
+            <LineChart fx:id="chartVentas" maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="340.0" prefWidth="950.0" legendVisible="false">
+               <xAxis>
+                  <NumberAxis fx:id="xAxis" side="BOTTOM" />
+               </xAxis>
+               <yAxis>
+                  <NumberAxis fx:id="yAxis" side="LEFT" />
+               </yAxis>
                <VBox.margin>
                   <Insets bottom="20.0" top="20.0" />
                </VBox.margin>
-            </HBox>
+            </LineChart>
             <Label text="Productos de bajo Stock" textFill="#00294d">
                <font>
                   <Font name="SansSerif Regular" size="35.0" />

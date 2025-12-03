@@ -38,5 +38,170 @@
         "subtotal": 3800.0
       }
     ]
+  },
+  {
+    "id": "PUR-544FEF16",
+    "studentEmail": "user@elpoli.edu.co",
+    "businessName": "Cafeteria Poli",
+    "businessLocation": "p40 103",
+    "purchaseDate": "2025-12-02T19:26:14.5002918",
+    "totalAmount": 11800.0,
+    "paymentMethod": "QR",
+    "items": [
+      {
+        "productName": "Americano",
+        "quantity": 1,
+        "unitPrice": 2500.0,
+        "subtotal": 2500.0
+      },
+      {
+        "productName": "Empanada de Jamón",
+        "quantity": 1,
+        "unitPrice": 5500.0,
+        "subtotal": 5500.0
+      },
+      {
+        "productName": "Jugo de Naranja",
+        "quantity": 1,
+        "unitPrice": 3800.0,
+        "subtotal": 3800.0
+      }
+    ]
+  },
+  {
+    "id": "PUR-85CF2789",
+    "studentEmail": "user@elpoli.edu.co",
+    "businessName": "Cafeteria Poli",
+    "businessLocation": "p40 103",
+    "purchaseDate": "2025-12-02T19:32:45.0053809",
+    "totalAmount": 5500.0,
+    "paymentMethod": "QR",
+    "items": [
+      {
+        "productName": "Empanada de Jamón",
+        "quantity": 1,
+        "unitPrice": 5500.0,
+        "subtotal": 5500.0
+      }
+    ]
+  },
+  {
+    "id": "PUR-2821E1F3",
+    "studentEmail": "user@elpoli.edu.co",
+    "businessName": "Cafeteria Poli",
+    "businessLocation": "p40 103",
+    "purchaseDate": "2025-12-02T19:37:29.0214559",
+    "totalAmount": 2500.0,
+    "paymentMethod": "QR",
+    "items": [
+      {
+        "productName": "Americano",
+        "quantity": 1,
+        "unitPrice": 2500.0,
+        "subtotal": 2500.0
+      }
+    ]
+  },
+  {
+    "id": "PUR-9A59BC73",
+    "studentEmail": "user@elpoli.edu.co",
+    "businessName": "Cafeteria Poli",
+    "businessLocation": "p40 103",
+    "purchaseDate": "2025-12-02T19:41:48.0430917",
+    "totalAmount": 2500.0,
+    "paymentMethod": "QR",
+    "items": [
+      {
+        "productName": "Americano",
+        "quantity": 1,
+        "unitPrice": 2500.0,
+        "subtotal": 2500.0
+      }
+    ]
+  },
+  {
+    "id": "PUR-F86D650B",
+    "studentEmail": "user@elpoli.edu.co",
+    "businessName": "Cafeteria Poli",
+    "businessLocation": "p40 103",
+    "purchaseDate": "2025-12-02T19:46:52.1740239",
+    "totalAmount": 5000.0,
+    "paymentMethod": "QR",
+    "items": [
+      {
+        "productName": "Americano",
+        "quantity": 2,
+        "unitPrice": 2500.0,
+        "subtotal": 5000.0
+      }
+    ]
+  },
+  {
+    "id": "PUR-981C9057",
+    "studentEmail": "user@elpoli.edu.co",
+    "businessName": "Cafetería",
+    "businessLocation": "",
+    "purchaseDate": "2025-12-02T19:49:41.5880279",
+    "totalAmount": 2500.0,
+    "paymentMethod": "QR",
+    "items": [
+      {
+        "productName": "Americano",
+        "quantity": 1,
+        "unitPrice": 2500.0,
+        "subtotal": 2500.0
+      }
+    ]
+  },
+  {
+    "id": "PUR-4E95D528",
+    "studentEmail": "user@elpoli.edu.co",
+    "businessName": "Cafetería",
+    "businessLocation": "",
+    "purchaseDate": "2025-12-02T19:53:57.95771",
+    "totalAmount": 2500.0,
+    "paymentMethod": "QR",
+    "items": [
+      {
+        "productName": "Americano",
+        "quantity": 1,
+        "unitPrice": 2500.0,
+        "subtotal": 2500.0
+      }
+    ]
+  },
+  {
+    "id": "PUR-A7C49250",
+    "studentEmail": "user@elpoli.edu.co",
+    "businessName": "Cafetería",
+    "businessLocation": "",
+    "purchaseDate": "2025-12-02T20:13:44.2857877",
+    "totalAmount": 2500.0,
+    "paymentMethod": "QR",
+    "items": [
+      {
+        "productName": "Americano",
+        "quantity": 1,
+        "unitPrice": 2500.0,
+        "subtotal": 2500.0
+      }
+    ]
+  },
+  {
+    "id": "PUR-E0040EFF",
+    "studentEmail": "user@elpoli.edu.co",
+    "businessName": "Cafetería",
+    "businessLocation": "",
+    "purchaseDate": "2025-12-02T20:29:22.3827646",
+    "totalAmount": 2500.0,
+    "paymentMethod": "QR",
+    "items": [
+      {
+        "productName": "Americano",
+        "quantity": 1,
+        "unitPrice": 2500.0,
+        "subtotal": 2500.0
+      }
+    ]
   }
 ]

@@ -1,0 +1,19 @@
+[
+  {
+    "id": "PUR-A8AA28A7",
+    "studentEmail": "emmanuel_echenique23251@elpoli.edu.co",
+    "businessName": "Cafeteria Poli",
+    "businessLocation": "p40 103",
+    "purchaseDate": "2025-12-02T19:03:41.5187904",
+    "totalAmount": 2500.0,
+    "paymentMethod": "QR",
+    "items": [
+      {
+        "productName": "Americano",
+        "quantity": 1,
+        "unitPrice": 2500.0,
+        "subtotal": 2500.0
+      }
+    ]
+  }
+]

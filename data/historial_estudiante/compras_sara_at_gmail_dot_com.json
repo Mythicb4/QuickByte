@@ -1,0 +1,77 @@
+[
+  {
+    "id": "PUR-F6D0E6E0",
+    "studentEmail": "sara@gmail.com",
+    "businessName": "Cafeteria Poli",
+    "businessLocation": "p40 103",
+    "purchaseDate": "2025-12-02T19:58:56.5224317",
+    "totalAmount": 12300.0,
+    "paymentMethod": "QR",
+    "items": [
+      {
+        "productName": "Jugo de Naranja",
+        "quantity": 1,
+        "unitPrice": 3800.0,
+        "subtotal": 3800.0
+      },
+      {
+        "productName": "Empanada de Jamón",
+        "quantity": 1,
+        "unitPrice": 5500.0,
+        "subtotal": 5500.0
+      },
+      {
+        "productName": "Brownie Chocolate",
+        "quantity": 1,
+        "unitPrice": 3000.0,
+        "subtotal": 3000.0
+      }
+    ]
+  },
+  {
+    "id": "PUR-E283B960",
+    "studentEmail": "sara@gmail.com",
+    "businessName": "Cafeteria Poli",
+    "businessLocation": "p40 103",
+    "purchaseDate": "2025-12-02T19:59:31.9498449",
+    "totalAmount": 12300.0,
+    "paymentMethod": "QR",
+    "items": [
+      {
+        "productName": "Jugo de Naranja",
+        "quantity": 1,
+        "unitPrice": 3800.0,
+        "subtotal": 3800.0
+      },
+      {
+        "productName": "Empanada de Jamón",
+        "quantity": 1,
+        "unitPrice": 5500.0,
+        "subtotal": 5500.0
+      },
+      {
+        "productName": "Brownie Chocolate",
+        "quantity": 1,
+        "unitPrice": 3000.0,
+        "subtotal": 3000.0
+      }
+    ]
+  },
+  {
+    "id": "PUR-0C38238C",
+    "studentEmail": "sara@gmail.com",
+    "businessName": "Cafetería",
+    "businessLocation": "",
+    "purchaseDate": "2025-12-02T20:04:47.8194628",
+    "totalAmount": 3000.0,
+    "paymentMethod": "QR",
+    "items": [
+      {
+        "productName": "Brownie Chocolate",
+        "quantity": 1,
+        "unitPrice": 3000.0,
+        "subtotal": 3000.0
+      }
+    ]
+  }
+]

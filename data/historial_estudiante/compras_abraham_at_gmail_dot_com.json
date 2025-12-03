@@ -1,0 +1,25 @@
+[
+  {
+    "id": "PUR-3E885C98",
+    "studentEmail": "abraham@gmail.com",
+    "businessName": "Cafeteria Poli",
+    "businessLocation": "p40 103",
+    "purchaseDate": "2025-12-02T20:08:30.7511393",
+    "totalAmount": 8500.0,
+    "paymentMethod": "QR",
+    "items": [
+      {
+        "productName": "Americano",
+        "quantity": 1,
+        "unitPrice": 2500.0,
+        "subtotal": 2500.0
+      },
+      {
+        "productName": "Brownie Chocolate",
+        "quantity": 2,
+        "unitPrice": 3000.0,
+        "subtotal": 6000.0
+      }
+    ]
+  }
+]

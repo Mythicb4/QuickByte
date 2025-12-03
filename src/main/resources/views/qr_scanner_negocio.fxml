@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="960.0" style="-fx-background-color: #F7D6A8;" xmlns="http://javafx.com/javafx/24" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.quickbite.QBQrScannerFX">
+   <children>
+      <VBox alignment="TOP_CENTER" prefHeight="720.0" prefWidth="960.0" spacing="20.0">
+         <children>
+            <!-- Header -->
+            <Label text="ESCANEAR CÓDIGO QR" textFill="#4A4A4A">
+               <font>
+                  <Font name="SansSerif Bold" size="32.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+            </Label>
+            
+            <!-- Status Label -->
+            <Label fx:id="lblStatus" text="🔍 Buscando código QR..." textFill="#4A4A4A">
+               <font>
+                  <Font name="SansSerif Regular" size="18.0" />
+               </font>
+            </Label>
+            
+            <!-- Camera View -->
+            <ImageView fx:id="imgCamera" fitHeight="480.0" fitWidth="640.0" pickOnBounds="true" preserveRatio="true" style="-fx-border-color: #4A4A4A; -fx-border-width: 3; -fx-background-color: black;">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </ImageView>
+            
+            <!-- Buttons -->
+            <HBox alignment="CENTER" spacing="20.0">
+               <children>
+                  <Button fx:id="btnConfirmar" disable="true" onAction="#onConfirmar" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10;" text="CONFIRMAR PEDIDO">
+                     <font>
+                        <Font name="SansSerif Bold" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnCancelar" onAction="#onCancelar" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #F44336; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10;" text="CANCELAR">
+                     <font>
+                        <Font name="SansSerif Bold" size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="30.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

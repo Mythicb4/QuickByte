@@ -1,1 +1,124 @@
-[]
+[
+  {
+    "id": "9dd43664-661e-486c-ae6b-d893e40fbe54",
+    "businessEmail": "",
+    "saleDate": "2025-12-02T19:54:21.4929815",
+    "totalAmount": 2500.0,
+    "clientName": "user@elpoli.edu.co",
+    "paymentMethod": "QR",
+    "receivedAmount": 2500.0,
+    "change": 0.0,
+    "items": [
+      {
+        "productIdForPersistence": "Americano",
+        "nameForPersistence": "Americano",
+        "quantityForPersistence": 1,
+        "unitPriceForPersistence": 2500.0,
+        "subtotalForPersistence": 2500.0
+      }
+    ]
+  },
+  {
+    "id": "VEN-001",
+    "saleDate": "2025-12-02T20:05:11.3041731",
+    "totalAmount": 3000.0,
+    "clientName": "sara@gmail.com",
+    "paymentMethod": "QR",
+    "receivedAmount": 30000.0,
+    "change": 27000.0,
+    "items": [
+      {
+        "productIdForPersistence": "Brownie Chocolate",
+        "nameForPersistence": "Brownie Chocolate",
+        "quantityForPersistence": 1,
+        "unitPriceForPersistence": 3000.0,
+        "subtotalForPersistence": 3000.0
+      }
+    ]
+  },
+  {
+    "id": "VEN-002",
+    "saleDate": "2025-12-02T20:09:21.9372313",
+    "totalAmount": 8500.0,
+    "clientName": "abraham@gmail.com",
+    "paymentMethod": "QR",
+    "receivedAmount": 8500.0,
+    "change": 0.0,
+    "items": [
+      {
+        "productIdForPersistence": "Americano",
+        "nameForPersistence": "Americano",
+        "quantityForPersistence": 1,
+        "unitPriceForPersistence": 2500.0,
+        "subtotalForPersistence": 2500.0
+      },
+      {
+        "productIdForPersistence": "Brownie Chocolate",
+        "nameForPersistence": "Brownie Chocolate",
+        "quantityForPersistence": 2,
+        "unitPriceForPersistence": 3000.0,
+        "subtotalForPersistence": 6000.0
+      }
+    ]
+  },
+  {
+    "id": "VEN-003",
+    "saleDate": "2025-12-02T20:14:43.5052946",
+    "totalAmount": 2500.0,
+    "clientName": "user@elpoli.edu.co",
+    "paymentMethod": "QR",
+    "receivedAmount": 2500.0,
+    "change": 0.0,
+    "items": [
+      {
+        "productIdForPersistence": "Americano",
+        "nameForPersistence": "Americano",
+        "quantityForPersistence": 1,
+        "unitPriceForPersistence": 2500.0,
+        "subtotalForPersistence": 2500.0
+      }
+    ]
+  },
+  {
+    "id": "VEN-004",
+    "saleDate": "2025-12-02T20:30:04.9037592",
+    "totalAmount": 20000.0,
+    "clientName": "user@elpoli.edu.co",
+    "paymentMethod": "QR",
+    "receivedAmount": 25000.0,
+    "change": 5000.0,
+    "items": [
+      {
+        "productIdForPersistence": "Americano",
+        "nameForPersistence": "Americano",
+        "quantityForPersistence": 1,
+        "unitPriceForPersistence": 2500.0,
+        "subtotalForPersistence": 2500.0
+      },
+      {
+        "productIdForPersistence": "PRD-001",
+        "quantityForPersistence": 0,
+        "unitPriceForPersistence": 0.0,
+        "subtotalForPersistence": 0.0
+      }
+    ]
+  },
+  {
+    "id": "VEN-005",
+    "saleDate": "2025-12-02T20:33:20.6867543",
+    "totalAmount": 2500.0,
+    "clientName": "user@elpoli.edu.co",
+    "paymentMethod": "QR",
+    "receivedAmount": 2500.0,
+    "change": 0.0,
+    "items": [
+      {
+        "productIdForPersistence": "Americano",
+        "nameForPersistence": "Americano",
+        "quantityForPersistence": 1,
+        "unitPriceForPersistence": 2500.0,
+        "subtotalForPersistence": 2500.0
+      }
+    ]
+  }
+]

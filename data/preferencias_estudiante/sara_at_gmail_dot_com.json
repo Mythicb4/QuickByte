@@ -1,0 +1,15 @@
+[
+  {
+    "id": "PRD-004",
+    "name": "Brownie Chocolate",
+    "price": 3000.0,
+    "category": "Postres",
+    "description": "Brownie con trozos de chocolate.",
+    "stock": 41,
+    "imagePath": "C:\\Users\\emman\\OneDrive\\Desktop\\QuickByte\\src\\main\\resources\\images\\cafeteria\\productos\\Brownie Chocolate.jpg",
+    "cost": 1200.0,
+    "supplier": "Dulce Tentación",
+    "enabled": true,
+    "minStock": 15
+  }
+]
